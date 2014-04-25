@@ -7,3 +7,4 @@ node_modules
 bower.json
 gulpfile.js
 /nbproject/private/
+nbproject

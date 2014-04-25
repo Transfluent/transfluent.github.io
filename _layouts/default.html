@@ -1,45 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<html ng-app="transfluent-dev-app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title}}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- CSS compiled from SCSS -->
-        <link rel="stylesheet" href="/css/style.css">
-        
+    <!-- CSS compiled from SCSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 
-    </head>
-    <body>
+    <!-- From Transfluent previous html -->
+    <script>window.TF = window.TF || {};
+      TF.API = "https://transfluent.com/v2"</script>
+    <link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=3.8.1' type='text/css' media='all' />
+    <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js?ver=2.0.3'></script>
+    <script>$ = jQuery;</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
 
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
+  </head>
+  <body>
+    <div class="wrapper container">
+      <header class="header">
+        {% include header.html %}
+      </header>
+      <div class="search-row row">
+        <form role="form">
+            <div class="form-group">
+              <input type="search" class="form-control" placeholder="Search" name="apisearch"><span class="input-group-addon"><i class='glyphicon glyphicon-search'></i></span>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
+        </form>
+      </div>
+      <div class="content-area row">
+        <section class="main-content col-xs-12 col-sm-9">
+          {{ content}}
+        </section>
+        <nav class="navigation col-sm-3">
+          <p>Navigation Goes Here</p>
+        </nav>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="upper-footer">
+        {% include footer.html %}
+      </div>
 
-    </body>
-</html>
+      <!-- From transfluent previous index.html -->
+
+      <div id="job_ad_console">#&gt; curl <a href="https://www.transfluent.com/jobs/">https://www.transfluent.com/jobs/</a> &gt; /opt/career <span class="blink">█</span></div>
+    </footer>
+
+  </body>
+</html>       
+

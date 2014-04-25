@@ -1,5 +1,10 @@
-@import "bootstrap";
+// Importing the Dependencies like Bootstrap Framework, Compass Framework with Sass Gem
+@import 'bootstrap';
+@import 'compass';
 
-body {
-  background-color: white;
-}
+// Adding the SCSS files with Sass Globbing
+@import 'extensions/font-awesome/scss/font-awesome.scss';
+@import 'utility/**/*';
+@import 'layout/**/*';
+  
+

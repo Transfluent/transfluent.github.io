@@ -1,0 +1,32 @@
+body {
+  //background: pink;
+  @include background(linear-gradient(top left, $body-grad-start, $body-grad-end));
+}
+.wrapper {
+  //@include background(image-url("bg_other_pages.jpg"));
+  background: green;
+  
+}
+
+.header-background {
+  //@include background(image-url("top-bg.jpg"));
+  //background: red;
+  //@include background 
+  @include background(linear-gradient(top left, $header-grad-start, $header-grad-end));
+}
+
+.footer {
+  background: silver;
+}
+
+.main-content {
+  @include background(linear-gradient(top left, $wrapper-grad-start, $wrapper-grad-end));
+}
+
+.navigation {
+  background: blue;
+}
+
+.search-row {
+  background: magenta;
+}

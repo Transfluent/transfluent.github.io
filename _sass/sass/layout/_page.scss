@@ -4,7 +4,7 @@ body {
 }
 .wrapper {
   //@include background(image-url("bg_other_pages.jpg"));
-  background: green;
+  //background: green;
   
 }
 
@@ -24,9 +24,9 @@ body {
 }
 
 .navigation {
-  background: blue;
+  @include background(linear-gradient(top left, $nav-grad-start, $nav-grad-end));
 }
 
 .search-row {
-  background: magenta;
+  //background: magenta;
 }

@@ -10063,11 +10063,6 @@ body {
   background: linear-gradient(top left, #f1f1f3, #c2c1c6);
 }
 
-/* line 5, ../_sass/sass/layout/_page.scss */
-.wrapper {
-  background: green;
-}
-
 /* line 11, ../_sass/sass/layout/_page.scss */
 .header-background {
   background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #dedede), color-stop(100%, #838385));
@@ -10093,10 +10088,9 @@ body {
 
 /* line 26, ../_sass/sass/layout/_page.scss */
 .navigation {
-  background: blue;
-}
-
-/* line 30, ../_sass/sass/layout/_page.scss */
-.search-row {
-  background: magenta;
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffffff), color-stop(100%, #fdfdfd));
+  background: -webkit-linear-gradient(top left, #ffffff, #fdfdfd);
+  background: -moz-linear-gradient(top left, #ffffff, #fdfdfd);
+  background: -o-linear-gradient(top left, #ffffff, #fdfdfd);
+  background: linear-gradient(top left, #ffffff, #fdfdfd);
 }

@@ -28,20 +28,22 @@
       <header class="header">
         {% include header.html %}
       </header>
-      <div class="search-row row">
-        <form role="form">
-            <div class="form-group">
-              <input type="search" class="form-control" placeholder="Search" name="apisearch"><span class="input-group-addon"><i class='glyphicon glyphicon-search'></i></span>
-            </div>
-        </form>
-      </div>
       <div class="content-area row">
+        <nav class="navigation col-sm-3">
+          <div class='search-form'>
+            <form role="form">
+              <div class="form-group">
+                <input type="search" class="form-control" placeholder="Search" name="apisearch">
+              </div>
+            </form>
+          </div>
+          <div class='navigation-links'>
+            <p>Navigation Goes Here</p>
+          </div>
+        </nav>
         <section class="main-content col-xs-12 col-sm-9">
           {{ content}}
         </section>
-        <nav class="navigation col-sm-3">
-          <p>Navigation Goes Here</p>
-        </nav>
       </div>
     </div>
     <footer class="footer">

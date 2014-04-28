@@ -1,3 +1,4 @@
 name: Transfluent API Documentation
 markdown: redcarpet
 pygments: true
+exclude: ['bower_components', 'node_modules', 'nbproject', 'bower.json', 'gruntfile.js', 'gulpfile.js', 'README.md']

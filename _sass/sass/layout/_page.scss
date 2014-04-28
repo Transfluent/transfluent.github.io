@@ -30,3 +30,7 @@ body {
 .search-row {
   //background: magenta;
 }
+
+.header-logo {
+  @include background(image-url("transfluent-logo.png"));
+}

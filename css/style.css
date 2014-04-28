@@ -10094,3 +10094,8 @@ body {
   background: -o-linear-gradient(top left, #ffffff, #fdfdfd);
   background: linear-gradient(top left, #ffffff, #fdfdfd);
 }
+
+/* line 34, ../_sass/sass/layout/_page.scss */
+.header-logo {
+  background: url('../images/transfluent-logo.png?1398413844');
+}

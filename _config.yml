@@ -1,4 +1,8 @@
-name: Transfluent API Documentation
-markdown: redcarpet
+name: transfluent.github.io
+description: Transfluent API Documentation
+author:
+  name: Transfluent.com
+  email: info@transfluent.com
 pygments: true
 exclude: ['bower_components', 'node_modules', 'nbproject', 'bower.json', 'gruntfile.js', 'gulpfile.js', 'README.md']
+timezone: Europe/Helsinki

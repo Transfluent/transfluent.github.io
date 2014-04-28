@@ -11,3 +11,4 @@ gulpfile.js
 nbproject
 Gruntfile.js
 _site
+_site/*

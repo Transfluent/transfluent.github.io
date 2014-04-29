@@ -1,0 +1,13 @@
+<div class='search-form'>
+  <input type="search" class="form-control" placeholder="Search the API" name="apisearch">
+</div>
+<div class='navigation-links'>
+  <ul>
+    {% for node in site.pages %}
+    {% if node.title != nil and node.url != '/' %}
+    {% capture nodediff %}{{ page.url | remove:node.url }}{% endcapture %}
+    <li><a {% if nodediff != page.url %}class="active" {% endif %}href="{{ node.url}}">{{ node.title}}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

@@ -1,14 +1,11 @@
 .idea
 .project
-package.json
 bower_components
 .sass-cache
 npm-debug.log
 node_modules
 bower.json
-gulpfile.js
 /nbproject/private/
 nbproject
-Gruntfile.js
 _site
 _site/*

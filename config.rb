@@ -17,12 +17,12 @@ firesass = false
 
 
 # Location of the theme's resources.
-css_dir         = "../css"
-sass_dir        = "sass"
-extensions_dir  = "sass/extensions"
-images_dir      = "../images"
-javascripts_dir = "../js"
-fonts_dir       = "../fonts"
+css_dir         = "_css"
+sass_dir        = "_sass"
+extensions_dir  = "_sass/extensions"
+images_dir      = "images"
+javascripts_dir = "_js"
+fonts_dir       = "fonts"
 generated_images_dir = images_dir + "/generated"
 
 

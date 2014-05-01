@@ -3,6 +3,8 @@ layout: post
 title:  "Transfluent API Documentation"
 date:   2014-04-24 08:07:47
 categories: jekyll update
+tags:
+  - API
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

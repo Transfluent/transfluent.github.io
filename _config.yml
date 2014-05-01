@@ -4,7 +4,7 @@ author:
   name: Transfluent.com
   email: info@transfluent.com
 pygments: true
-exclude: ['bower_components', 'node_modules', 'nbproject', 'bower.json', 'gruntfile.js', 'gulpfile.js', 'README.md']
+exclude: ['bower_components', 'node_modules', 'nbproject', 'bower.json', 'gulpfile.js', 'README.md', 'config.rb', 'package.json']
 timezone: Europe/Helsinki
 permalink: /:title
-markdown: rdiscount
+markdown: kramdown

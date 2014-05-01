@@ -1,7 +1,12 @@
 ---
 layout: default
 title: Authentication
+category: api
 section: api/authentication
+tags: 
+  - API
+  - auth
+  - authentication
 ---
 
 <h3 class='api-title'> Authentication </h3>

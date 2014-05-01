@@ -1,0 +1,33 @@
+{
+  "name": "transfluent.github.io",
+  "version": "1.0.0",
+  "description": "Transfluent API Documentation",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-util": "~2.2.14",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-concat": "~2.2.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-minify-css": "~0.3.4",
+    "gulp-shell": "~0.2.4",
+    "gulp-livereload": "~1.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Transfluent/transfluent.github.io.git"
+  },
+  "keywords": [
+    "API",
+    "Documentation"
+  ],
+  "author": "Transfluent",
+  "license": "Private non-Public",
+  "bugs": {
+    "url": "https://github.com/Transfluent/transfluent.github.io/issues"
+  },
+  "homepage": "https://transfluent.github.io"
+}

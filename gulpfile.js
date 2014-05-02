@@ -15,7 +15,7 @@ gulp.task('jekyll', function(){
 });
 
 gulp.task('compass', function(){
-	gulp.src('')
+	gulp.src('_sass/**/*.scss')
 	.pipe(shell([
 		'compass watch'
 	]))
@@ -38,6 +38,7 @@ gulp.task('minify', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('_js/*.js', ['scripts']);
+	gulp.watch('_sass/**/*.scss', ['compass']);
 	gulp.watch('_css/*.css', ['minify']);
 });
 

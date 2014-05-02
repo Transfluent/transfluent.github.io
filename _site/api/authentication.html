@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Authentication</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </head>
+
+  <body ng-app="transfluent-api">
+
+    <div class="wrapper container">
+
+      <header class="header">
+        <div class="header-background">
+  <div class="header-logo">
+    <a href="/"><p>Transfluent</p></a>
+  </div>
+  <h2 class="title"><a href="/">transfluent.github.io</a></h2>
+  <!--  <a class="extra" href="/">home</a> -->
+</div>
+      </header>
+
+      <div class="content-area row">
+
+        <nav class="navigation col-sm-3">
+          <div class='search-form'>
+  <input type="search" class="form-control" placeholder="Search the API" name="apisearch">
+</div>
+<div class='navigation-links'>
+  <ul>
+    
+  </ul>
+</div>
+<ul>
+  
+  <li>Transfluent API Documentation</li>
+  
+</ul>
+
+
+        </nav>
+
+        <section class="main-content col-xs-12 col-sm-9">
+          <h3 class='api-title'>Authentication</h3>
+
+<div class='api-body'>
+<p>Some methods are public and available without authentication. Some methods are available on Transfluent.com user session, e.g. CustomerEmail which is designed to serve the backend functionality via javascript to the customers. For developers, the most interesting methods are those which are available via token authentication. You can retrieve a token via Authenticate method.</p>
+<p>Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.</p>
+<blockquote>
+  <p>Method: GET<br />
+ URL: https://transfluent.com/v2/authenticate/ ( HTTPS only)<br />
+ Parameters: email, password<br />
+ Returns:  </p>
+</blockquote>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span>   <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;token&quot;</span><span class="o">:</span><span class="s2">&quot;ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...&quot;</span><span class="p">,</span> <span class="s2">&quot;expires&quot;</span><span class="o">:</span><span class="s2">&quot;On password change&quot;</span><span class="p">}}</span>
+<span class="lineno">2</span>     <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;EBackendSecurityViolation&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="o">:</span><span class="s2">&quot;Authentication failed!&quot;</span><span class="p">},</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Login failed. Please try again.&quot;</span><span class="p">}</span>  
+<span class="lineno">3</span>   
+</code></pre></div>
+
+<blockquote>
+  <p>Test with curl:  </p>
+</blockquote>
+
+<div class="highlight"><pre><code class="text">#&gt; curl -d &#39;email=user@example.org&amp;password=your-password&#39; https://transfluent.com/v2/authenticate/
+    
+</code></pre></div>
+
+<div>
+</div>
+
+</div>
+
+        </section>
+
+      </div>
+
+    </div> <!-- .wrapper -->
+
+    <footer class="footer">
+      <p>This is Footer</p>  
+    </footer>
+
+  </body>
+</html>       
+

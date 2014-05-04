@@ -3,30 +3,11 @@
 </div>
 <div class='navigation-links'>
   <ul>
-   {% for apis in page.categories.apis %}
-   <li>{{ apis }}</li>
-{% endfor %}
-  </ul>
+    {% for node in site.pages %}
+      {% if node.title != nil and node.url != '/' %}
+        {% capture nodediff %}{{ page.url | remove:node.url }}{% endcapture %}
+        <li><a {% if nodediff != page.url %}class="active" {% endif %}href="{{ node.url}}">{{ node.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul> 
 </div>
-
- {% for node in site.pages %}
-    {% if node.title != nil and node.url != '/' %}
-    {% capture nodediff %}{{ page.url | remove:node.url }}{% endcapture %}
-    <li><a {% if nodediff != page.url %}class="active" {% endif %}href="{{ node.url}}">{{ node.title}}</a></li>
-    {% endif %}
- 
-   {% endfor %}
-   
-   
-   {% for node in site.categories.apis %}
-   {{ 'we are here' }}
-   {{ node }}
-   {% endfor %}
-   
-     {% for node in site.api %}
-   {{ 'we are here' }}
-   {{ node }}
-   I can be here
-     {% endfor %}
-     
-     I am alos here

@@ -9,7 +9,7 @@
   </ul>
 </div>
 
- {% for node in site.categories.apis %}
+ {% for node in site.pages %}
     {% if node.title != nil and node.url != '/' %}
     {% capture nodediff %}{{ page.url | remove:node.url }}{% endcapture %}
     <li><a {% if nodediff != page.url %}class="active" {% endif %}href="{{ node.url}}">{{ node.title}}</a></li>
@@ -21,7 +21,12 @@
    {% for node in site.categories.apis %}
    {{ 'we are here' }}
    {{ node }}
+   {% endfor %}
+   
+     {% for node in site.api %}
+   {{ 'we are here' }}
+   {{ node }}
    I can be here
      {% endfor %}
      
-     I am not here
+     I am alos here

@@ -3,32 +3,112 @@ layout: default
 ---
 
 <div class='page-header'>
-  <h3>Transfluent API Documentation for Developers</h3>
+  <h1>Transfluent API Documentation for Developers</h1>
 </div>
 <div>
-  <p>The API documentation is RESTful. It reads and writes JSON</p>
-  <div>
-    <p>To Test the API visit the URI at 
-      <a href="https://transfluent.com/v2/hello/World/" title='Transfluent Backend API' target="_blank">https://transfluent.com/v2/hello/World</a> 
-      which should show the result like</p>
+  <article>
+    <header>
+      <h2>RESTfulness</h2>
+    </header>
+    <p>The API documentation is RESTful. It reads and writes JSON</p>
     <div>
-      {% highlight javascript %}
-      {"status":"OK","response":"Hello World"}
-      {% endhighlight %}
+      <p>
+        To Test the API visit the URI at 
+        <a href="https://transfluent.com/v2/hello/World/" title='Transfluent Backend API' target="_blank">
+          https://transfluent.com/v2/hello/World
+        </a> 
+        which should show the result like
+      </p>
+      <div>
+        {% highlight javascript %}
+        {"status":"OK","response":"Hello World"}
+        {% endhighlight %}
+      </div>
+      <p>You can change the last word in the link (Hello in this case) to something else, still the response will be same. 
+        Lets say change the world to my Name like
+        <a href="https://transfluent.com/v2/hello/Rajib/"  title='Transfluent Backend API' target="_blank">
+          https://transfluent.com/v2/hello/Rajib
+        </a>
+        Which should show the result like
+      </p>
+      <div>
+        {% highlight javascript %}
+        {"status":"OK","response":"Hello Rajib"}
+        {% endhighlight %}
+      </div>
+      <div>
+        Alternatively you can grab sample PHP client from 
+        <a href="https://github.com/Transfluent/Transfluent-Backend-API-client" title='Transfluent Backend API' target="_blank">
+          GitHub's project page.
+        </a>
+      </div>
     </div>
-    <p>You can change the last word in the link (Hello in this case) to something else, still the response will be same. 
-      Lets say change the world to my Name like
-      <a href="https://transfluent.com/v2/hello/Rajib/"  title='Transfluent Backend API' target="_blank">https://transfluent.com/v2/hello/Rajib</a>
-      Which should show the result like
-    </p>
+  </article>
+
+  <article>
+    <header>
+      <h2>Authentication</h2>
+    </header>
     <div>
-      {% highlight javascript %}
-      {"status":"OK","response":"Hello Rajib"}
-      {% endhighlight %}
+      <p>
+        Some methods are public and available without authentication. Some methods are available on Transfluent.com user 
+        session, e.g. CustomerEmail which is designed to serve the backend functionality via javascript to the customers. 
+        For developers, the most interesting methods are those which are available via token authentication. 
+        You can retrieve a token via <a href="/api/security/authenticate.html" title="Authenticate method">Authenticate method</a>.
+      </p>
     </div>
+  </article>
+
+  <article>
+    <header>
+      <h2>Security</h2>   
+    </header>
     <div>
-      Alternatively you can grab sample PHP client from 
-      <a href="https://github.com/Transfluent/Transfluent-Backend-API-client" title='Transfluent Backend API' target="_blank">GitHub's project page.</a>
+      <p>
+        Transfluent's Backend API supports HTTPS for all methods and requires it for most of them. 
+        It is strongly encouraged to use HTTPS always.
+      </p>
     </div>
-  </div>
+  </article>
+
+  <article>
+    <header>
+      <h2>Languages</h2>
+    </header>
+    <div>
+      <p>
+        Transfluent's Backend API uses internal language ids. 
+        See <a href="/api/services/language.html" title="Language method">Language method</a> to retrieve them.
+      </p>
+    </div>
+  </article>
+
+  <article>
+    <header>
+      <h2>Errors</h2>
+    </header>
+    <div>
+      <p>
+        First check HTTP response code, next check response content. The API always returns a valid JSON response. 
+        On error the status is "ERROR".
+      </p>
+      <div>
+        {% highlight javascript %}
+        {"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Method requires secure connection (HTTPS), 
+        your request was unsafe."},"response":"Method requires secure connection (HTTPS), your request was unsafe."}
+        {% endhighlight %}
+      </div>
+      <p>
+        It is recommended to match the error type (if non-generic type is provided) rather than trying to match the error 
+        text which may change for any reason (fixing typos, providing varying information like ids etc.)
+      </p>
+    </div>
+  </article>
 </div>
+
+
+
+
+
+
+

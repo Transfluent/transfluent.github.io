@@ -8,3 +8,4 @@ exclude: ['bower_components', 'node_modules', 'nbproject', 'bower.json', 'gulpfi
 timezone: Europe/Helsinki
 permalink: /:title
 markdown: kramdown
+port: 4001

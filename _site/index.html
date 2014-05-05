@@ -40,7 +40,12 @@
     
       
         
-        <li><a href="/api/authentication.html">Authentication</a></li>
+        <li><a href="/api/security/authenticate.html">Authenticate</a></li>
+      
+    
+      
+        
+        <li><a href="/api/services/language.html">Language</a></li>
       
     
       
@@ -91,35 +96,115 @@
 
         <section class="main-content col-xs-12 col-sm-9">
           <div class='page-header'>
-  <h3>Transfluent API Documentation for Developers</h3>
+  <h1>Transfluent API Documentation for Developers</h1>
 </div>
 <div>
-  <p>The API documentation is RESTful. It reads and writes JSON</p>
-  <div>
-    <p>To Test the API visit the URI at 
-      <a href="https://transfluent.com/v2/hello/World/" title='Transfluent Backend API' target="_blank">https://transfluent.com/v2/hello/World</a> 
-      which should show the result like</p>
+  <article>
+    <header>
+      <h2>RESTfulness</h2>
+    </header>
+    <p>The API documentation is RESTful. It reads and writes JSON</p>
     <div>
-      <div class="highlight"><pre><code class="javascript">      <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Hello World&quot;</span><span class="p">}</span>
-      
+      <p>
+        To Test the API visit the URI at 
+        <a href="https://transfluent.com/v2/hello/World/" title='Transfluent Backend API' target="_blank">
+          https://transfluent.com/v2/hello/World
+        </a> 
+        which should show the result like
+      </p>
+      <div>
+        <div class="highlight"><pre><code class="javascript">        <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Hello World&quot;</span><span class="p">}</span>
+        
 </code></pre></div>
-    </div>
-    <p>You can change the last word in the link (Hello in this case) to something else, still the response will be same. 
-      Lets say change the world to my Name like
-      <a href="https://transfluent.com/v2/hello/Rajib/"  title='Transfluent Backend API' target="_blank">https://transfluent.com/v2/hello/Rajib</a>
-      Which should show the result like
-    </p>
-    <div>
-      <div class="highlight"><pre><code class="javascript">      <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Hello Rajib&quot;</span><span class="p">}</span>
-      
+      </div>
+      <p>You can change the last word in the link (Hello in this case) to something else, still the response will be same. 
+        Lets say change the world to my Name like
+        <a href="https://transfluent.com/v2/hello/Rajib/"  title='Transfluent Backend API' target="_blank">
+          https://transfluent.com/v2/hello/Rajib
+        </a>
+        Which should show the result like
+      </p>
+      <div>
+        <div class="highlight"><pre><code class="javascript">        <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Hello Rajib&quot;</span><span class="p">}</span>
+        
 </code></pre></div>
+      </div>
+      <div>
+        Alternatively you can grab sample PHP client from 
+        <a href="https://github.com/Transfluent/Transfluent-Backend-API-client" title='Transfluent Backend API' target="_blank">
+          GitHub's project page.
+        </a>
+      </div>
     </div>
+  </article>
+
+  <article>
+    <header>
+      <h2>Authentication</h2>
+    </header>
     <div>
-      Alternatively you can grab sample PHP client from 
-      <a href="https://github.com/Transfluent/Transfluent-Backend-API-client" title='Transfluent Backend API' target="_blank">GitHub's project page.</a>
+      <p>
+        Some methods are public and available without authentication. Some methods are available on Transfluent.com user 
+        session, e.g. CustomerEmail which is designed to serve the backend functionality via javascript to the customers. 
+        For developers, the most interesting methods are those which are available via token authentication. 
+        You can retrieve a token via <a href="/api/security/authenticate.html" title="Authenticate method">Authenticate method</a>.
+      </p>
     </div>
-  </div>
+  </article>
+
+  <article>
+    <header>
+      <h2>Security</h2>   
+    </header>
+    <div>
+      <p>
+        Transfluent's Backend API supports HTTPS for all methods and requires it for most of them. 
+        It is strongly encouraged to use HTTPS always.
+      </p>
+    </div>
+  </article>
+
+  <article>
+    <header>
+      <h2>Languages</h2>
+    </header>
+    <div>
+      <p>
+        Transfluent's Backend API uses internal language ids. 
+        See <a href="/api/services/language.html" title="Language method">Language method</a> to retrieve them.
+      </p>
+    </div>
+  </article>
+
+  <article>
+    <header>
+      <h2>Errors</h2>
+    </header>
+    <div>
+      <p>
+        First check HTTP response code, next check response content. The API always returns a valid JSON response. 
+        On error the status is "ERROR".
+      </p>
+      <div>
+        <div class="highlight"><pre><code class="javascript">        <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;EBackendSecurityViolation&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="o">:</span><span class="s2">&quot;Method requires secure connection (HTTPS), </span>
+<span class="s2">        your request was unsafe.&quot;</span><span class="p">},</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Method requires secure connection (HTTPS), your request was unsafe.&quot;</span><span class="p">}</span>
+        
+</code></pre></div>
+      </div>
+      <p>
+        It is recommended to match the error type (if non-generic type is provided) rather than trying to match the error 
+        text which may change for any reason (fixing typos, providing varying information like ids etc.)
+      </p>
+    </div>
+  </article>
 </div>
+
+
+
+
+
+
+
 
         </section>
 

@@ -1,0 +1,27 @@
+- Name: Languages
+  Description: 
+  Method: GET
+  URL: https://transfluent.com/v2/languages/
+  Parameters: 
+  Returns: 
+    
+- Name: LanguagesCheck
+  Description: Check if language pair is supported on requested level
+  Method: GET
+  URL: https://transfluent.com/v2/languages/check/
+  Parameters: level [=3], source_language, target_language, return_other_levels, customer_id
+  Returns:
+    
+- Name: LanguagesPairs
+  Method: GET
+  URL: https://transfluent.com/v2/languages/pairs/
+  Parameters: version [=1]
+  Returns:
+    
+- Name: Hello
+  Description: This method is a dummy method to quickly familiarize yourself with the API.
+  Method: GET
+  URL: https://transfluent.com/v2/hello/
+  Parameters: name
+  Returns: '{"status":"OK","response":"Hello World"} 
+            {"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'

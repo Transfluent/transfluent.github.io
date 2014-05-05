@@ -1,0 +1,29 @@
+- name: Tomi Heiskanen
+  email: tomi@transfluent.com
+  github: tomi-heiskanen
+  image: tomi.jpg
+  
+- name: Timo Rongas
+  email: timo@transfluent.com
+  github: TimoRongas
+  image: timo.jpg
+  
+- name: Rajib Paudyal
+  email: rajib@transfluent.com
+  github: rajibmp
+  image: rajib.jpg
+
+- name: Mika Schafroth
+  email: mika@transfluent.com
+  github: mikaschafroth
+  image: mika.jpg
+
+- name: Ilari Mäkimattila
+  email: ilari@transfluent.com
+  github: Kryil
+  image: kryil.jpg
+
+- name: Saber Kordestanchi
+  email: saber@transfluent.com
+  github: kordestanchi
+  image: saber.jpg

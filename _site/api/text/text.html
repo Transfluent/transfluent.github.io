@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Text GET</title>
+    <title>Text</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -80,7 +80,7 @@
     
       
         
-        <li><a class="active" href="/api/text/get.html">Text GET</a></li>
+        <li><a href="/api/text/get.html">Text GET</a></li>
       
     
       
@@ -95,7 +95,7 @@
     
       
         
-        <li><a href="/api/text/text.html">Text</a></li>
+        <li><a class="active" href="/api/text/text.html">Text</a></li>
       
     
       
@@ -112,10 +112,30 @@
         <section class="main-content col-xs-12 col-sm-9">
           <section class='api-container'>
   <header class='api-header'>
-    <h3 class='api-title'>Text GET</h3>
+    <h3 class='api-title'>Text</h3>
   </header>
   <article class='api-body'>
     
+<p>Retrieve (GET) or save (POST) texts to the system.  </p>
+
+<p>Method: GET/POST  </p>
+
+<p>URL: <a href="https://transfluent.com/v2/text/">https://transfluent.com/v2/text/</a>  </p>
+
+<p>Parameters: text_id, group_id, language, text, invalidate_translations [=1], is_draft, token  </p>
+
+<p>Returns:   </p>
+
+<p>Status OK:  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;POST&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;{\&quot;status\&quot;:\&quot;OK\&quot;,\&quot;response\&quot;:true}&quot;</span><span class="p">}</span> 
+</code></pre></div>
+
+<p>Method: POST  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">}</span> 
+</code></pre></div>
+
 
   </article>
 </section>

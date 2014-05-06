@@ -95,6 +95,11 @@
     
       
         
+        <li><a href="/api/text/text.html">Text</a></li>
+      
+    
+      
+        
         <li><a class="active" href="/api/text/status.html">Text Status</a></li>
       
     
@@ -110,7 +115,22 @@
     <h3 class='api-title'>Text Status</h3>
   </header>
   <article class='api-body'>
-    <p>I am trying to check the status of the text</p>
+    
+<p>Check if text has been translated to specified language.  </p>
+
+<p>Method: GET  </p>
+
+<p>URL: <a href="https://transfluent.com/v2/text/status/">https://transfluent.com/v2/text/status/</a>  </p>
+
+<p>Parameters: text_id, group_id, language, token  </p>
+
+<p>Returns:   </p>
+
+<p>Status OK:  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;is_translated&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">}}</span> 
+</code></pre></div>
+
 
   </article>
 </section>

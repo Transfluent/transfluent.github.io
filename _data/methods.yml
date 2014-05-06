@@ -81,3 +81,12 @@
   Parameters: text_id, group_id, language, token
   Returns:
     OK: '{"status":"OK","response":{"is_translated":true}}'
+    
+- Name: Text
+  Description: Retrieve (GET) or save (POST) texts to the system.
+  Method: GET/POST
+  URL: https://transfluent.com/v2/text/
+  Parameters: text_id, group_id, language, text, invalidate_translations [=1], is_draft, token
+  Returns:
+    OK:
+      POST: '{"status":"OK","response":true}'

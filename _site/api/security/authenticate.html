@@ -105,16 +105,25 @@
     <h3 class='api-title'>Authenticate</h3>
   </header>
   <article class='api-body'>
-    <p>Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.</p>
+    
+<p>Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.  </p>
 
-<p>Method: GET<br />
-URL: https://transfluent.com/v2/authenticate/ ( HTTPS only)<br />
-Parameters: email, password<br />
-Returns:  </p>
+<p>Method: GET  </p>
 
-<div class="highlight"><pre><code class="javascript">  <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;token&quot;</span><span class="o">:</span><span class="s2">&quot;ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...&quot;</span><span class="p">,</span> <span class="s2">&quot;expires&quot;</span><span class="o">:</span><span class="s2">&quot;On password change&quot;</span><span class="p">}}</span>  
-  <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;EBackendSecurityViolation&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="o">:</span><span class="s2">&quot;Authentication failed!&quot;</span><span class="p">},</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Login failed. Please try again.&quot;</span><span class="p">}</span> 
- 
+<p>URL: <a href="https://transfluent.com/v2/authenticate/">https://transfluent.com/v2/authenticate/</a>  </p>
+
+<p>Parameters: email, password  </p>
+
+<p>Returns: with status  </p>
+
+<p>OK:  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;token&quot;</span><span class="o">:</span><span class="s2">&quot;ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...&quot;</span><span class="p">,</span> <span class="s2">&quot;expires&quot;</span><span class="o">:</span><span class="s2">&quot;On password change&quot;</span><span class="p">}}</span> 
+</code></pre></div>
+
+<p>Error:  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;EBackendSecurityViolation&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="o">:</span><span class="s2">&quot;Authentication failed!&quot;</span><span class="p">},</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Login failed. Please try again.&quot;</span><span class="p">}</span> 
 </code></pre></div>
 
 <p>Test with curl: </p>

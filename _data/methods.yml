@@ -23,3 +23,12 @@
   Returns:
     OK: '{"status":"OK","response":"Hello World"}'
     Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
+    
+- Name: Authenticate
+  Description: Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.
+  Method: GET
+  URL: https://transfluent.com/v2/authenticate/
+  Parameters: email, password
+  Returns:
+    OK: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'
+    Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'

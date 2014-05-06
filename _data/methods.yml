@@ -73,3 +73,11 @@
   Parameters: format [=UTF-8], content, type, save_only_data, identifier, language, token
   Returns:
     OK: '{"status":"OK","response":{"word_count":390,"word_count_altered":29}}'
+    
+- Name: Text Status
+  Description: Check if text has been translated to specified language.
+  Method: GET
+  URL: https://transfluent.com/v2/text/status/
+  Parameters: text_id, group_id, language, token
+  Returns:
+    OK: '{"status":"OK","response":{"is_translated":true}}'

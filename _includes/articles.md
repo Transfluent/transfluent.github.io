@@ -25,12 +25,28 @@ Status OK:
 {{ method.Returns.OK }} 
 {% endhighlight %}
 {% endif %}
+
+{% if method.Returns.OK.GET %}
+Method: GET  
+{% highlight javascript %}
+{{ method.Returns.OK.GET }} 
+{% endhighlight %}
+{% endif %}
+
+{% if method.Returns.OK.POST %}
+Method: POST  
+{% highlight javascript %}
+{{ method.Returns.OK.POST }} 
+{% endhighlight %}
+{% endif %}
+
 {% if method.Returns.Error %}
 Status Error:  
 {% highlight javascript %}
 {{ method.Returns.Error }} 
 {% endhighlight %}
 {% endif %}
+
 {% if method.Returns.Other %}
 > {{ method.Returns.Other }}  
 {% endif %} 

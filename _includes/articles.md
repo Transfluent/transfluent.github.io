@@ -18,7 +18,7 @@ Parameters: {{ method.Parameters }}
 {% endif %}
 
 {% if method.Returns %}
-Returns: {{ method.Returns.Other }}  
+Returns:   
 {% if method.Returns.OK %}
 Status OK:  
 {% highlight javascript %}
@@ -31,6 +31,16 @@ Status Error:
 {{ method.Returns.Error }} 
 {% endhighlight %}
 {% endif %}
+{% if method.Returns.Other %}
+> {{ method.Returns.Other }}  
+{% endif %} 
 {% endif %}
+
+{% if method.CurlTest %}
+Test with curl:  
+{% highlight text only %}
+{{ method.CurlTest }}  
+{% endhighlight %}
+{% endif %} 
 {% endif %}
 {% endfor %}

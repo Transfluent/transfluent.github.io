@@ -32,6 +32,7 @@
   Returns:
     OK: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'
     Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'
+  CurlTest: "#> curl -d 'email=user@example.org&password=your-password' https://transfluent.com/v2/authenticate/"
     
 - Name: File Read
   Description: You can easily retrieve your project's original/translated resource file from our backend by making a GET request to /file/read/.

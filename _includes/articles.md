@@ -18,15 +18,15 @@ Parameters: {{ method.Parameters }}
 {% endif %}
 
 {% if method.Returns %}
-Returns: with status  
+Returns: {{ method.Returns.Other }}  
 {% if method.Returns.OK %}
-OK:  
+Status OK:  
 {% highlight javascript %}
 {{ method.Returns.OK }} 
 {% endhighlight %}
 {% endif %}
 {% if method.Returns.Error %}
-Error:  
+Status Error:  
 {% highlight javascript %}
 {{ method.Returns.Error }} 
 {% endhighlight %}

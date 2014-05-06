@@ -4,4 +4,4 @@ title: File Read
 section: api/file/read
 ---
 
-I am trying to read the file
+{% include articles.md %}

@@ -32,3 +32,11 @@
   Returns:
     OK: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'
     Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'
+    
+- Name: File Read
+  Description: You can easily retrieve your project's original/translated resource file from our backend by making a GET request to /file/read/.
+  Method: GET
+  URL: https://transfluent.com/v2/file/read/
+  Parameters: identifier, language, token
+  Returns: 
+    Other: "Attention! Exceptionally this method won't response with a JSON package. It will set 'Content-Disposition: attachment; filename=..' HTTP header and force your client to download the file."

@@ -105,7 +105,17 @@
     <h3 class='api-title'>File Read</h3>
   </header>
   <article class='api-body'>
-    <p>I am trying to read the file</p>
+    
+<p>You can easily retrieve your project&#8217;s original/translated resource file from our backend by making a GET request to /file/read/.  </p>
+
+<p>Method: GET  </p>
+
+<p>URL: <a href="https://transfluent.com/v2/file/read/">https://transfluent.com/v2/file/read/</a>  </p>
+
+<p>Parameters: identifier, language, token  </p>
+
+<p>Returns: Attention! Exceptionally this method won&#8217;t response with a JSON package. It will set &#8216;Content-Disposition: attachment; filename=..&#8217; HTTP header and force your client to download the file.  </p>
+
 
   </article>
 </section>

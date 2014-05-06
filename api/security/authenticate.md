@@ -6,10 +6,10 @@ section: api/security/authenticate
 
 Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.
 
-> Method: GET  
-> URL: https://transfluent.com/v2/authenticate/ ( HTTPS only)  
-> Parameters: email, password  
-> Returns:  
+Method: GET  
+URL: https://transfluent.com/v2/authenticate/ ( HTTPS only)  
+Parameters: email, password  
+Returns:  
 
 {% highlight javascript %}
 
@@ -18,7 +18,7 @@ Retrieve authentication token by calling this method. The token is valid until y
  
 {% endhighlight %}
 
-> Test with curl: 
+Test with curl: 
  
 {% highlight text only %}
   #> curl -d 'email=user@example.org&password=your-password' https://transfluent.com/v2/authenticate/  

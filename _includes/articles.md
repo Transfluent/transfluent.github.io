@@ -24,7 +24,6 @@ Status OK:
 {% highlight javascript %}
 {{ method.Returns.OK }} 
 {% endhighlight %}
-{% endif %}
 
 {% if method.Returns.OK.GET %}
 Method: GET  
@@ -38,6 +37,8 @@ Method: POST
 {% highlight javascript %}
 {{ method.Returns.OK.POST }} 
 {% endhighlight %}
+{% endif %}
+
 {% endif %}
 
 {% if method.Returns.Error %}
@@ -58,5 +59,7 @@ Test with curl:
 {{ method.CurlTest }}  
 {% endhighlight %}
 {% endif %} 
+
 {% endif %}
+
 {% endfor %}

@@ -2,7 +2,7 @@
 {% if method.Name == page.title %}
 
 {% if method.Description %} 
-Description: {{ method.Description }}  
+{{ method.Description }}  
 {% endif %}
 
 {% if method.Method %}

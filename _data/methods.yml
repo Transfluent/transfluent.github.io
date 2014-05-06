@@ -1,9 +1,6 @@
 - Name: Languages
-  Description: 
   Method: GET
-  URL: https://transfluent.com/v2/languages/
-  Parameters: 
-  Returns: 
+  URL: https://transfluent.com/v2/languages/ 
     
 - Name: LanguagesCheck
   Description: Check if language pair is supported on requested level
@@ -23,5 +20,6 @@
   Method: GET
   URL: https://transfluent.com/v2/hello/
   Parameters: name
-  Returns: '{"status":"OK","response":"Hello World"} 
-            {"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
+  Returns:
+    OK: '{"status":"OK","response":"Hello World"}'
+    Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'

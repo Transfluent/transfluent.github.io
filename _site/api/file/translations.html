@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Authenticate</title>
+    <title>File Translations</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
     
       
         
-        <li><a class="active" href="/api/security/authenticate.html">Authenticate</a></li>
+        <li><a href="/api/security/authenticate.html">Authenticate</a></li>
       
     
       
@@ -60,7 +60,7 @@
     
       
         
-        <li><a href="/api/file/translations.html">File Translations</a></li>
+        <li><a class="active" href="/api/file/translations.html">File Translations</a></li>
       
     
       
@@ -107,33 +107,23 @@
         <section class="main-content col-xs-12 col-sm-9">
           <section class='api-container'>
   <header class='api-header'>
-    <h3 class='api-title'>Authenticate</h3>
+    <h3 class='api-title'>File Translations</h3>
   </header>
   <article class='api-body'>
     
-<p>Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.  </p>
+<p>This method allows you to import translations from an Excel worksheet to our string translation system. Please ask details from us if you plan to use this!  </p>
 
-<p>Method: GET  </p>
+<p>Method: GET/POST  </p>
 
-<p>URL: <a href="https://transfluent.com/v2/authenticate/">https://transfluent.com/v2/authenticate/</a>  </p>
+<p>URL: <a href="https://transfluent.com/v2/file/translations/">https://transfluent.com/v2/file/translations/</a>  </p>
 
-<p>Parameters: email, password  </p>
+<p>Parameters: callback_url, format [=UTF-8], content, type, save_only_data, identifier, language, token  </p>
 
 <p>Returns:   </p>
 
 <p>Status OK:  </p>
 
-<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;token&quot;</span><span class="o">:</span><span class="s2">&quot;ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...&quot;</span><span class="p">,</span> <span class="s2">&quot;expires&quot;</span><span class="o">:</span><span class="s2">&quot;On password change&quot;</span><span class="p">}}</span> 
-</code></pre></div>
-
-<p>Status Error:  </p>
-
-<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;EBackendSecurityViolation&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="o">:</span><span class="s2">&quot;Authentication failed!&quot;</span><span class="p">},</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Login failed. Please try again.&quot;</span><span class="p">}</span> 
-</code></pre></div>
-
-<p>Test with curl:  </p>
-
-<div class="highlight"><pre><code class="text">#&gt; curl -d &#39;email=user@example.org&amp;password=your-password&#39; https://transfluent.com/v2/authenticate/  
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;identifier&quot;</span><span class="o">:</span><span class="s2">&quot;Localizable.strings&quot;</span><span class="p">,</span><span class="s2">&quot;source_language&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;English&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;en-gb&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">},</span><span class="s2">&quot;target_languages&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;3&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;Finnish&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;fi-fi&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="mi">11</span><span class="p">}},</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;11&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;progress&quot;</span><span class="o">:</span><span class="s2">&quot;1.82%&quot;</span><span class="p">,</span><span class="s2">&quot;word_count&quot;</span><span class="o">:</span><span class="mi">549</span><span class="p">,</span><span class="s2">&quot;word_count_translated&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">}}}}</span> <span class="nx">OR</span> <span class="p">(</span><span class="nx">depending</span> <span class="nx">on</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">}</span> 
 </code></pre></div>
 
 

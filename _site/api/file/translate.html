@@ -60,6 +60,11 @@
     
       
         
+        <li><a href="/api/file/translations.html">File Translations</a></li>
+      
+    
+      
+        
         <li><a class="active" href="/api/file/translate.html">File Translate</a></li>
       
     
@@ -105,7 +110,22 @@
     <h3 class='api-title'>File Translate</h3>
   </header>
   <article class='api-body'>
-    <p>I am trying to translate the file</p>
+    
+<p>You can easily translate texts from your project&#8217;s resource file by making a POST request to /file/translate/. Please note that previously translated, unchanged items won&#8217;t be re-translated. All new and changed items will be translated.  </p>
+
+<p>Method: GET/POST  </p>
+
+<p>URL: <a href="https://transfluent.com/v2/file/translate/">https://transfluent.com/v2/file/translate/</a>  </p>
+
+<p>Parameters: callback_url, comment, target_languages, level [=3], identifier, language, token  </p>
+
+<p>Returns:   </p>
+
+<p>Status OK:  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;word_count&quot;</span><span class="o">:</span><span class="mi">87</span><span class="p">,</span><span class="s2">&quot;ordered_word_count&quot;</span><span class="o">:</span><span class="mi">12</span><span class="p">}}</span> 
+</code></pre></div>
+
 
   </article>
 </section>

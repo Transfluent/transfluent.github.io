@@ -60,6 +60,11 @@
     
       
         
+        <li><a href="/api/file/translations.html">File Translations</a></li>
+      
+    
+      
+        
         <li><a href="/api/file/translate.html">File Translate</a></li>
       
     
@@ -105,7 +110,22 @@
     <h3 class='api-title'>File Status</h3>
   </header>
   <article class='api-body'>
-    <p>I am trying to check the status of the file</p>
+    
+<p>You can easily check what is the translation progress of your submitted file.  </p>
+
+<p>Method: GET  </p>
+
+<p>URL: <a href="https://transfluent.com/v2/file/status/">https://transfluent.com/v2/file/status/</a>  </p>
+
+<p>Parameters: identifier, language, token  </p>
+
+<p>Returns:   </p>
+
+<p>Status OK:  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;progress&quot;</span><span class="o">:</span><span class="s2">&quot;11.49%&quot;</span><span class="p">,</span><span class="s2">&quot;word_count&quot;</span><span class="o">:</span><span class="mi">87</span><span class="p">,</span><span class="s2">&quot;word_count_translated&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">}}</span> 
+</code></pre></div>
+
 
   </article>
 </section>

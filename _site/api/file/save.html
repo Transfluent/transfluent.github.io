@@ -60,6 +60,11 @@
     
       
         
+        <li><a href="/api/file/translations.html">File Translations</a></li>
+      
+    
+      
+        
         <li><a href="/api/file/translate.html">File Translate</a></li>
       
     
@@ -105,7 +110,22 @@
     <h3 class='api-title'>File Save</h3>
   </header>
   <article class='api-body'>
-    <p>I am trying to save the file</p>
+    
+<p>You can easily save your project&#8217;s resource file to our backend by making a POST request to /file/save/.  </p>
+
+<p>Method: GET/POST  </p>
+
+<p>URL: <a href="https://transfluent.com/v2/file/save/">https://transfluent.com/v2/file/save/</a>  </p>
+
+<p>Parameters: format [=UTF-8], content, type, save_only_data, identifier, language, token  </p>
+
+<p>Returns:   </p>
+
+<p>Status OK:  </p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;word_count&quot;</span><span class="o">:</span><span class="mi">390</span><span class="p">,</span><span class="s2">&quot;word_count_altered&quot;</span><span class="o">:</span><span class="mi">29</span><span class="p">}}</span> 
+</code></pre></div>
+
 
   </article>
 </section>

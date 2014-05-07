@@ -14,43 +14,16 @@ URL: [{{ method.URL }}]({{ method.URL }})
 {% endif %}
 
 {% if method.Parameters %}
-Parameters: {{ method.Parameters }}  
+Parameters: 
+{% for param_names in method.Parameters %}
+[{{ param_names }}]
+{% endfor %} 
 {% endif %}
 
 {% if method.Returns %}
-Returns:   
-{% if method.Returns.OK %}
-Status OK:  
 {% highlight javascript %}
-{{ method.Returns.OK }} 
+{% cycle 'methods_group': method.Returns.OK, method.Returns.Error, method.Returns.Other %} 
 {% endhighlight %}
-
-{% if method.Returns.OK.GET %}
-Method: GET  
-{% highlight javascript %}
-{{ method.Returns.OK.GET }} 
-{% endhighlight %}
-{% endif %}
-
-{% if method.Returns.OK.POST %}
-Method: POST  
-{% highlight javascript %}
-{{ method.Returns.OK.POST }} 
-{% endhighlight %}
-{% endif %}
-
-{% endif %}
-
-{% if method.Returns.Error %}
-Status Error:  
-{% highlight javascript %}
-{{ method.Returns.Error }} 
-{% endhighlight %}
-{% endif %}
-
-{% if method.Returns.Other %}
-> {{ method.Returns.Other }}  
-{% endif %} 
 {% endif %}
 
 {% if method.CurlTest %}
@@ -63,3 +36,4 @@ Test with curl:
 {% endif %}
 
 {% endfor %}
+

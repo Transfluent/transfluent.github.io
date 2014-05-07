@@ -21,9 +21,50 @@ Parameters:
 {% endif %}
 
 {% if method.Returns %}
+Returns:  
+{% for returnings in method.Returns %}
+
+{% if returnings.OK %}
+
+{% for okey in returnings.OK %}
+with status OK:  
+{% if okey.POST %}
+POST  
 {% highlight javascript %}
-{% cycle 'methods_group': method.Returns.OK, method.Returns.Error, method.Returns.Other %} 
+{{ okey.POST }}
 {% endhighlight %}
+{% endif %}
+
+{% if okey.GET %}
+GET  
+{% highlight javascript %}
+{{ okey.GET }}
+{% endhighlight %}
+{% endif %}
+
+{% if okey.Default %}
+{% highlight javascript %}
+{{ okey.Default }}
+{% endhighlight %}
+{% endif %}
+{% endfor %}
+
+
+
+{% endif %} 
+
+{% if returnings.Error %}
+with status Error:  
+{% highlight javascript %}
+{{ returnings.Error }}
+{% endhighlight %}
+{% endif %} 
+
+{% if returnings.Other %}
+> {{ returnings.Other }}  
+{% endif %} 
+
+{% endfor %}
 {% endif %}
 
 {% if method.CurlTest %}

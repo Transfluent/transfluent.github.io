@@ -6,20 +6,25 @@
   Description: Check if language pair is supported on requested level
   Method: GET
   URL: https://transfluent.com/v2/languages/check/
-  Parameters: level [=3], source_language, target_language, return_other_levels, customer_id
-  Returns:
+  Parameters: 
+    - level [=3]
+    - source_language
+    - target_language
+    - return_other_levels
+    - customer_id
     
 - Name: LanguagesPairs
   Method: GET
   URL: https://transfluent.com/v2/languages/pairs/
-  Parameters: version [=1]
-  Returns:
+  Parameters: 
+    - version [=1]
     
 - Name: Hello
   Description: This method is a dummy method to quickly familiarize yourself with the API.
   Method: GET
   URL: https://transfluent.com/v2/hello/
-  Parameters: name
+  Parameters: 
+    - name
   Returns:
     OK: '{"status":"OK","response":"Hello World"}'
     Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
@@ -28,7 +33,9 @@
   Description: Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.
   Method: GET
   URL: https://transfluent.com/v2/authenticate/
-  Parameters: email, password
+  Parameters: 
+    - email
+    - password
   Returns:
     OK: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'
     Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'
@@ -38,7 +45,10 @@
   Description: You can easily retrieve your project's original/translated resource file from our backend by making a GET request to /file/read/.
   Method: GET
   URL: https://transfluent.com/v2/file/read/
-  Parameters: identifier, language, token
+  Parameters: 
+    - identifier
+    - language
+    - token
   Returns: 
     Other: "Attention! Exceptionally this method won't response with a JSON package. It will set 'Content-Disposition: attachment; filename=..' HTTP header and force your client to download the file."
     
@@ -46,7 +56,10 @@
   Description: You can easily check what is the translation progress of your submitted file.
   Method: GET
   URL: https://transfluent.com/v2/file/status/
-  Parameters: identifier, language, token
+  Parameters: 
+    - identifier
+    - language
+    - token
   Returns:
     OK: '{"status":"OK","response":{"progress":"11.49%","word_count":87,"word_count_translated":10}}'
     
@@ -54,7 +67,14 @@
   Description: You can easily translate texts from your project's resource file by making a POST request to /file/translate/. Please note that previously translated, unchanged items won't be re-translated. All new and changed items will be translated.
   Method: GET/POST
   URL: https://transfluent.com/v2/file/translate/
-  Parameters: callback_url, comment, target_languages, level [=3], identifier, language, token
+  Parameters: 
+    - callback_url
+    - comment
+    - target_languages
+    - level [=3]
+    - identifier
+    - language
+    - token
   Returns:
     OK: '{"status":"OK","response":{"word_count":87,"ordered_word_count":12}}'
     
@@ -62,7 +82,15 @@
   Description: This method allows you to import translations from an Excel worksheet to our string translation system. Please ask details from us if you plan to use this!
   Method: GET/POST
   URL: https://transfluent.com/v2/file/translations/
-  Parameters: callback_url, format [=UTF-8], content, type, save_only_data, identifier, language, token
+  Parameters: 
+    - callback_url
+    - format [=UTF-8]
+    - content
+    - type
+    - save_only_data
+    - identifier
+    - language
+    - token
   Returns: 
     OK: '{"status":"OK","response":{"identifier":"Localizable.strings","source_language":{"name":"English","code":"en-gb","id":1},"target_languages":{"3":{"name":"Finnish","code":"fi-fi","id":11}},"status":{"11":{"progress":"1.82%","word_count":549,"word_count_translated":10}}}} OR (depending on type) {"status":"OK","response":true}'
     
@@ -70,7 +98,14 @@
   Description: You can easily save your project's resource file to our backend by making a POST request to /file/save/.
   Method: GET/POST
   URL: https://transfluent.com/v2/file/save/
-  Parameters: format [=UTF-8], content, type, save_only_data, identifier, language, token
+  Parameters: 
+    - format [=UTF-8]
+    - content
+    - type
+    - save_only_data
+    - identifier
+    - language
+    - token
   Returns:
     OK: '{"status":"OK","response":{"word_count":390,"word_count_altered":29}}'
     
@@ -90,7 +125,14 @@
   Description: Retrieve (GET) or save (POST) texts to the system.
   Method: GET/POST
   URL: https://transfluent.com/v2/text/
-  Parameters: text_id, group_id, language, text, invalidate_translations [=1], is_draft, token
+  Parameters: 
+    - text_id
+    - group_id
+    - language
+    - text
+    - invalidate_translations [=1]
+    - is_draft
+    - token
   Returns:
     OK:
       POST: '{"status":"OK","response":true}'

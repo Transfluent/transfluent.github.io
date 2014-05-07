@@ -16,7 +16,7 @@ URL: [{{ method.URL }}]({{ method.URL }})
 {% if method.Parameters %}
 Parameters: 
 {% for param_names in method.Parameters %}
-[{{ param_names }}]
+[{{ param_names }}]()
 {% endfor %} 
 {% endif %}
 

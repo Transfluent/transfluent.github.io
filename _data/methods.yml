@@ -26,8 +26,8 @@
   Parameters: 
     - name
   Returns:
-    OK: '{"status":"OK","response":"Hello World"}'
-    Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
+    - OK: '{"status":"OK","response":"Hello World"}'
+    - Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
     
 - Name: Authenticate
   Description: Retrieve authentication token by calling this method. The token is valid until your password changes. If you save the token locally, please store it securely to keep it secret.
@@ -37,8 +37,8 @@
     - email
     - password
   Returns:
-    OK: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'
-    Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'
+    - OK: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'
+    - Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'
   CurlTest: "#> curl -d 'email=user@example.org&password=your-password' https://transfluent.com/v2/authenticate/"
     
 - Name: File Read
@@ -50,7 +50,7 @@
     - language
     - token
   Returns: 
-    Other: "Attention! Exceptionally this method won't response with a JSON package. It will set 'Content-Disposition: attachment; filename=..' HTTP header and force your client to download the file."
+    - Other: "Attention! Exceptionally this method won't response with a JSON package. It will set 'Content-Disposition: attachment; filename=..' HTTP header and force your client to download the file."
     
 - Name: File Status
   Description: You can easily check what is the translation progress of your submitted file.
@@ -61,7 +61,7 @@
     - language
     - token
   Returns:
-    OK: '{"status":"OK","response":{"progress":"11.49%","word_count":87,"word_count_translated":10}}'
+    - OK: '{"status":"OK","response":{"progress":"11.49%","word_count":87,"word_count_translated":10}}'
     
 - Name: File Translate
   Description: You can easily translate texts from your project's resource file by making a POST request to /file/translate/. Please note that previously translated, unchanged items won't be re-translated. All new and changed items will be translated.
@@ -76,7 +76,7 @@
     - language
     - token
   Returns:
-    OK: '{"status":"OK","response":{"word_count":87,"ordered_word_count":12}}'
+    - OK: '{"status":"OK","response":{"word_count":87,"ordered_word_count":12}}'
     
 - Name: File Translations
   Description: This method allows you to import translations from an Excel worksheet to our string translation system. Please ask details from us if you plan to use this!
@@ -92,7 +92,7 @@
     - language
     - token
   Returns: 
-    OK: '{"status":"OK","response":{"identifier":"Localizable.strings","source_language":{"name":"English","code":"en-gb","id":1},"target_languages":{"3":{"name":"Finnish","code":"fi-fi","id":11}},"status":{"11":{"progress":"1.82%","word_count":549,"word_count_translated":10}}}} OR (depending on type) {"status":"OK","response":true}'
+    - OK: '{"status":"OK","response":{"identifier":"Localizable.strings","source_language":{"name":"English","code":"en-gb","id":1},"target_languages":{"3":{"name":"Finnish","code":"fi-fi","id":11}},"status":{"11":{"progress":"1.82%","word_count":549,"word_count_translated":10}}}} OR (depending on type) {"status":"OK","response":true}'
     
 - Name: File Save
   Description: You can easily save your project's resource file to our backend by making a POST request to /file/save/.
@@ -107,7 +107,7 @@
     - language
     - token
   Returns:
-    OK: '{"status":"OK","response":{"word_count":390,"word_count_altered":29}}'
+    - OK: '{"status":"OK","response":{"word_count":390,"word_count_altered":29}}'
     
 - Name: Text Status
   Description: Check if text has been translated to specified language.
@@ -119,7 +119,7 @@
     - language
     - token
   Returns:
-    OK: '{"status":"OK","response":{"is_translated":true}}'
+    - OK: '{"status":"OK","response":{"is_translated":true}}'
     
 - Name: Text
   Description: Retrieve (GET) or save (POST) texts to the system.
@@ -134,5 +134,5 @@
     - is_draft
     - token
   Returns:
-    OK:
-      POST: '{"status":"OK","response":true}'
+    - OK:
+        - POST: '{"status":"OK","response":true}'

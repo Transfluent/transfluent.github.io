@@ -21,6 +21,7 @@ li {
   background: $footer-bg;
   color: $footer-text;
   margin-top: 10px;
+  @extend .pad-up-dn-1o;
   
   a{
     color: $footer-link;
@@ -46,7 +47,7 @@ li {
 }
 
 .upper-footer {
-  padding-top: 10px;
+  @extend .pad-up-dn-1o;
   
   a {
     color: $upper-footer-text;
@@ -55,6 +56,7 @@ li {
 
 .team-footer {
   background: $footer-team-bg;
+  @extend .pad-up-dn-1o;
 }
 
 .team-members-images {
@@ -64,5 +66,5 @@ li {
 .lower-footer {
   clear: both;
   color: $copyright;
-  margin-top: 10px;
+  @extend .pad-up-dn-1o;
 }

@@ -1,3 +1,9 @@
+/* line 1, ../_sass/utility/_common_utility.scss */
+.pad-up-dn-1o, .footer, .upper-footer, .team-footer, .lower-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /* line 1, ../_sass/layout/_page.scss */
 body {
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #91eab6), color-stop(50%, #f3f3f3), color-stop(100%, #86cecd));
@@ -18,55 +24,50 @@ li {
   color: #47bcdd;
   margin-top: 10px;
 }
-/* line 25, ../_sass/layout/_page.scss */
+/* line 26, ../_sass/layout/_page.scss */
 .footer a {
   color: #e55066;
 }
 
-/* line 30, ../_sass/layout/_page.scss */
+/* line 31, ../_sass/layout/_page.scss */
 .main-content {
   border-radius: 10px;
 }
 
-/* line 35, ../_sass/layout/_page.scss */
+/* line 36, ../_sass/layout/_page.scss */
 .navigation {
   border-radius: 10px;
   background: #f2f2f2;
 }
 
-/* line 40, ../_sass/layout/_page.scss */
+/* line 41, ../_sass/layout/_page.scss */
 .header-background {
   margin: 20px;
 }
 
-/* line 44, ../_sass/layout/_page.scss */
+/* line 45, ../_sass/layout/_page.scss */
 .search-form {
   margin: 10px;
 }
 
-/* line 48, ../_sass/layout/_page.scss */
-.upper-footer {
-  padding-top: 10px;
-}
-/* line 51, ../_sass/layout/_page.scss */
+/* line 52, ../_sass/layout/_page.scss */
 .upper-footer a {
   color: #52d273;
 }
 
-/* line 56, ../_sass/layout/_page.scss */
+/* line 57, ../_sass/layout/_page.scss */
 .team-footer {
   background: #333333;
 }
 
-/* line 60, ../_sass/layout/_page.scss */
+/* line 62, ../_sass/layout/_page.scss */
 .team-members-images {
   max-height: 100px;
   max-width: 100px;
 }
 
-/* line 64, ../_sass/layout/_page.scss */
+/* line 66, ../_sass/layout/_page.scss */
 .lower-footer {
   clear: both;
   color: #e8c74f;
-  margin-top: 10px;
 }

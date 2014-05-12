@@ -8,4 +8,6 @@ group :development do
   gem 'kramdown'
   gem 'sass-globbing'
   gem 'compass-rgbapng'
+  gem 'guard'
+  gem 'guard-livereload', require: false
 end

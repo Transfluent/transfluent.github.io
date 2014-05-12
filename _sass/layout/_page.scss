@@ -1,18 +1,16 @@
 body {
-  //background: pink;
-  @include background(linear-gradient(top left, $body-grad-start, $body-grad-end));
+  @include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));
 }
 .wrapper {
-  //@include background(image-url("bg_other_pages.jpg"));
-  //background: green;
-  
+  //@include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));  
 }
 
 .header-background {
   //@include background(image-url("top-bg.jpg"));
   //background: red;
   //@include background 
-  @include background(linear-gradient(top left, $header-grad-start, $header-grad-end));
+  //@include background(radial-gradient(top left, $header-grad-start, $header-grad-end));
+  //@include background(radial-gradient(color-stops(#c00, #00c), top left));
 }
 
 .footer {
@@ -20,10 +18,14 @@ body {
 }
 
 .main-content {
-  @include background(linear-gradient(top left, $wrapper-grad-start, $wrapper-grad-end));
+  background: $main-content-bg;
+  border-radius: 10px;
+  //@include background(linear-gradient(top left, $wrapper-grad-start, $wrapper-grad-end));
+ // @include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));
 }
 
 .navigation {
+  border-radius: 10px;
   @include background(linear-gradient(top left, $nav-grad-start, $nav-grad-end));
 }
 
@@ -32,5 +34,5 @@ body {
 }
 
 .header-logo {
-  @include background(image-url("transfluent-logo.png"));
+  //@include background(image-url("transfluent-logo.png"));
 }

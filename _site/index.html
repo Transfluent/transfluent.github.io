@@ -16,15 +16,15 @@
     <script src="js/scripts.js"></script>
   </head>
 
-  <body ng-app="transfluentApi">
+  <body>
     <div class="wrapper container">
 
       <header class="header">
-        <div class="header-background">
-  <div class="header-logo">
-    <a href="/"><p>Transfluent</p></a>
+        <div class="header-background row">
+  <div class="header-logo col-sm-4">
+    <a href="/"><img src="/images/transfluent-logo.png" alt="Transfluent logo" ></a>
   </div>
-  <h2 class="title"><a href="/">transfluent.github.io</a></h2>
+  <h1 class="title"><a href="/">Transfluent API Documentation</a></h1>
 </div>
       </header>
 
@@ -32,93 +32,93 @@
 
         <nav class="navigation col-sm-3">
           <div class='search-form'>
-  <input type="search" class="form-control" placeholder="Search the API" name="apisearch">
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+    <input type="search" class="form-control" placeholder="Search the API" name="apisearch">
+  </div>
 </div>
 <div class='navigation-links'>
   <ul>
     
-      
-        
-        <li><a href="/api/security/authenticate.html">Authenticate</a></li>
-      
     
-      
-        
-        <li><a href="/api/services/languages.html">Languages</a></li>
-      
     
-      
-        
-        <li><a href="/api/services/hello.html">Hello</a></li>
-      
+    <li><a href="/api/security/authenticate.html">Authenticate</a></li>
     
-      
-        
-        <li><a href="/api/file/save.html">File Save</a></li>
-      
     
-      
-        
-        <li><a href="/api/file/translations.html">File Translations</a></li>
-      
     
-      
-        
-        <li><a href="/api/file/translate.html">File Translate</a></li>
-      
     
-      
-        
-        <li><a href="/api/file/status.html">File Status</a></li>
-      
+    <li><a href="/api/services/languages.html">Languages</a></li>
     
-      
-        
-        <li><a href="/api/file/read.html">File Read</a></li>
-      
     
-      
-        
-        <li><a href="/api/text/get.html">Text GET</a></li>
-      
     
-      
-        
-        <li><a href="/api/text/translate.html">Text Translate</a></li>
-      
     
-      
-        
-        <li><a href="/api/text/post.html">Text POST</a></li>
-      
+    <li><a href="/api/services/hello.html">Hello</a></li>
     
-      
-        
-        <li><a href="/api/text/text.html">Text</a></li>
-      
     
-      
-        
-        <li><a href="/api/text/status.html">Text Status</a></li>
-      
     
-      
+    
+    <li><a href="/api/file/save.html">File Save</a></li>
+    
+    
+    
+    
+    <li><a href="/api/file/translations.html">File Translations</a></li>
+    
+    
+    
+    
+    <li><a href="/api/file/translate.html">File Translate</a></li>
+    
+    
+    
+    
+    <li><a href="/api/file/status.html">File Status</a></li>
+    
+    
+    
+    
+    <li><a href="/api/file/read.html">File Read</a></li>
+    
+    
+    
+    
+    <li><a href="/api/text/get.html">Text GET</a></li>
+    
+    
+    
+    
+    <li><a href="/api/text/translate.html">Text Translate</a></li>
+    
+    
+    
+    
+    <li><a href="/api/text/post.html">Text POST</a></li>
+    
+    
+    
+    
+    <li><a href="/api/text/text.html">Text</a></li>
+    
+    
+    
+    
+    <li><a href="/api/text/status.html">Text Status</a></li>
+    
+    
+    
     
   </ul> 
 </div>
         </nav>
 
         <section class="main-content col-xs-12 col-sm-9">
-          <div class='page-header'>
-  <h1>Transfluent API Documentation for Developers</h1>
-</div>
-<div>
-  <article>
-    <header>
+          <div>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>RESTfulness</h2>
     </header>
-    <p>The API documentation is RESTful. It reads and writes JSON</p>
-    <div>
+    <div class="panel-body">
+      <p>The API documentation is RESTful. It reads and writes JSON</p>
       <p>
         To Test the API visit the URI at 
         <a href="https://transfluent.com/v2/hello/World/" title='Transfluent Backend API' target="_blank">
@@ -152,11 +152,11 @@
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Authentication</h2>
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         Some methods are public and available without authentication. Some methods are available on Transfluent.com user 
         session, e.g. CustomerEmail which is designed to serve the backend functionality via javascript to the customers. 
@@ -166,11 +166,11 @@
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Security</h2>   
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         Transfluent's Backend API supports HTTPS for all methods and requires it for most of them. 
         It is strongly encouraged to use HTTPS always.
@@ -178,11 +178,11 @@
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Languages</h2>
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         Transfluent's Backend API uses internal language ids. 
         See <a href="/api/services/languages.html" title="Languages method">Languages method</a> to retrieve them.
@@ -190,11 +190,11 @@
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Errors</h2>
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         First check HTTP response code, next check response content. The API always returns a valid JSON response. 
         On error the status is "ERROR".
@@ -217,62 +217,57 @@
     </div> <!-- .wrapper -->
 
     <footer class="footer">
-      <p>This is Footer</p>
-<div>
-  <p>Team</p>
-  <div>
-    
-    <ul>
-      <li>
-        Name: Tomi Heiskanen <br>
-        Email: tomi@transfluent.com <br>
-        Github: <a href="https://github.com/tomi-heiskanen">tomi-heiskanen</a> <br>
-      </li>
-    </ul>
-    
-    <ul>
-      <li>
-        Name: Timo Rongas <br>
-        Email: timo@transfluent.com <br>
-        Github: <a href="https://github.com/TimoRongas">TimoRongas</a> <br>
-      </li>
-    </ul>
-    
-    <ul>
-      <li>
-        Name: Rajib Paudyal <br>
-        Email: rajib@transfluent.com <br>
-        Github: <a href="https://github.com/rajibmp">rajibmp</a> <br>
-      </li>
-    </ul>
-    
-    <ul>
-      <li>
-        Name: Mika Schafroth <br>
-        Email: mika@transfluent.com <br>
-        Github: <a href="https://github.com/mikaschafroth">mikaschafroth</a> <br>
-      </li>
-    </ul>
-    
-    <ul>
-      <li>
-        Name: Ilari Mäkimattila <br>
-        Email: ilari@transfluent.com <br>
-        Github: <a href="https://github.com/Kryil">Kryil</a> <br>
-      </li>
-    </ul>
-    
-    <ul>
-      <li>
-        Name: Saber Kordestanchi <br>
-        Email: saber@transfluent.com <br>
-        Github: <a href="https://github.com/kordestanchi">kordestanchi</a> <br>
-      </li>
-    </ul>
-    
-  </div>
+      <div class="">
+  
+  <ul>
+    <li>
+      Name: Tomi Heiskanen <br>
+      Email: tomi@transfluent.com <br>
+      Github: <a href="https://github.com/tomi-heiskanen">tomi-heiskanen</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      Name: Timo Rongas <br>
+      Email: timo@transfluent.com <br>
+      Github: <a href="https://github.com/TimoRongas">TimoRongas</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      Name: Rajib Paudyal <br>
+      Email: rajib@transfluent.com <br>
+      Github: <a href="https://github.com/rajibmp">rajibmp</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      Name: Mika Schafroth <br>
+      Email: mika@transfluent.com <br>
+      Github: <a href="https://github.com/mikaschafroth">mikaschafroth</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      Name: Ilari Mäkimattila <br>
+      Email: ilari@transfluent.com <br>
+      Github: <a href="https://github.com/Kryil">Kryil</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      Name: Saber Kordestanchi <br>
+      Email: saber@transfluent.com <br>
+      Github: <a href="https://github.com/kordestanchi">kordestanchi</a> <br>
+    </li>
+  </ul>
+  
 </div>
-
     </footer>
   </body>
 </html>

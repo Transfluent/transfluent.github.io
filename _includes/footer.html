@@ -1,15 +1,11 @@
-<p>This is Footer</p>
-<div>
-  <p>Team</p>
-  <div>
-    {% for member in site.data.team %}
-    <ul>
-      <li>
-        Name: {{ member.name }} <br>
-        Email: {{  member.email }} <br>
-        Github: <a href="https://github.com/{{ member.github }}">{{ member.github }}</a> <br>
-      </li>
-    </ul>
-    {% endfor %}
-  </div>
+<div class="">
+  {% for member in site.data.team %}
+  <ul>
+    <li>
+      Name: {{ member.name }} <br>
+      Email: {{  member.email }} <br>
+      Github: <a href="https://github.com/{{ member.github }}">{{ member.github }}</a> <br>
+    </li>
+  </ul>
+  {% endfor %}
 </div>

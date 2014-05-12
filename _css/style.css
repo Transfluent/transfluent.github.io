@@ -9,19 +9,19 @@ body {
 
 /* line 16, ../_sass/layout/_page.scss */
 .footer {
+  background: black;
   color: green;
+  margin-top: 10px;
 }
 
-/* line 21, ../_sass/layout/_page.scss */
+/* line 22, ../_sass/layout/_page.scss */
 .main-content {
-  background: #f2f2f2;
   border-radius: 10px;
 }
 
-/* line 26, ../_sass/layout/_page.scss */
+/* line 27, ../_sass/layout/_page.scss */
 .navigation {
   border-radius: 10px;
-  margin-right: 10px;
   background: #f2f2f2;
 }
 

@@ -3,12 +3,12 @@ layout: default
 ---
 
 <div>
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>RESTfulness</h2>
     </header>
-    <p>The API documentation is RESTful. It reads and writes JSON</p>
-    <div>
+    <div class="panel-body">
+      <p>The API documentation is RESTful. It reads and writes JSON</p>
       <p>
         To Test the API visit the URI at 
         <a href="https://transfluent.com/v2/hello/World/" title='Transfluent Backend API' target="_blank">
@@ -42,11 +42,11 @@ layout: default
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Authentication</h2>
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         Some methods are public and available without authentication. Some methods are available on Transfluent.com user 
         session, e.g. CustomerEmail which is designed to serve the backend functionality via javascript to the customers. 
@@ -56,11 +56,11 @@ layout: default
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Security</h2>   
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         Transfluent's Backend API supports HTTPS for all methods and requires it for most of them. 
         It is strongly encouraged to use HTTPS always.
@@ -68,11 +68,11 @@ layout: default
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Languages</h2>
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         Transfluent's Backend API uses internal language ids. 
         See <a href="/api/services/languages.html" title="Languages method">Languages method</a> to retrieve them.
@@ -80,11 +80,11 @@ layout: default
     </div>
   </article>
 
-  <article>
-    <header>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
       <h2>Errors</h2>
     </header>
-    <div>
+    <div class="panel-body">
       <p>
         First check HTTP response code, next check response content. The API always returns a valid JSON response. 
         On error the status is "ERROR".

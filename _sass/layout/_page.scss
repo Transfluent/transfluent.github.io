@@ -14,18 +14,18 @@ body {
 }
 
 .footer {
-  //background: black;
+  background: $black;
   color: green;
+  margin-top: 10px;
 }
 
 .main-content {
-  background: $main-content-bg;
+  //background: $main-content-bg;
   border-radius: 10px;
 }
 
 .navigation {
   border-radius: 10px;
-  margin-right: 10px;
   background: $nav-bg;
 }
 

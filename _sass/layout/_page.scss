@@ -14,25 +14,25 @@ body {
 }
 
 .footer {
-  background: silver;
+  //background: black;
+  color: green;
 }
 
 .main-content {
   background: $main-content-bg;
   border-radius: 10px;
-  //@include background(linear-gradient(top left, $wrapper-grad-start, $wrapper-grad-end));
- // @include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));
 }
 
 .navigation {
   border-radius: 10px;
-  @include background(linear-gradient(top left, $nav-grad-start, $nav-grad-end));
+  margin-right: 10px;
+  background: $nav-bg;
 }
 
-.search-row {
-  //background: magenta;
+.header-background {
+  margin: 20px;
 }
 
-.header-logo {
-  //@include background(image-url("transfluent-logo.png"));
+.search-form {
+  margin: 10px;
 }

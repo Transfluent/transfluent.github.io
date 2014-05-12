@@ -9,21 +9,28 @@ body {
 
 /* line 16, ../_sass/layout/_page.scss */
 .footer {
-  background: silver;
+  color: green;
 }
 
-/* line 20, ../_sass/layout/_page.scss */
+/* line 21, ../_sass/layout/_page.scss */
 .main-content {
   background: #f2f2f2;
   border-radius: 10px;
 }
 
-/* line 27, ../_sass/layout/_page.scss */
+/* line 26, ../_sass/layout/_page.scss */
 .navigation {
   border-radius: 10px;
-  background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffffff), color-stop(100%, #fdfdfd));
-  background: -webkit-linear-gradient(top left, #ffffff, #fdfdfd);
-  background: -moz-linear-gradient(top left, #ffffff, #fdfdfd);
-  background: -o-linear-gradient(top left, #ffffff, #fdfdfd);
-  background: linear-gradient(top left, #ffffff, #fdfdfd);
+  margin-right: 10px;
+  background: #f2f2f2;
+}
+
+/* line 32, ../_sass/layout/_page.scss */
+.header-background {
+  margin: 20px;
+}
+
+/* line 36, ../_sass/layout/_page.scss */
+.search-form {
+  margin: 10px;
 }

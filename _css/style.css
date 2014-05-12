@@ -7,30 +7,66 @@ body {
   background: radial-gradient(#91eab6, #f3f3f3, #86cecd);
 }
 
-/* line 16, ../_sass/layout/_page.scss */
-.footer {
-  background: black;
-  color: green;
-  margin-top: 10px;
+/* line 5, ../_sass/layout/_page.scss */
+li {
+  list-style: none;
 }
 
-/* line 22, ../_sass/layout/_page.scss */
+/* line 20, ../_sass/layout/_page.scss */
+.footer {
+  background: black;
+  color: #47bcdd;
+  margin-top: 10px;
+}
+/* line 25, ../_sass/layout/_page.scss */
+.footer a {
+  color: #e55066;
+}
+
+/* line 30, ../_sass/layout/_page.scss */
 .main-content {
   border-radius: 10px;
 }
 
-/* line 27, ../_sass/layout/_page.scss */
+/* line 35, ../_sass/layout/_page.scss */
 .navigation {
   border-radius: 10px;
   background: #f2f2f2;
 }
 
-/* line 32, ../_sass/layout/_page.scss */
+/* line 40, ../_sass/layout/_page.scss */
 .header-background {
   margin: 20px;
 }
 
-/* line 36, ../_sass/layout/_page.scss */
+/* line 44, ../_sass/layout/_page.scss */
 .search-form {
   margin: 10px;
+}
+
+/* line 48, ../_sass/layout/_page.scss */
+.upper-footer {
+  padding-top: 10px;
+}
+/* line 51, ../_sass/layout/_page.scss */
+.upper-footer a {
+  color: #52d273;
+}
+
+/* line 56, ../_sass/layout/_page.scss */
+.team-footer {
+  background: #333333;
+}
+
+/* line 60, ../_sass/layout/_page.scss */
+.team-members-images {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+/* line 64, ../_sass/layout/_page.scss */
+.lower-footer {
+  clear: both;
+  color: #e8c74f;
+  margin-top: 10px;
 }

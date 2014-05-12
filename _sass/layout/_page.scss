@@ -1,6 +1,10 @@
 body {
   @include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));
 }
+
+li {
+  list-style: none;
+}
 .wrapper {
   //@include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));  
 }
@@ -14,9 +18,13 @@ body {
 }
 
 .footer {
-  background: $black;
-  color: green;
+  background: $footer-bg;
+  color: $footer-text;
   margin-top: 10px;
+  
+  a{
+    color: $footer-link;
+  }
 }
 
 .main-content {
@@ -35,4 +43,26 @@ body {
 
 .search-form {
   margin: 10px;
+}
+
+.upper-footer {
+  padding-top: 10px;
+  
+  a {
+    color: $upper-footer-text;
+  }
+}
+
+.team-footer {
+  background: $footer-team-bg;
+}
+
+.team-members-images {
+  max-height: 100px;
+  max-width: 100px;
+}
+.lower-footer {
+  clear: both;
+  color: $copyright;
+  margin-top: 10px;
 }

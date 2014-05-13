@@ -5,66 +5,7 @@ body {
 li {
   list-style: none;
 }
-.wrapper {
-  //@include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));  
-}
-
-.header-background {
-  //@include background(image-url("top-bg.jpg"));
-  //background: red;
-  //@include background 
-  //@include background(radial-gradient(top left, $header-grad-start, $header-grad-end));
-  //@include background(radial-gradient(color-stops(#c00, #00c), top left));
-}
-
-.footer {
-  background: $footer-bg;
-  color: $footer-text;
-  margin-top: 10px;
-  @extend .pad-up-dn-1o;
-  
-  a{
-    color: $footer-link;
-  }
-}
 
 .main-content {
-  //background: $main-content-bg;
   border-radius: 10px;
-}
-
-.navigation {
-  border-radius: 10px;
-  background: $nav-bg;
-}
-
-.header-background {
-  margin: 20px;
-}
-
-.search-form {
-  margin: 10px;
-}
-
-.upper-footer {
-  @extend .pad-up-dn-1o;
-  
-  a {
-    color: $upper-footer-text;
-  }
-}
-
-.team-footer {
-  background: $footer-team-bg;
-  @extend .pad-up-dn-1o;
-}
-
-.team-members-images {
-  max-height: 100px;
-  max-width: 100px;
-}
-.lower-footer {
-  clear: both;
-  color: $copyright;
-  @extend .pad-up-dn-1o;
 }

@@ -1,3 +1,4 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500,400italic");
 /* line 1, ../_sass/utility/_common_utility.scss */
 .pad-up-dn-1o, .footer, .upper-footer, .team-footer, .lower-footer {
   padding-top: 10px;
@@ -38,7 +39,7 @@
 }
 
 /* line 1, ../_sass/layout/_header.scss */
-.header-background {
+.header {
   margin: 20px;
 }
 
@@ -60,14 +61,20 @@ body {
   background: -moz-radial-gradient(#91eab6, #f3f3f3, #86cecd);
   background: -o-radial-gradient(#91eab6, #f3f3f3, #86cecd);
   background: radial-gradient(#91eab6, #f3f3f3, #86cecd);
+  font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-/* line 5, ../_sass/layout/_page.scss */
+/* line 6, ../_sass/layout/_page.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+/* line 10, ../_sass/layout/_page.scss */
 li {
   list-style: none;
 }
 
-/* line 9, ../_sass/layout/_page.scss */
+/* line 14, ../_sass/layout/_page.scss */
 .main-content {
   border-radius: 10px;
 }

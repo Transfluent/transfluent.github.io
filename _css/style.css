@@ -7,32 +7,34 @@
 
 /* line 1, ../_sass/layout/_footer.scss */
 .footer {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 500;
   background: black;
   color: #47bcdd;
   margin-top: 10px;
 }
-/* line 7, ../_sass/layout/_footer.scss */
+/* line 9, ../_sass/layout/_footer.scss */
 .footer a {
   color: #e55066;
 }
 
-/* line 15, ../_sass/layout/_footer.scss */
+/* line 17, ../_sass/layout/_footer.scss */
 .upper-footer a {
   color: #52d273;
 }
 
-/* line 20, ../_sass/layout/_footer.scss */
+/* line 22, ../_sass/layout/_footer.scss */
 .team-footer {
   background: #333333;
 }
 
-/* line 25, ../_sass/layout/_footer.scss */
+/* line 27, ../_sass/layout/_footer.scss */
 .team-members-images {
   max-height: 100px;
   max-width: 100px;
 }
 
-/* line 30, ../_sass/layout/_footer.scss */
+/* line 32, ../_sass/layout/_footer.scss */
 .lower-footer {
   clear: both;
   color: #e8c74f;

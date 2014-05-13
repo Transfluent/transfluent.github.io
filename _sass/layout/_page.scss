@@ -4,6 +4,10 @@ body {
   
   a {
     color: $body-link;
+    
+    &:hover, &:active {
+      color: $body-link-hover;
+    }
   }
 }
 

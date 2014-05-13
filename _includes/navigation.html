@@ -5,6 +5,10 @@
   </div>
 </div>
 <div class='navigation-links'>
+  <div>
+    <input ng-model='hello'>
+    <p><span ng-bind="hello"></span>, World</p>
+  </div>
   <ul>
     {% for node in site.pages %}
     {% if node.title != nil and node.url != '/' %}

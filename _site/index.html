@@ -11,9 +11,12 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/syntax.css">
     <link rel="stylesheet" href="/css/style.css">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="/js/scripts.js"></script>
   </head>
 
-  <body>
+  <body ng-app="transfluentAPI">
     <div class="container">
 
       <header class="header">
@@ -35,6 +38,10 @@
   </div>
 </div>
 <div class='navigation-links'>
+  <div>
+    <input ng-model='hello'>
+    <p><span ng-bind="hello"></span>, World</p>
+  </div>
   <ul>
     
     
@@ -310,7 +317,7 @@
 </div>
 </div>
 <div class="container">
-  <div class="lower-footer">
+  <!--<div class="lower-footer">
   <div class="col-md-6 col-sm-12 text-left">
     <p>
       Transfluent &copy; 2014. All rights reserved. Made with love in Jyväskylä, Finland
@@ -332,10 +339,8 @@
     <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftransfluent&amp;width=400&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=114329478669702&colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:80px;" allowTransparency="true"></iframe>
   </div>
 </div>
+-->
 </div>
-    </footer>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    <script src="js/scripts.js"></script>
+    </footer>    
   </body>
 </html>

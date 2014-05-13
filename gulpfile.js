@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 	prefix = require('gulp-autoprefixer'),
 	minifycss = require('gulp-minify-css'),
 	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
+	uglify = require('gulp-ngmin'),
 	shell = require('gulp-shell');
 
 gulp.task('jekyll', function(){

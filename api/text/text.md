@@ -4,4 +4,4 @@ title: Text
 section: api/text/text
 ---
 
-{% include articles.md %}
+{% include text-methods.md %}

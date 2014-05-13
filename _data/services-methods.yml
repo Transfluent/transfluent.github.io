@@ -1,0 +1,10 @@
+- Name: Hello
+  Description: This method is a dummy method to quickly familiarize yourself with the API.
+  Method: GET
+  URL: https://transfluent.com/v2/hello/
+  Parameters: 
+    - name
+  Returns:
+    - OK:  
+      - Default: '{"status":"OK","response":"Hello World"}'
+    - Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'

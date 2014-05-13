@@ -4,4 +4,4 @@ title: Text Status
 section: api/text/status
 ---
 
-{% include articles.md %}
+{% include text-methods.md %}

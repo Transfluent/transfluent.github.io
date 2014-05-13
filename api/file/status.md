@@ -4,4 +4,4 @@ title: File Status
 section: api/file/status
 ---
 
-{% include articles.md %}
+{% include file-methods.md %}

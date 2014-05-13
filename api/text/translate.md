@@ -4,4 +4,4 @@ title: Text Translate
 section: api/text/translate
 ---
 
-{% include articles.md %}
+{% include text-methods.md %}

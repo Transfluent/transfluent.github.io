@@ -1,4 +1,3 @@
-{% for method in site.data.methods %}
 {% if method.Name == page.title %}
 
 {% if method.Description %} 
@@ -75,6 +74,3 @@ Test with curl:
 {% endif %} 
 
 {% endif %}
-
-{% endfor %}
-

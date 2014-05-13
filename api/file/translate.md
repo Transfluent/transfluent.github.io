@@ -4,4 +4,4 @@ title: File Translate
 section: api/file/translate
 ---
 
-{% include articles.md %}
+{% include file-methods.md %}

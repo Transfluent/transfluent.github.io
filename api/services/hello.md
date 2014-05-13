@@ -4,4 +4,4 @@ title: Hello
 section: api/services/hello
 ---
 
-{% include articles.md %}
+{% include services-methods.md %}

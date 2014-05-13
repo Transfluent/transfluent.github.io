@@ -4,4 +4,4 @@ title: Text POST
 section: api/text/post
 ---
 
-{% include articles.md %}
+{% include text-methods.md %}

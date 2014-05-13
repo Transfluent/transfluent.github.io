@@ -48,10 +48,12 @@
 /* line 1, ../_sass/layout/_navigation.scss */
 .navigation {
   border-radius: 10px;
-  background: #f2f2f2;
+  background: whitesmoke;
+  font-weight: bolder;
+  line-height: 1.75;
 }
 
-/* line 6, ../_sass/layout/_navigation.scss */
+/* line 8, ../_sass/layout/_navigation.scss */
 .search-form {
   margin: 10px;
 }
@@ -65,18 +67,40 @@ body {
   background: radial-gradient(#91eab6, #f3f3f3, #86cecd);
   font-family: "Open Sans", Helvetica, sans-serif;
 }
+/* line 5, ../_sass/layout/_page.scss */
+body a {
+  color: #e95065;
+}
 
-/* line 6, ../_sass/layout/_page.scss */
+/* line 10, ../_sass/layout/_page.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", Helvetica, sans-serif;
 }
 
-/* line 10, ../_sass/layout/_page.scss */
+/* line 14, ../_sass/layout/_page.scss */
 li {
   list-style: none;
 }
 
-/* line 14, ../_sass/layout/_page.scss */
+/* line 18, ../_sass/layout/_page.scss */
 .main-content {
   border-radius: 10px;
+}
+
+/* line 22, ../_sass/layout/_page.scss */
+.error pre {
+  background: #58494c;
+  color: #ed4e64;
+}
+
+/* line 27, ../_sass/layout/_page.scss */
+.success pre {
+  background: #49564c;
+  color: #51c96f;
+}
+
+/* line 32, ../_sass/layout/_page.scss */
+.info pre {
+  background: #495458;
+  color: #49a7c3;
 }

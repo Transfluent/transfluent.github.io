@@ -1,6 +1,10 @@
 body {
   @include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));
   font-family: $open-sans;
+  
+  a {
+    color: $body-link;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,4 +17,19 @@ li {
 
 .main-content {
   border-radius: 10px;
+}
+
+.error pre {
+  background: $highlight-error-bg;
+  color: $highlight-error;
+}
+
+.success pre {
+  background: $highlight-success-bg;
+  color: $highlight-success;
+}
+
+.info pre {
+  background: $highlight-info-bg;
+  color: $highlight-info;
 }

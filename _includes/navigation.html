@@ -1,14 +1,10 @@
 <div class='search-form'>
   <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-    <input type="search" class="form-control" placeholder="Search the API" name="apisearch">
+    <input type="search" class="form-control" placeholder="Search the API" name="apisearch" ng-model='searchTerm'>
   </div>
 </div>
 <div class='navigation-links'>
-  <div>
-    <input ng-model='hello'>
-    <p>{[ hello ]} World</p>
-  </div>
   <ul>
     {% for node in site.pages %}
     {% if node.title != nil and node.url != '/' %}
@@ -18,3 +14,4 @@
     {% endfor %}
   </ul> 
 </div>
+{[ searchTerm ]}

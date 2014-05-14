@@ -11,9 +11,6 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/syntax.css">
     <link rel="stylesheet" href="/css/style.css">
-    
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    <script src="/js/scripts.js"></script>
   </head>
 
   <body ng-app="transfluentAPI">
@@ -34,14 +31,10 @@
           <div class='search-form'>
   <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-    <input type="search" class="form-control" placeholder="Search the API" name="apisearch">
+    <input type="search" class="form-control" placeholder="Search the API" name="apisearch" ng-model='searchTerm'>
   </div>
 </div>
 <div class='navigation-links'>
-  <div>
-    <input ng-model='hello'>
-    <p>{[ hello ]} World</p>
-  </div>
   <ul>
     
     
@@ -113,6 +106,7 @@
     
   </ul> 
 </div>
+{[ searchTerm ]}
         </nav>
 
         <section class="main-content col-xs-12 col-sm-9">
@@ -341,6 +335,9 @@
 </div>
 -->
 </div>
-    </footer>    
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="/js/scripts.js"></script>    
   </body>
 </html>

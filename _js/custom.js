@@ -1,7 +1,8 @@
-var app = angular.module('transfluentAPI', []).config(function($interpolateProvider){
+angular.module('transfluentAPI', []).config(function($interpolateProvider){
         $interpolateProvider.startSymbol('{[').endSymbol(']}');
     }
-);
+); 
+
 //
 //
 ////var app = angular.module('transfluent-api', []);

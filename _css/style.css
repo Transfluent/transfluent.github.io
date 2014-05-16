@@ -29,23 +29,17 @@
 }
 
 /* line 27, ../_sass/layout/_footer.scss */
-.footer-products {
-  background: highlight yellow;
-  padding-left: 3px;
-}
-
-/* line 32, ../_sass/layout/_footer.scss */
 .team-footer {
   background: #333333;
 }
 
-/* line 37, ../_sass/layout/_footer.scss */
+/* line 32, ../_sass/layout/_footer.scss */
 .team-members-images {
   max-height: 100px;
   max-width: 100px;
 }
 
-/* line 42, ../_sass/layout/_footer.scss */
+/* line 37, ../_sass/layout/_footer.scss */
 .lower-footer {
   clear: both;
   color: #e8c74f;

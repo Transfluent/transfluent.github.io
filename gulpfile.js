@@ -4,7 +4,8 @@ var gulp        = require('gulp'),
     prefix      = require('gulp-autoprefixer'),
     minifycss   = require('gulp-minify-css'),
     concat      = require('gulp-concat'),
-    uglify      = require('gulp-ngmin'),
+    ngmin       = require('gulp-ngmin'),
+    uglify      = require('gulp-uglify'),
     shell       = require('gulp-shell'),
     map         = require('map-stream'),
     yaml        = require('js-yaml');
@@ -26,6 +27,7 @@ gulp.task('compass', function(){
 gulp.task('scripts', function () {
 	gulp.src('_js/*.js')
 		.pipe(concat("scripts.js"))
+    .pipe(ngmin())
 		.pipe(uglify())
 		.pipe(gulp.dest('js'))
 });

@@ -1,18 +1,48 @@
 body {
   @include background(radial-gradient($body-grad-center, $body-grad-middle, $body-grad-start));
-  font-family: $open-sans;
-  
+  font-family: $kameron;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
   a {
     color: $body-link;
-    
+
     &:hover, &:active {
       color: $body-link-hover;
     }
+  }
+
+  ::selection {
+    background: $body-selection;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $roboto;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
 }
 
 li {

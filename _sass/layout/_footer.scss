@@ -1,5 +1,6 @@
 .footer {
   font-family: $roboto;
+  font-size: $base-font-size / 2 * 1.5;
   font-weight: 500;
   background: $footer-bg;
   color: $footer-text;
@@ -9,6 +10,10 @@
   a{
     color: $footer-link;
   }
+  
+  ::selection {
+    background: $footer-selection;
+  }
 }
 
 .upper-footer {
@@ -17,6 +22,11 @@
   a {
     color: $upper-footer-text;
   }
+}
+
+.footer-products {
+  background: highlight yellow;
+  padding-left: 3px;
 }
 
 .team-footer {

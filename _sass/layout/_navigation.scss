@@ -1,8 +1,11 @@
 .navigation {
   border-radius: 10px;
   background: $nav-bg;
-  font-weight: bolder;
-  line-height: 1.75;
+  line-height: $base-line-height * 1.25;
+  
+  ::selection {
+    background: $nav-selection;
+  }
 }
 
 .search-form {

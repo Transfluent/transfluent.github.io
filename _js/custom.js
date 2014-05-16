@@ -1,7 +1,24 @@
-angular.module('transfluentAPI', []).config(function($interpolateProvider){
-        $interpolateProvider.startSymbol('{[').endSymbol(']}');
-    }
-); 
+//tf.controller('navCtrl', ['$scope', function($scope) {
+//  $scope.greeting = 'Hola!';
+//  $scope.nat = "mine";
+//  $scope.navs = [
+//    {text:'learn angular'},
+//    {text:'build an angular app'}];
+//}]);
+//
+//function navCtrl($scope){
+//  $scope.greeting = 'Hola!';
+//  $scope.nat = "mine";
+//  $scope.navs = [
+//    {text:'learn angular'},
+//    {text:'build an angular app'}];
+//}
+
+//function replaceBy(words){
+//  consol.log(words);
+//  //return words.replace(' ', '/');
+//}
+//angular.module()
 
 //
 //

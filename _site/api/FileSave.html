@@ -33,79 +33,46 @@
     <input type="search" class="form-control" placeholder="Search the API" name="apisearch" ng-model='searchTerm'>
   </div>
 </div>
-<div class='navigation-links'>
-  <ul>
-    
-    
-    
-    <li><a href="/api/security/authenticate.html">Authenticate</a></li>
-    
-    
-    
-    
-    <li><a href="/api/services/languages.html">Languages</a></li>
-    
-    
-    
-    
-    <li><a href="/api/services/hello.html">Hello</a></li>
-    
-    
-    
-    
-    <li><a class="active" href="/api/file/save.html">File Save</a></li>
-    
-    
-    
-    
-    <li><a href="/api/file/translations.html">File Translations</a></li>
-    
-    
-    
-    
-    <li><a href="/api/file/translate.html">File Translate</a></li>
-    
-    
-    
-    
-    <li><a href="/api/file/status.html">File Status</a></li>
-    
-    
-    
-    
-    <li><a href="/api/file/read.html">File Read</a></li>
-    
-    
-    
-    
-    <li><a href="/api/text/get.html">Text GET</a></li>
-    
-    
-    
-    
-    <li><a href="/api/text/translate.html">Text Translate</a></li>
-    
-    
-    
-    
-    <li><a href="/api/text/post.html">Text POST</a></li>
-    
-    
-    
-    
-    <li><a href="/api/text/text.html">Text</a></li>
-    
-    
-    
-    
-    <li><a href="/api/text/status.html">Text Status</a></li>
-    
-    
-    
-    
-  </ul> 
-</div>
+
 {[ searchTerm ]}
+
+<div class='navigation-links'>
+  <ul ng-controller="servicesCtrl"> 
+    <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
+  </ul>
+  <ul ng-controller="securityCtrl"> 
+    <li>Authentication</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="languagesCtrl"> 
+    <li>Languages Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="textCtrl"> 
+    <li>Text Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="fileCtrl"> 
+    <li>File Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+</div>
         </nav>
 
         <section class="main-content col-xs-12 col-sm-9">
@@ -115,35 +82,6 @@
   </header>
   <div class='api-body panel-body'>
     
-<p>You can easily save your project&#8217;s resource file to our backend by making a POST request to /file/save/.  </p>
-
-<p>Method: GET/POST  </p>
-
-<p>URL: <a href="https://transfluent.com/v2/file/save/">https://transfluent.com/v2/file/save/</a>  </p>
-
-<p>Parameters: </p>
-
-<p><a href="">format [=UTF-8]</a></p>
-
-<p><a href="">content</a></p>
-
-<p><a href="">type</a></p>
-
-<p><a href="">save_only_data</a></p>
-
-<p><a href="">identifier</a></p>
-
-<p><a href="">language</a></p>
-
-<p><a href="">token</a></p>
-
-<p>Returns:  </p>
-
-<p>with status OK:  </p>
-
-<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;word_count&quot;</span><span class="o">:</span><span class="mi">390</span><span class="p">,</span><span class="s2">&quot;word_count_altered&quot;</span><span class="o">:</span><span class="mi">29</span><span class="p">}}</span>
-</code></pre></div>
-
 
   </div>
 </article>

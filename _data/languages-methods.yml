@@ -2,7 +2,7 @@
   Method: GET
   URL: https://transfluent.com/v2/languages/ 
     
-- Name: Languages Check
+- Name: LanguagesCheck
   Description: Check if language pair is supported on requested level
   Method: GET
   URL: https://transfluent.com/v2/languages/check/
@@ -13,7 +13,7 @@
     - return_other_levels
     - customer_id
     
-- Name: Languages Pairs
+- Name: LanguagesPairs
   Method: GET
   URL: https://transfluent.com/v2/languages/pairs/
   Parameters: 

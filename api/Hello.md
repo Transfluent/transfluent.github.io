@@ -1,7 +1,7 @@
 ---
 layout: api
 title: Hello
-section: api/services/hello
+section: api/Hello
 ---
 
 {% include services-methods.md %}

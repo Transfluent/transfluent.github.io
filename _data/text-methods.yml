@@ -1,16 +1,3 @@
-- Name: Text Status
-  Description: Check if text has been translated to specified language.
-  Method: GET
-  URL: https://transfluent.com/v2/text/status/
-  Parameters: 
-    - text_id 
-    - group_id
-    - language
-    - token
-  Returns:
-    - OK: 
-      - Default: '{"status":"OK","response":{"is_translated":true}}'
-    
 - Name: Text
   Description: Retrieve (GET) or save (POST) texts to the system.
   Method: GET/POST
@@ -26,3 +13,17 @@
   Returns:
     - OK:
         - POST: '{"status":"OK","response":true}'
+        
+- Name: TextStatus
+  Description: Check if text has been translated to specified language.
+  Method: GET
+  URL: https://transfluent.com/v2/text/status/
+  Parameters: 
+    - text_id 
+    - group_id
+    - language
+    - token
+  Returns:
+    - OK: 
+      - Default: '{"status":"OK","response":{"is_translated":true}}'
+    

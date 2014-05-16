@@ -1,7 +1,7 @@
 ---
 layout: api
-title: File Status
-section: api/file/status
+title: File Translate
+section: api/FileTranslate
 ---
 
 {% include file-methods.md %}

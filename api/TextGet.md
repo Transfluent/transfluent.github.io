@@ -1,7 +1,7 @@
 ---
 layout: api
 title: Text GET
-section: api/text/get
+section: api/TextGet
 ---
 
 {% include text-methods.md %}

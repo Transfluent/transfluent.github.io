@@ -1,7 +1,7 @@
 ---
 layout: api
 title: Authenticate
-section: api/security/authenticate
+section: api/Authenticate
 ---
 
 {% include security-methods.md %}

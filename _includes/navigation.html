@@ -4,14 +4,43 @@
     <input type="search" class="form-control" placeholder="Search the API" name="apisearch" ng-model='searchTerm'>
   </div>
 </div>
-<div class='navigation-links'>
-  <ul>
-    {% for node in site.pages %}
-    {% if node.title != nil and node.url != '/' %}
-    {% capture nodediff %}{{ page.url | remove:node.url }}{% endcapture %}
-    <li><a {% if nodediff != page.url %}class="active" {% endif %}href="{{ node.url}}">{{ node.title}}</a></li>
-    {% endif %}
-    {% endfor %}
-  </ul> 
-</div>
+
 {[ searchTerm ]}
+
+<div class='navigation-links'>
+  <ul ng-controller="servicesCtrl"> 
+    <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
+  </ul>
+  <ul ng-controller="securityCtrl"> 
+    <li>Authentication</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="languagesCtrl"> 
+    <li>Languages Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="textCtrl"> 
+    <li>Text Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="fileCtrl"> 
+    <li>File Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+</div>

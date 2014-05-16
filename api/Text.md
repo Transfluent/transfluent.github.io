@@ -1,7 +1,7 @@
 ---
 layout: api
-title: Text Translate
-section: api/text/translate
+title: Text
+section: api/Text
 ---
 
 {% include text-methods.md %}

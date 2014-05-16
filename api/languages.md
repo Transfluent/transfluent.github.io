@@ -1,7 +1,7 @@
 ---
 layout: api
 title: Languages
-section: api/services/language
+section: api/Languages
 ---
 
 {% include languages-methods.md %}

@@ -1,7 +1,7 @@
 ---
 layout: api
 title: File Read
-section: api/file/read
+section: api/FileRead
 ---
 
 {% include file-methods.md %}

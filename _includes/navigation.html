@@ -5,41 +5,39 @@
   </div>
 </div>
 
-{[ searchTerm ]}
-
 <div class='navigation-links'>
   <ul ng-controller="servicesCtrl"> 
-    <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
+    <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
   </ul>
   <ul ng-controller="securityCtrl"> 
-    <li>Authentication</li>
+    <li ng-hide="searchTerm">Authentication</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
   <ul ng-controller="languagesCtrl"> 
-    <li>Languages Methods</li>
+    <li ng-hide="searchTerm">Languages Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
   <ul ng-controller="textCtrl"> 
-    <li>Text Methods</li>
+    <li ng-hide="searchTerm">Text Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
   <ul ng-controller="fileCtrl"> 
-    <li>File Methods</li>
+    <li ng-hide="searchTerm">File Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>404 - Page not found Transfluent API Documentation</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body ng-app="transfluentAPI">
+    <div class="container">
+
+      <header class="header">
+        <div class="header row">
+  <div class="header-logo col-sm-4">
+    <a href="/"><img src="/images/transfluent-logo.png" alt="Transfluent logo" ></a>
+  </div>
+  <h1 class="title"><a href="/">Transfluent API Documentation</a></h1>
+</div>
+      </header>
+
+      <div class="content-area row">
+
+        <nav class="navigation col-sm-3">
+          <div class='search-form'>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+    <input type="search" class="form-control" placeholder="Search the API" name="apisearch" ng-model='searchTerm'>
+  </div>
+</div>
+
+<div class='navigation-links'>
+  <ul ng-controller="servicesCtrl"> 
+    <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
+  </ul>
+  <ul ng-controller="securityCtrl"> 
+    <li ng-hide="searchTerm">Authentication</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="languagesCtrl"> 
+    <li ng-hide="searchTerm">Languages Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="textCtrl"> 
+    <li ng-hide="searchTerm">Text Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="fileCtrl"> 
+    <li ng-hide="searchTerm">File Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+</div>
+        </nav>
+
+        <section class="main-content col-xs-12 col-sm-9">
+          <article class="panel panel-primary">
+  <header class='api-header panel-heading'>
+    <h3 class='api-title'>404 - Page not found</h3>
+  </header>
+  <div class='api-body panel-body'>
+    <article>
+  <header>
+    <h1>404</h1>
+  </header>
+  <div>
+    <p>The Page you are looking for is not available</p>
+    <p>Please use the Searchbox to search the API</p>
+  </div>
+</article>
+  </div>
+</article>
+        </section>
+      </div>
+    </div> <!-- .wrapper -->
+
+    <footer class="footer">
+      <div class="container">
+  <div class="upper-footer">
+  <div class="col-sm-3">
+    <a href="https://www.transfluent.com/register/" class="btn btn-danger btn-lg">Sign up for free now</a><br/><br/>
+    <p>Sign up now and be amazed by our rapid human-powered translations. You only pay for the words we translate.</p>
+  </div>
+  <div class="col-sm-3 col-sm-offset-1">
+    <div>
+      <ul>
+        <li><a href="https://www.transfluent.com/en/about/">About us</a></li>
+        <li><a href="https://www.transfluent.com/en/pricing/">Pricing</a></li>
+        <li><a href="https://www.transfluent.com/en/about/jobs/">Jobs</a></li>
+        <li><a href="https://www.transfluent.com/en/blog/">Blog</a></li>
+        <li><a href="https://www.transfluent.com/en/about/media/">Media</a></li>
+        <li><a href="https://www.transfluent.com/en/about/contact-us/">Contact</a></li>
+        <li><a href="https://www.transfluent.com/en/about/terms-of-service/">Terms of Service</a></li>
+      </ul>
+    </div>                    </div>
+  <div class="col-sm-3">
+    <div>
+      <ul>
+        <li><a href="https://www.transfluent.com/en/products/">Products</a></li>
+        <li><a href="https://www.transfluent.com/en/products/social-media/">Social media</a></li>
+        <li><a href="https://www.transfluent.com/en/products/apps/">App translations</a></li>
+        <li><a href="https://www.transfluent.com/en/products/unity/">Unity3D app localization toolkit v2.0</a></li>
+        <li><a href="https://www.transfluent.com/en/products/weibo/">Weibo</a></li>
+        <li><a href="https://www.transfluent.com/en/products/zendesk/">Zendesk</a></li>
+        <li><a href="https://www.transfluent.com/en/products/magento/">Magento webshops</a></li>
+        <li><a href="https://www.transfluent.com/en/supported-language-pairs/">Supported language pairs</a></li>
+      </ul></div>
+  </div>
+  <div class="col-sm-2">
+    <a href="https://twitter.com/Transfluent_EN"><span class="fa fa-twitter-square fa-2x"></span></a>
+    <a href="https://www.youtube.com/user/TransfluentOfficial"><span class="fa fa-youtube-square fa-2x"></span></a>
+  </div>
+</div>
+</div>
+<div class="container-fluid team-footer">
+  <div>
+  
+  <ul>
+    <li class="col-sm-2">
+      <img src="https://avatars.githubusercontent.com/u/4193211" alt="Tomi Heiskanen" class="img-responsive img-circle team-members-images"><br>
+      Name: Tomi Heiskanen <br>
+      Email: <a href="mailto:tomi@transfluent.com" target="_top">tomi@transfluent.com</a> <br>
+      Github: <a href="https://github.com/tomi-heiskanen" target="_blank">tomi-heiskanen</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li class="col-sm-2">
+      <img src="https://avatars.githubusercontent.com/u/5627061" alt="Timo Rongas" class="img-responsive img-circle team-members-images"><br>
+      Name: Timo Rongas <br>
+      Email: <a href="mailto:timo@transfluent.com" target="_top">timo@transfluent.com</a> <br>
+      Github: <a href="https://github.com/TimoRongas" target="_blank">TimoRongas</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li class="col-sm-2">
+      <img src="https://avatars.githubusercontent.com/u/2764745" alt="Rajib Paudyal" class="img-responsive img-circle team-members-images"><br>
+      Name: Rajib Paudyal <br>
+      Email: <a href="mailto:rajib@transfluent.com" target="_top">rajib@transfluent.com</a> <br>
+      Github: <a href="https://github.com/rajibmp" target="_blank">rajibmp</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li class="col-sm-2">
+      <img src="https://avatars.githubusercontent.com/u/7045090" alt="Mika Schafroth" class="img-responsive img-circle team-members-images"><br>
+      Name: Mika Schafroth <br>
+      Email: <a href="mailto:mika@transfluent.com" target="_top">mika@transfluent.com</a> <br>
+      Github: <a href="https://github.com/mikaschafroth" target="_blank">mikaschafroth</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li class="col-sm-2">
+      <img src="https://avatars.githubusercontent.com/u/1040612" alt="Ilari Mäkimattila" class="img-responsive img-circle team-members-images"><br>
+      Name: Ilari Mäkimattila <br>
+      Email: <a href="mailto:ilari@transfluent.com" target="_top">ilari@transfluent.com</a> <br>
+      Github: <a href="https://github.com/Kryil" target="_blank">Kryil</a> <br>
+    </li>
+  </ul>
+  
+  <ul>
+    <li class="col-sm-2">
+      <img src="https://avatars.githubusercontent.com/u/3592980" alt="Saber Kordestanchi" class="img-responsive img-circle team-members-images"><br>
+      Name: Saber Kordestanchi <br>
+      Email: <a href="mailto:saber@transfluent.com" target="_top">saber@transfluent.com</a> <br>
+      Github: <a href="https://github.com/kordestanchi" target="_blank">kordestanchi</a> <br>
+    </li>
+  </ul>
+  
+</div>
+</div>
+<div class="container">
+  <!--<div class="lower-footer">
+  <div class="col-md-6 col-sm-12 text-left">
+    <p>
+      Transfluent &copy; 2014. All rights reserved. Made with love in Jyväskylä, Finland
+    </p>
+    <div id="twitter">
+      <a href="https://twitter.com/transfluent_en" class="twitter-follow-button" data-show-count="false">Follow @transfluent_en</a>
+      <script>!function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, "script", "twitter-wjs");</script>
+    </div>
+  </div>
+  <div class="col-md-6 hidden-xs hidden-sm">
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftransfluent&amp;width=400&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=114329478669702&colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:80px;" allowTransparency="true"></iframe>
+  </div>
+</div>
+-->
+</div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

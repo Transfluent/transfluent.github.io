@@ -31,5 +31,4 @@ angular.module('transfluentAPI.controllers', [])
             $http.get('/json/text-methods.json').success(function(data) {
               $scope.navs = data;
             })
-
           }]);

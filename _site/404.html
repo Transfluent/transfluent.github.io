@@ -134,61 +134,14 @@
 </div>
 <div class="container-fluid team-footer">
   <div>
-  
-  <ul>
-    <li class="col-sm-2">
-      <img src="https://avatars.githubusercontent.com/u/4193211" alt="Tomi Heiskanen" class="img-responsive img-circle team-members-images"><br>
-      Name: Tomi Heiskanen <br>
-      Email: <a href="mailto:tomi@transfluent.com" target="_top">tomi@transfluent.com</a> <br>
-      Github: <a href="https://github.com/tomi-heiskanen" target="_blank">tomi-heiskanen</a> <br>
+  <ul ng-controller="teamCtrl">
+    <li class="col-sm-2" ng-repeat="member in team">
+      <img ng-src="{[ member.image ]}" alt="{[ member.name ]}" class="img-responsive img-circle team-members-images"><br>
+      Name: {[ member.name ]} <br>
+      Email: <a href="mailto:{[  member.email ]}" target="_top">{[  member.email ]}</a> <br>
+      Github: <a href="https://github.com/{[ member.github ]}" target="_blank">{[ member.github ]}</a> <br>
     </li>
   </ul>
-  
-  <ul>
-    <li class="col-sm-2">
-      <img src="https://avatars.githubusercontent.com/u/5627061" alt="Timo Rongas" class="img-responsive img-circle team-members-images"><br>
-      Name: Timo Rongas <br>
-      Email: <a href="mailto:timo@transfluent.com" target="_top">timo@transfluent.com</a> <br>
-      Github: <a href="https://github.com/TimoRongas" target="_blank">TimoRongas</a> <br>
-    </li>
-  </ul>
-  
-  <ul>
-    <li class="col-sm-2">
-      <img src="https://avatars.githubusercontent.com/u/2764745" alt="Rajib Paudyal" class="img-responsive img-circle team-members-images"><br>
-      Name: Rajib Paudyal <br>
-      Email: <a href="mailto:rajib@transfluent.com" target="_top">rajib@transfluent.com</a> <br>
-      Github: <a href="https://github.com/rajibmp" target="_blank">rajibmp</a> <br>
-    </li>
-  </ul>
-  
-  <ul>
-    <li class="col-sm-2">
-      <img src="https://avatars.githubusercontent.com/u/7045090" alt="Mika Schafroth" class="img-responsive img-circle team-members-images"><br>
-      Name: Mika Schafroth <br>
-      Email: <a href="mailto:mika@transfluent.com" target="_top">mika@transfluent.com</a> <br>
-      Github: <a href="https://github.com/mikaschafroth" target="_blank">mikaschafroth</a> <br>
-    </li>
-  </ul>
-  
-  <ul>
-    <li class="col-sm-2">
-      <img src="https://avatars.githubusercontent.com/u/1040612" alt="Ilari Mäkimattila" class="img-responsive img-circle team-members-images"><br>
-      Name: Ilari Mäkimattila <br>
-      Email: <a href="mailto:ilari@transfluent.com" target="_top">ilari@transfluent.com</a> <br>
-      Github: <a href="https://github.com/Kryil" target="_blank">Kryil</a> <br>
-    </li>
-  </ul>
-  
-  <ul>
-    <li class="col-sm-2">
-      <img src="https://avatars.githubusercontent.com/u/3592980" alt="Saber Kordestanchi" class="img-responsive img-circle team-members-images"><br>
-      Name: Saber Kordestanchi <br>
-      Email: <a href="mailto:saber@transfluent.com" target="_top">saber@transfluent.com</a> <br>
-      Github: <a href="https://github.com/kordestanchi" target="_blank">kordestanchi</a> <br>
-    </li>
-  </ul>
-  
 </div>
 </div>
 <div class="container">

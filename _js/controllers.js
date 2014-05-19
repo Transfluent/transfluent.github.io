@@ -31,4 +31,9 @@ angular.module('transfluentAPI.controllers', [])
             $http.get('/json/text-methods.json').success(function(data) {
               $scope.navs = data;
             })
+          }])
+        .controller('teamCtrl', ['$scope', '$http', function($scope, $http) {
+            $http.get('/json/team.json').success(function(data) {
+              $scope.team = data;
+            })
           }]);

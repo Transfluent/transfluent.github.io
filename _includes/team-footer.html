@@ -1,12 +1,10 @@
 <div>
-  {% for member in site.data.team %}
-  <ul>
-    <li class="col-sm-2">
-      <img src="{{ member.image }}" alt="{{ member.name }}" class="img-responsive img-circle team-members-images"><br>
-      Name: {{ member.name }} <br>
-      Email: <a href="mailto:{{  member.email }}" target="_top">{{  member.email }}</a> <br>
-      Github: <a href="https://github.com/{{ member.github }}" target="_blank">{{ member.github }}</a> <br>
+  <ul ng-controller="teamCtrl">
+    <li class="col-sm-2" ng-repeat="member in team">
+      <img ng-src="{[ member.image ]}" alt="{[ member.name ]}" class="img-responsive img-circle team-members-images"><br>
+      Name: {[ member.name ]} <br>
+      Email: <a href="mailto:{[  member.email ]}" target="_top">{[  member.email ]}</a> <br>
+      Github: <a href="https://github.com/{[ member.github ]}" target="_blank">{[ member.github ]}</a> <br>
     </li>
   </ul>
-  {% endfor %}
 </div>

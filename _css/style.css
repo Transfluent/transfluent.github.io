@@ -9,6 +9,8 @@
 pre {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 14px;
+  color: #e95065;
+  padding: 2px 10px;
 }
 
 /* line 1, ../_sass/layout/_footer.scss */

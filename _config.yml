@@ -4,7 +4,7 @@ author:
   name: Transfluent.com
   email: info@transfluent.com
 pygments: true
-exclude: ['node_modules', 'nbproject', 'bower.json', 'gulpfile.js', 'README.md', 'config.rb', 'package.json', 'Gemfil*']
+exclude: ['node_modules', 'nbproject', 'bower_components', 'bower.json', 'gulpfile.js', 'README.md', 'config.rb', 'package.json', 'Gemfil*']
 timezone: Europe/Helsinki
 permalink: /:title
 markdown: kramdown

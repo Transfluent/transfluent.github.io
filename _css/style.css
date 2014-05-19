@@ -5,6 +5,12 @@
   padding-bottom: 10px;
 }
 
+/* line 1, ../_sass/layout/_codes.scss */
+pre {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 14px;
+}
+
 /* line 1, ../_sass/layout/_footer.scss */
 .footer {
   font-family: "Roboto", Helvetica, sans-serif;

@@ -1,7 +1,6 @@
 <div ng-if="method.Description">
   {[ method.Description ]}
 </div>
-
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">
     <td>Method</td>
@@ -19,23 +18,31 @@
   </tr>
 </table>
 <div ng-if="method.Returns">
+  <p>Returns:</p>
   <div ng-repeat="returnings in method.Returns">
     <div ng-repeat="okey in returnings.OK">
+      <p>With Status OK:</p>
       <div ng-if="okey.GET">
-        <code ng-bind="okey.GET"></code>
+        <p>GET:</p>
+        <pre ng-bind="okey.GET" class="prettyprint"></pre>
       </div>
       <div ng-if="okey.POST">
-        <code ng-bind="okey.POST"></code>
+        <p>POST:</p>
+        <pre ng-bind="okey.POST" class="prettyprint"></pre>
       </div>
       <div ng-if="okey.Default">
-        <code ng-bind="okey.Default"></code>         
+        <pre ng-bind="okey.Default" class="prettyprint"></pre>         
       </div>
     </div>
     <div ng-if="returnings.Error">
-      <code ng-bind="returnings.Error"></code>
+      <p>With Status Error:</p>
+      <pre ng-bind="returnings.Error" class="prettyprint"></pre>
     </div>
     <div ng-if="returnings.Default">
-      <code ng-bind="returnings.Default"></code>
+      <pre ng-bind="returnings.Default" class="prettyprint"></pre>
+    </div>
+    <div ng-if="returnings.Other">
+      <blockquote ng-bind="returnings.Other" class="blockquote"></blockquote>
     </div>
   </div>
 </div>

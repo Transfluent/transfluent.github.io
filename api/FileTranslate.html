@@ -1,12 +1,12 @@
 ---
 layout: api
-title: Text Status
-section: api/TextStatus
+title: File Translate
+section: api/FileTranslate
 ---
 
-<div ng-controller="textCtrl">
+<div ng-controller="fileCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='TextStatus'">
+    <div ng-if="method.Name=='FileTranslate'">
       {% include template-logic.html %}
     </div>
   </div>

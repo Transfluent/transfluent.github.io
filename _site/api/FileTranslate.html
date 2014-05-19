@@ -79,8 +79,53 @@
     <h3 class='api-title'>File Translate</h3>
   </header>
   <div class='api-body panel-body'>
-    
+    <div ng-controller="fileCtrl">
+  <div ng-repeat="method in navs| filter: searchTerm">
+    <div ng-if="method.Name=='FileTranslate'">
+      <div ng-if="method.Description">
+  {[ method.Description ]}
+</div>
 
+<table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
+  <tr ng-if="method.Method">
+    <td>Method</td>
+    <td>{[ method.Method ]}</td>
+  </tr>
+  <tr ng-if="method.URL">
+    <td>URL</td>
+    <td><a href="{[ method.URL ]}" target="_blank" title="Method link">{[ method.URL ]}</a></td>
+  </tr>
+  <tr ng-if="method.Parameters">
+    <td>Parameters</td>
+    <td>
+      <span ng-repeat="params in method.Parameters"><a  href="#">{[ params ]}</a>, </span>
+    </td>
+  </tr>
+</table>
+<div ng-if="method.Returns">
+  <div ng-repeat="returnings in method.Returns">
+    <div ng-repeat="okey in returnings.OK">
+      <div ng-if="okey.GET">
+        <code ng-bind="okey.GET"></code>
+      </div>
+      <div ng-if="okey.POST">
+        <code ng-bind="okey.POST"></code>
+      </div>
+      <div ng-if="okey.Default">
+        <code ng-bind="okey.Default"></code>         
+      </div>
+    </div>
+    <div ng-if="returnings.Error">
+      <code ng-bind="returnings.Error"></code>
+    </div>
+    <div ng-if="returnings.Default">
+      <code ng-bind="returnings.Default"></code>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
   </div>
 </article>
         </section>

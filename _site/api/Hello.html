@@ -79,30 +79,53 @@
     <h3 class='api-title'>Hello</h3>
   </header>
   <div class='api-body panel-body'>
-    
-<p>This method is a dummy method to quickly familiarize yourself with the API.  </p>
+    <div ng-controller="servicesCtrl">
+  <div ng-repeat="method in navs| filter: searchTerm">
+    <div ng-if="method.Name=='Hello'">
+      <div ng-if="method.Description">
+  {[ method.Description ]}
+</div>
 
-<p>Method: GET  </p>
-
-<p>URL: <a href="https://transfluent.com/v2/hello/">https://transfluent.com/v2/hello/</a>  </p>
-
-<p>Parameters: </p>
-
-<p><a href="">name</a></p>
-
-<p>Returns:  </p>
-
-<p>with status OK:  </p>
-
-<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Hello World&quot;</span><span class="p">}</span>
-</code></pre></div>
-
-<p>with status Error:  </p>
-
-<div class="highlight"><pre><code class="javascript"><span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;EBackendParameterInvalid&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="o">:</span><span class="s2">&quot;Name is required!&quot;</span><span class="p">},</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience.&quot;</span><span class="p">}</span>
-</code></pre></div>
-
-
+<table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
+  <tr ng-if="method.Method">
+    <td>Method</td>
+    <td>{[ method.Method ]}</td>
+  </tr>
+  <tr ng-if="method.URL">
+    <td>URL</td>
+    <td><a href="{[ method.URL ]}" target="_blank" title="Method link">{[ method.URL ]}</a></td>
+  </tr>
+  <tr ng-if="method.Parameters">
+    <td>Parameters</td>
+    <td>
+      <span ng-repeat="params in method.Parameters"><a  href="#">{[ params ]}</a>, </span>
+    </td>
+  </tr>
+</table>
+<div ng-if="method.Returns">
+  <div ng-repeat="returnings in method.Returns">
+    <div ng-repeat="okey in returnings.OK">
+      <div ng-if="okey.GET">
+        <code ng-bind="okey.GET"></code>
+      </div>
+      <div ng-if="okey.POST">
+        <code ng-bind="okey.POST"></code>
+      </div>
+      <div ng-if="okey.Default">
+        <code ng-bind="okey.Default"></code>         
+      </div>
+    </div>
+    <div ng-if="returnings.Error">
+      <code ng-bind="returnings.Error"></code>
+    </div>
+    <div ng-if="returnings.Default">
+      <code ng-bind="returnings.Default"></code>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
   </div>
 </article>
         </section>

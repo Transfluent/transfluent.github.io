@@ -1,12 +1,12 @@
 ---
 layout: api
-title: Text Status
-section: api/TextStatus
+title: Authenticate
+section: api/Authenticate
 ---
 
-<div ng-controller="textCtrl">
+<div ng-controller="securityCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='TextStatus'">
+    <div ng-if="method.Name=='Authenticate'">
       {% include template-logic.html %}
     </div>
   </div>

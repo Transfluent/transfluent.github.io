@@ -94,30 +94,16 @@
     <a href="https://www.transfluent.com/register/" class="btn btn-danger btn-lg">Sign up for free now</a><br/><br/>
     <p>Sign up now and be amazed by our rapid human-powered translations. You only pay for the words we translate.</p>
   </div>
-  <div class="col-sm-3 col-sm-offset-1">
-    <div>
-      <ul>
-        <li><a href="https://www.transfluent.com/en/about/">About us</a></li>
-        <li><a href="https://www.transfluent.com/en/pricing/">Pricing</a></li>
-        <li><a href="https://www.transfluent.com/en/about/jobs/">Jobs</a></li>
-        <li><a href="https://www.transfluent.com/en/blog/">Blog</a></li>
-        <li><a href="https://www.transfluent.com/en/about/media/">Media</a></li>
-        <li><a href="https://www.transfluent.com/en/about/contact-us/">Contact</a></li>
-        <li><a href="https://www.transfluent.com/en/about/terms-of-service/">Terms of Service</a></li>
-      </ul>
-    </div>                    </div>
   <div class="col-sm-3">
-    <div>
-      <ul>
-        <li><a href="https://www.transfluent.com/en/products/">Products</a></li>
-        <li><a href="https://www.transfluent.com/en/products/social-media/">Social media</a></li>
-        <li><a href="https://www.transfluent.com/en/products/apps/">App translations</a></li>
-        <li><a href="https://www.transfluent.com/en/products/unity/">Unity3D app localization toolkit v2.0</a></li>
-        <li><a href="https://www.transfluent.com/en/products/weibo/">Weibo</a></li>
-        <li><a href="https://www.transfluent.com/en/products/zendesk/">Zendesk</a></li>
-        <li><a href="https://www.transfluent.com/en/products/magento/">Magento webshops</a></li>
-        <li><a href="https://www.transfluent.com/en/supported-language-pairs/">Supported language pairs</a></li>
-      </ul></div>
+    <ul ng-controller="siteLinksCtrl">
+      <li ng-repeat="link in links"><a href="{[ link.uri ]}">{[ link.text ]}</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-4">
+    <ul ng-controller="productsLinksCtrl">
+      <li ng-repeat="link in links"><a href="{[ link.uri ]}">{[ link.text ]}</a></li>
+    </ul>
   </div>
   <div class="col-sm-2">
     <a href="https://twitter.com/Transfluent_EN"><span class="fa fa-twitter-square fa-2x"></span></a>

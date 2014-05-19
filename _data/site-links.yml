@@ -1,0 +1,20 @@
+- text: About us
+  uri: https://www.transfluent.com/en/about
+
+- text: Pricing
+  uri: https://www.transfluent.com/en/pricing
+    
+- text: Jobs
+  uri: https://www.transfluent.com/en/about/jobs
+
+- text: Blog
+  uri: https://www.transfluent.com/en/blog
+
+- text: Media
+  uri: https://www.transfluent.com/en/about/media
+
+- text: Contact
+  uri: https://www.transfluent.com/en/about/contact-us
+
+- text: Terms of Service
+  uri: https://www.transfluent.com/en/about/terms-of-service

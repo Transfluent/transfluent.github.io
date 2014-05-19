@@ -36,4 +36,14 @@ angular.module('transfluentAPI.controllers', [])
             $http.get('/json/team.json').success(function(data) {
               $scope.team = data;
             })
+          }])
+        .controller('siteLinksCtrl', ['$scope', '$http', function($scope, $http) {
+            $http.get('/json/site-links.json').success(function(data) {
+              $scope.links = data;
+            })
+          }])
+        .controller('productsLinksCtrl', ['$scope', '$http', function($scope, $http) {
+            $http.get('/json/products-links.json').success(function(data) {
+              $scope.links = data;
+            })
           }]);

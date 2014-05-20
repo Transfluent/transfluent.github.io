@@ -7,10 +7,9 @@
 
 /* line 1, ../_sass/layout/_codes.scss */
 pre {
-  font-family: "Open Sans", Helvetica, sans-serif;
-  font-size: 14px;
-  color: #e95065;
-  padding: 2px 10px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 10px 20px;
 }
 
 /* line 1, ../_sass/layout/_footer.scss */
@@ -144,19 +143,19 @@ li {
 }
 
 /* line 56, ../_sass/layout/_page.scss */
-.error pre {
+.error {
   background: #58494c;
   color: #ed4e64;
 }
 
 /* line 61, ../_sass/layout/_page.scss */
-.success pre {
+.success {
   background: #49564c;
   color: #51c96f;
 }
 
 /* line 66, ../_sass/layout/_page.scss */
-.info pre {
+.info {
   background: #495458;
   color: #49a7c3;
 }

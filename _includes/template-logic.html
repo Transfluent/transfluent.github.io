@@ -24,25 +24,25 @@
       <p>With Status OK:</p>
       <div ng-if="okey.GET">
         <p>GET:</p>
-        <pre ng-bind="okey.GET" class="prettyprint"></pre>
+        <pre ng-bind="okey.GET" class="success"></pre>
       </div>
       <div ng-if="okey.POST">
         <p>POST:</p>
-        <pre ng-bind="okey.POST" class="prettyprint"></pre>
+        <pre ng-bind="okey.POST" class="success"></pre>
       </div>
       <div ng-if="okey.Default">
-        <pre ng-bind="okey.Default" class="prettyprint"></pre>         
+        <pre ng-bind="okey.Default" class="success"></pre>         
       </div>
     </div>
     <div ng-if="returnings.Error">
       <p>With Status Error:</p>
-      <pre ng-bind="returnings.Error" class="prettyprint"></pre>
+      <pre ng-bind="returnings.Error" class="error"></pre>
     </div>
     <div ng-if="returnings.Default">
-      <pre ng-bind="returnings.Default" class="prettyprint"></pre>
+      <pre ng-bind="returnings.Default" class="success"></pre>
     </div>
     <div ng-if="returnings.Other">
-      <blockquote ng-bind="returnings.Other" class="blockquote"></blockquote>
+      <blockquote ng-bind="returnings.Other" class="info"></blockquote>
     </div>
   </div>
 </div>

@@ -53,17 +53,17 @@ li {
   border-radius: 10px;
 }
 
-.error pre {
+.error {
   background: $highlight-error-bg;
   color: $highlight-error;
 }
 
-.success pre {
+.success {
   background: $highlight-success-bg;
   color: $highlight-success;
 }
 
-.info pre {
+.info {
   background: $highlight-info-bg;
   color: $highlight-info;
 }

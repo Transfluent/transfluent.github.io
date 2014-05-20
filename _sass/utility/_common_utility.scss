@@ -2,3 +2,19 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.overflow {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+@mixin code-selection {
+  &::selection {
+    background: $highlight-selection2;
+  }
+  
+  ::selection {
+    background: $highlight-selection;
+  }
+}

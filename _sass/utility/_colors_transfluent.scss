@@ -3,14 +3,14 @@ $body-grad-middle: #F3F3F3;
 $body-grad-center: #91eab6;
 $body-link: #E95065;
 $body-link-hover: #46BDDF;
-$body-selection: #52D273;
+$body-selection: #52D273 + 55;
 
 $header-grad-start: #27AE60;
 $header-grad-end: #27AE60;
 
 $nav-bg: #F5F5F5;
 $nav-active: #52D273;
-$nav-selection: #52D273;
+$nav-selection: $body-selection;
 
 $main-content-bg: #F2F2F2;
 
@@ -28,3 +28,7 @@ $highlight-info: #49A7C3;
 $highlight-error-bg: #58494C;
 $highlight-success-bg: #49564C;
 $highlight-info-bg: #495458;
+$highlight-selection: $footer-selection;
+$highlight-selection2: #49A7C3;
+
+$primary: #47BCDD;

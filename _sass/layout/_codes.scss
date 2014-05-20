@@ -1,16 +1,3 @@
-.overflow {
-  overflow: auto;
-  word-wrap: normal;
-  white-space: pre;
-}
-
-pre {
-  font-family: $roboto;
-  font-size: $base-font-size - 3;
-  padding: 10px 20px;
-  @extend .overflow;
-}
-
 .highlight code { 
   @extend .overflow;
 }

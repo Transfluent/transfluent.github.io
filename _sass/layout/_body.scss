@@ -49,6 +49,14 @@ li {
   list-style: none;
 }
 
+pre {
+  font-family: $roboto;
+  font-size: $base-font-size - 3;
+  padding: 10px 20px;
+  @extend .overflow;
+  @include code-selection;
+}
+
 .main-content {
   border-radius: 10px;
 }

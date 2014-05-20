@@ -36,13 +36,13 @@
 
 <div class='navigation-links'>
   <ul ng-controller="servicesCtrl"> 
-    <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
+    <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
   </ul>
   <ul ng-controller="securityCtrl"> 
     <li ng-hide="searchTerm">Authentication</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -50,7 +50,7 @@
     <li ng-hide="searchTerm">Languages Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -58,7 +58,7 @@
     <li ng-hide="searchTerm">Text Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -66,7 +66,15 @@
     <li ng-hide="searchTerm">File Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="sampleCodeCtrl"> 
+    <li ng-hide="searchTerm">Sample Code</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -80,56 +88,28 @@
   </header>
   <div class='api-body panel-body'>
     <div ng-controller="sampleCodeCtrl">
-  <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='Order Translations'">
-      <div ng-if="method.Description">
-  {[ method.Description ]}
-</div>
-<table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
-  <tr ng-if="method.Method">
-    <td>Method</td>
-    <td>{[ method.Method ]}</td>
-  </tr>
-  <tr ng-if="method.URL">
-    <td>URL</td>
-    <td><a href="{[ method.URL ]}" target="_blank" title="Method link">{[ method.URL ]}</a></td>
-  </tr>
-  <tr ng-if="method.Parameters">
-    <td>Parameters</td>
-    <td>
-      <span ng-repeat="params in method.Parameters"><a  href="#">{[ params ]}</a>, </span>
-    </td>
-  </tr>
-</table>
-<div ng-if="method.Returns">
-  <p>Returns:</p>
-  <div ng-repeat="returnings in method.Returns">
-    <div ng-repeat="okey in returnings.OK">
-      <p>With Status OK:</p>
-      <div ng-if="okey.GET">
-        <p>GET:</p>
-        <pre ng-bind="okey.GET" class="success"></pre>
+  <div ng-repeat="codes in navs| filter: searchTerm">
+    <div ng-if="codes.Link =='order-translations'">
+      <div ng-if="codes.Description">
+        {[ codes.Description ]}
+      </div>      
+      <div>
+<div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent\BackendClient</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SaveIosStringsFile</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;/home/john/work/my-project/resources/Localizable.strings&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">FileTranslate</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="s1">&#39;This is description of My-project etc.&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.example.org/callback-me.php&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words (for all target languages) were ordered.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">error_log</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
       </div>
-      <div ng-if="okey.POST">
-        <p>POST:</p>
-        <pre ng-bind="okey.POST" class="success"></pre>
-      </div>
-      <div ng-if="okey.Default">
-        <pre ng-bind="okey.Default" class="success"></pre>         
-      </div>
-    </div>
-    <div ng-if="returnings.Error">
-      <p>With Status Error:</p>
-      <pre ng-bind="returnings.Error" class="error"></pre>
-    </div>
-    <div ng-if="returnings.Default">
-      <pre ng-bind="returnings.Default" class="success"></pre>
-    </div>
-    <div ng-if="returnings.Other">
-      <blockquote ng-bind="returnings.Other" class="info"></blockquote>
-    </div>
-  </div>
-</div>
     </div>
   </div>
 </div>

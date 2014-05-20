@@ -36,13 +36,13 @@
 
 <div class='navigation-links'>
   <ul ng-controller="servicesCtrl"> 
-    <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
+    <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
   </ul>
   <ul ng-controller="securityCtrl"> 
     <li ng-hide="searchTerm">Authentication</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -50,7 +50,7 @@
     <li ng-hide="searchTerm">Languages Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -58,7 +58,7 @@
     <li ng-hide="searchTerm">Text Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -66,7 +66,15 @@
     <li ng-hide="searchTerm">File Methods</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs | filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="sampleCodeCtrl"> 
+    <li ng-hide="searchTerm">Sample Code</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>

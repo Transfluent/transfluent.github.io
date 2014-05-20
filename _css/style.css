@@ -6,6 +6,13 @@
 }
 
 /* line 1, ../_sass/layout/_codes.scss */
+.overflow, pre, .highlight code {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+/* line 7, ../_sass/layout/_codes.scss */
 pre {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 15px;

@@ -46,4 +46,9 @@ angular.module('transfluentAPI.controllers', [])
             $http.get('/json/products-links.json').success(function(data) {
               $scope.links = data;
             })
+          }])
+        .controller('sampleCodeCtrl', ['$scope', '$http', function($scope, $http) {
+            $http.get('/json/sample-code.json').success(function(data) {
+              $scope.navs = data;
+            })
           }]);

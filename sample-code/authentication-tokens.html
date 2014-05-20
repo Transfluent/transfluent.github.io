@@ -1,0 +1,15 @@
+---
+layout: api
+title: Authentication Tokens
+link: authentication-tokens
+---
+
+<div ng-controller="sampleCodeCtrl">
+  <div ng-repeat="codes in navs| filter: searchTerm">
+    <div ng-if="codes.Link =='{{ page.link}}'">
+      <div ng-if="codes.Description">
+        {[ codes.Description ]}
+      </div> 
+    </div>
+  </div>
+</div>

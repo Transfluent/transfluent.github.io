@@ -1,0 +1,20 @@
+---
+layout: api
+title: Retrieve Translated File
+link: retrieve-translated-file
+---
+
+<div ng-controller="sampleCodeCtrl">
+  <div ng-repeat="codes in navs| filter: searchTerm">
+    <div ng-if="codes.Link =='{{ page.link}}'">
+      <div ng-if="codes.Description">
+        {[ codes.Description ]}
+      </div>      
+      <div>
+{% highlight php %}
+{% include retrieve-translated-file.php %}
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>

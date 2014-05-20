@@ -1,12 +1,12 @@
 ---
 layout: api
-title: File Read
+title: FileRead
 section: api/FileRead
 ---
 
 <div ng-controller="fileCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='FileRead'">
+    <div ng-if="method.Name=='{{ page.title }}'">
       {% include template-logic.html %}
     </div>
   </div>

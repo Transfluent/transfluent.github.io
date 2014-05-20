@@ -1,12 +1,12 @@
 ---
 layout: api
-title: Text POST
+title: TextPOST
 section: api/TextPost
 ---
 
 <div ng-controller="textCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='TextPost'">
+    <div ng-if="method.Name=='{{ page.title }}'">
       {% include template-logic.html %}
     </div>
   </div>

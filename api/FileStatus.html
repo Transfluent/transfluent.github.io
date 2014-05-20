@@ -1,12 +1,12 @@
 ---
 layout: api
-title: File Status
+title: FileStatus
 section: api/FileStatus
 ---
 
 <div ng-controller="fileCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='FileStatus'">
+    <div ng-if="method.Name=='{{ page.title }}'">
       {% include template-logic.html %}
     </div>
   </div>

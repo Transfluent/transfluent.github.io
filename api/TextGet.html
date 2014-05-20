@@ -1,12 +1,12 @@
 ---
 layout: api
-title: Text GET
+title: TextGET
 section: api/TextGet
 ---
 
 <div ng-controller="textCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='TextGet'">
+    <div ng-if="method.Name=='{{ page.title }}'">
       {% include template-logic.html %}
     </div>
   </div>

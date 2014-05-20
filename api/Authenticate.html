@@ -6,7 +6,7 @@ section: api/Authenticate
 
 <div ng-controller="securityCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='Authenticate'">
+    <div ng-if="method.Name=='{{ page.title }}'">
       {% include template-logic.html %}
     </div>
   </div>

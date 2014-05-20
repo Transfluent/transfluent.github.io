@@ -74,4 +74,5 @@ pre {
 .info {
   background: $highlight-info-bg;
   color: $highlight-info;
+  @include code-selection;
 }

@@ -121,6 +121,14 @@ pre ::selection {
   background: #495458;
   color: #49a7c3;
 }
+/* line 13, ../_sass/utility/_common_utility.scss */
+.info::selection {
+  background: #49a7c3;
+}
+/* line 17, ../_sass/utility/_common_utility.scss */
+.info ::selection {
+  background: #e296e2;
+}
 
 /* line 1, ../_sass/layout/_footer.scss */
 .footer {

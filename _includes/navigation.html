@@ -42,7 +42,7 @@
     </li>    
   </ul>
   <ul ng-controller="sampleCodeCtrl"> 
-    <li ng-hide="searchTerm">Sample Code</li>
+    <li ng-hide="searchTerm">Example Code To:</li>
     <li>
       <ul>
         <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>

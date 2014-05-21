@@ -8,7 +8,7 @@ link: order-translations
   <div ng-repeat="codes in navs| filter: searchTerm">
     <div ng-if="codes.Link =='{{ page.link}}'">
       <div ng-if="codes.Description">
-        {[ codes.Description ]}
+        {[ codes.Description | linebreak ]}
       </div>      
       <div>
 {% highlight php %}

@@ -3,51 +3,51 @@
 /* Controllers */
 
 angular.module('transfluentAPI.controllers', [])
-        .controller('servicesCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('servicesCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/services-methods.json').success(function(data) {
               $scope.navs = data;
             })
 
           }])
-        .controller('securityCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('securityCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/security-methods.json').success(function(data) {
               $scope.navs = data;
             })
 
           }])
-        .controller('fileCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('fileCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/file-methods.json').success(function(data) {
               $scope.navs = data;
             })
 
           }])
-        .controller('languagesCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('languagesCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/languages-methods.json').success(function(data) {
               $scope.navs = data;
             })
 
           }])
-        .controller('textCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('textCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/text-methods.json').success(function(data) {
               $scope.navs = data;
             })
           }])
-        .controller('teamCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('teamCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/team.json').success(function(data) {
               $scope.team = data;
             })
           }])
-        .controller('siteLinksCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('siteLinksCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/site-links.json').success(function(data) {
               $scope.links = data;
             })
           }])
-        .controller('productsLinksCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('productsLinksCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/products-links.json').success(function(data) {
               $scope.links = data;
             })
           }])
-        .controller('sampleCodeCtrl', ['$scope', '$http', function($scope, $http) {
+        .controller('sampleCodeCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
             $http.get('/json/sample-code.json').success(function(data) {
               $scope.navs = data;
             })

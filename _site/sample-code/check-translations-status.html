@@ -90,9 +90,7 @@
     <div ng-controller="sampleCodeCtrl">
   <div ng-repeat="codes in navs| filter: searchTerm">
     <div ng-if="codes.Link =='check-translations-status'">
-      <div ng-if="codes.Description">
-        {[ codes.Description ]}
-      </div>      
+      <div ng-if="codes.Description" ng-bind-html="codes.Description | linebreak | to_trusted"></div>      
       <div>
 <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
 

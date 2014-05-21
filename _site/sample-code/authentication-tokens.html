@@ -90,9 +90,7 @@
     <div ng-controller="sampleCodeCtrl">
   <div ng-repeat="codes in navs| filter: searchTerm">
     <div ng-if="codes.Link =='authentication-tokens'">
-      <div ng-if="codes.Description">
-        {[ codes.Description ]}
-      </div> 
+      <div ng-if="codes.Description" ng-bind-html="codes.Description | linebreak | to_trusted"></div> 
     </div>
   </div>
 </div>

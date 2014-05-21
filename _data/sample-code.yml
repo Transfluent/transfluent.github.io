@@ -1,6 +1,10 @@
 - Name: Order Translations
   Link: order-translations
-  Description: Example how to order translations for a resource file
+  Description: |
+                This is an example code how to order translations for the resource file.
+                Call our Backend API with your registered username(email) and password.
+                Provide the path to the resource file that needs to be translated.
+                The API will provide the count for number of words in the files to be translated.
     
 - Name: Check Translations Status
   Link: check-translations-status

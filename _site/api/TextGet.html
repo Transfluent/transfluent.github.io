@@ -90,8 +90,10 @@
     <div ng-controller="textCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
     <div ng-if="method.Name=='TextGET'">
-      <div ng-if="method.Description">
-  {[ method.Description ]}
+      <div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
+<div ng-if="method.Code">
+<div class="highlight"><pre><code class="php"><span class="x">{[ method.Code ]}</span>
+</code></pre></div>
 </div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">

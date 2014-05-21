@@ -12,10 +12,7 @@
   white-space: pre;
 }
 
-/*.panel-primary {
-  background: $primary;
-}*/
-/* line 5, ../_sass/utility/_twb_override.scss */
+/* line 1, ../_sass/utility/_twb_override.scss */
 .panel-heading {
   background-color: #47bcdd !important;
 }

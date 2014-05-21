@@ -71,7 +71,7 @@
     </li>    
   </ul>
   <ul ng-controller="sampleCodeCtrl"> 
-    <li ng-hide="searchTerm">Example Code To:</li>
+    <li ng-hide="searchTerm"><a href="/sample-code/example-code.html">Example Code To:</a></li>
     <li>
       <ul>
         <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
@@ -102,7 +102,7 @@
 </code></pre></div>
       </div>
       <p>You can change the last word in the link (Hello in this case) to something else, still the response will be same. 
-        Lets say change the world to my Name like
+        Lets say change the world to my Name i.e Rajib, 
         <a href="https://transfluent.com/v2/hello/Rajib/"  title='Transfluent Backend API' target="_blank">
           https://transfluent.com/v2/hello/Rajib
         </a>

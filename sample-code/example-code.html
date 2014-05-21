@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div>
+  <article class="panel panel-primary">
+    <header class="panel-heading">
+      <h3>Example Code for Backend API Client </h3>
+    </header>
+    <div class="panel-body">
+      <section>
+        <header>
+          <h4>Requirements</h4>
+        </header>
+        <ul>
+          <li>PHP 5.3+</li>
+          <li>PHP cURL extension</li>
+        </ul>
+      </section>
+      <section>
+        <header>
+          <h4>Code Samples</h4>
+        </header>
+        <p>Our code samples may give you quick start guidance to order translations from a resource file.
+          Please browse through the links to see the sample codes</p>
+        <ul ng-controller="sampleCodeCtrl"> 
+          <li ng-repeat="nav in navs"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+        </ul>
+      </section>
+    </div>
+  </article>
+</div>

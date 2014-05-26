@@ -1,0 +1,81 @@
+---
+layout: api
+title: How To
+section: api/How To
+---
+
+<div ng-controller="servicesCtrl">
+  <div ng-repeat="method in navs| filter: searchTerm">
+    <div ng-if="method.Name =='{{ page.title}}'">
+      {% include template-logic.html %}
+    </div>
+  </div>
+</div>
+<div>
+  <p>First things first, please register to our service at <a href="https://transfluent.com/register" target="_blank">Transfluent.com</a>.</p>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='installations'>Installation</a></h2>
+    </header>
+    <div>
+      <h4 class="how-to">With Git</h4>
+      <p>You can get our API from Github</p>
+      <pre>git clone https://github.com/Transfluent/Transfluent-Backend-API-client.git</pre>
+      <h4 class="how-to">Direct Download</h4>
+      <p>you can also <a href="https://github.com/Transfluent/Transfluent-Backend-API-client/archive/master.zip">download the Zip file</a> directly</p>
+    </div>
+  </section>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='usage'>Usage</a></h2>
+    </header>
+    <div>
+      <h4 class="how-to">Instantiate</h4>
+      <p>To call our Backend API Client, just instantiate with your Registered email and password.</p>
+      {% include initialize-backend.php %}
+      <h4 class="how-to">Token</h4>
+      <p>You can alternatively set Authentication Token for your user credentials. If you create instances of our API very often then setting Token is easier and preferred way to do. To set your Token call our SetToken method</p>
+      <p>To set your token, you can call our Token Method directly like</p>
+      {% include set-token.php %}
+      <p>please keep the Token in safe place</p>
+    </div>
+  </section>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='language'>Languages</a></h2>
+    </header>
+    <p>You can check our supported Language Information here:</p>
+    {% include languages.php %}
+  </section>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='order-translations'>Order Translations</a></h2>
+    </header>
+    <div>
+      <p>In this section we will show you how easy it is to Order translations from our service for different types of resource files</p>
+      <p>Our system is quite flexible, as it is even possible to count the number of words before making the actual order for translations</p>
+      <p>This assumes you are passing Valid IOS Strings to test</p>
+      {% include ios-strings.php %}
+      <p>The Methods SaveIosStringsFile requires 3 parameters to be passed. </p>
+      {% include ios-param.php %}
+      <p>
+        First one is <strong>Identifier</strong>
+        The second one is <strong>Language id</strong>. See above in <a href="#language">Language section</a> to know how to retrieve the supported language information
+        The Third parameter is the actual <strong>file</strong> with its full path that you want to translate
+      </p>
+      <p>If you are not sure the file that you are passing through is valid IOS String, then you can do something like</p>
+      {% include ios-strings-try-catch.php %}
+      <h4 class="how-to">Order Translation for IOS Strings file</h4>
+      {% include ios-strings-original.php %}
+      <h4 class="how-to">Order Translation for Android Strings file</h4>
+      {% include android-strings.php %}
+      <p>Our system also supports translations of Android Array files</p>
+      <h4 class="how-to">Order Translation for Android Array file</h4>
+      {% include android-array.php %}
+    </div>
+  </section>
+</div>

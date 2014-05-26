@@ -10,3 +10,6 @@
     - OK:  
       - Default: '{"status":"OK","response":"Hello World"}'
     - Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
+    
+- Name: How To
+  Description: This is a simple step wise guide how to get started to connect to our service via our API.

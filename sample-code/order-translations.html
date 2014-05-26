@@ -9,9 +9,7 @@ link: order-translations
     <div ng-if="codes.Link =='{{ page.link}}'">
       <div ng-if="codes.Description" ng-bind-html="codes.Description | linebreak | to_trusted"></div>     
       <div>
-{% highlight php %}
-{% include order-translations.php %}
-{% endhighlight %}
+        {% include order-translations.php %}
       </div>
     </div>
   </div>

@@ -9,9 +9,7 @@ link: check-translations-status
     <div ng-if="codes.Link =='{{ page.link}}'">
       <div ng-if="codes.Description" ng-bind-html="codes.Description | linebreak | to_trusted"></div>      
       <div>
-{% highlight php %}
-{% include check-translations-status.php %}
-{% endhighlight %}
+        {% include check-translations-status.php %}
       </div>
     </div>
   </div>

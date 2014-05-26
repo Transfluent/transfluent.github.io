@@ -1,6 +1,11 @@
+{% highlight php %}
 <?php
 
-$client = new Transfluent\BackendClient('example@example.org', 'my-password');
+require "BackendClient.php";
+
+use Transfluent\BackendClient as Transfluent;
+
+$client = new Transfluent('example@example.org', 'my-password');
 
 try {
     $is_translated = $client->IsFileComplete('my-project/Localizable.strings', 11);
@@ -15,3 +20,4 @@ catch (Exception $e) {
     error_log($e->getMessage());
     exit;
 }
+{% endhighlight %}

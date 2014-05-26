@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>How To Transfluent API Documentation</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body ng-app="transfluentAPI">
+    <div class="container">
+
+      <header class="header">
+        <div class="header row">
+  <div class="header-logo col-sm-4">
+    <a href="/"><img src="/images/transfluent-logo.png" alt="Transfluent logo" ></a>
+  </div>
+  <h1 class="title"><a href="/">Transfluent API Documentation</a></h1>
+</div>
+      </header>
+
+      <div class="content-area row">
+
+        <nav class="navigation col-sm-3">
+          <div class='search-form'>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+    <input type="search" class="form-control" placeholder="Search the API" name="apisearch" ng-model='searchTerm'>
+  </div>
+</div>
+
+<div class='navigation-links'>
+  <ul ng-controller="servicesCtrl"> 
+    <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
+  </ul>
+  <ul ng-controller="securityCtrl"> 
+    <li ng-hide="searchTerm">Authentication</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="languagesCtrl"> 
+    <li ng-hide="searchTerm">Languages Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="textCtrl"> 
+    <li ng-hide="searchTerm">Text Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="fileCtrl"> 
+    <li ng-hide="searchTerm">File Methods</li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+  <ul ng-controller="sampleCodeCtrl"> 
+    <li ng-hide="searchTerm"><a href="/sample-code/example-code.html">Example Code To:</a></li>
+    <li>
+      <ul>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+      </ul>
+    </li>    
+  </ul>
+</div>
+        </nav>
+
+        <section class="main-content col-xs-12 col-sm-9">
+          <article class="panel panel-primary">
+  <header class='api-header panel-heading'>
+    <h3 class='api-title'>How To</h3>
+  </header>
+  <div class='api-body panel-body'>
+    <div ng-controller="servicesCtrl">
+  <div ng-repeat="method in navs| filter: searchTerm">
+    <div ng-if="method.Name =='How To'">
+      <div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
+<div ng-if="method.Code">
+<div class="highlight"><pre><code class="php"><span class="x">{[ method.Code ]}</span>
+</code></pre></div>
+</div>
+<table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
+  <tr ng-if="method.Method">
+    <td>Method</td>
+    <td>{[ method.Method ]}</td>
+  </tr>
+  <tr ng-if="method.URL">
+    <td>URL</td>
+    <td><a href="{[ method.URL ]}" target="_blank" title="Method link">{[ method.URL ]}</a></td>
+  </tr>
+  <tr ng-if="method.Parameters">
+    <td>Parameters</td>
+    <td>
+      <span ng-repeat="params in method.Parameters"><a  href="#">{[ params ]}</a>, </span>
+    </td>
+  </tr>
+</table>
+<div ng-if="method.Returns">
+  <p>Returns:</p>
+  <div ng-repeat="returnings in method.Returns">
+    <div ng-repeat="okey in returnings.OK">
+      <p>With Status OK:</p>
+      <div ng-if="okey.GET">
+        <p>GET:</p>
+        <pre ng-bind="okey.GET" class="success"></pre>
+      </div>
+      <div ng-if="okey.POST">
+        <p>POST:</p>
+        <pre ng-bind="okey.POST" class="success"></pre>
+      </div>
+      <div ng-if="okey.Default">
+        <pre ng-bind="okey.Default" class="success"></pre>         
+      </div>
+    </div>
+    <div ng-if="returnings.Error">
+      <p>With Status Error:</p>
+      <pre ng-bind="returnings.Error" class="error"></pre>
+    </div>
+    <div ng-if="returnings.Default">
+      <pre ng-bind="returnings.Default" class="success"></pre>
+    </div>
+    <div ng-if="returnings.Other">
+      <blockquote ng-bind="returnings.Other" class="info"></blockquote>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<div>
+  <p>First things first, please register to our service at <a href="https://transfluent.com/register" target="_blank">Transfluent.com</a>.</p>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='installations'>Installation</a></h2>
+    </header>
+    <div>
+      <h4 class="how-to">With Git</h4>
+      <p>You can get our API from Github</p>
+      <pre>git clone https://github.com/Transfluent/Transfluent-Backend-API-client.git</pre>
+      <h4 class="how-to">Direct Download</h4>
+      <p>you can also <a href="https://github.com/Transfluent/Transfluent-Backend-API-client/archive/master.zip">download the Zip file</a> directly</p>
+    </div>
+  </section>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='usage'>Usage</a></h2>
+    </header>
+    <div>
+      <h4 class="how-to">Instantiate</h4>
+      <p>To call our Backend API Client, just instantiate with your Registered email and password.</p>
+      <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+</code></pre></div>
+      <h4 class="how-to">Token</h4>
+      <p>You can alternatively set Authentication Token for your user credentials. If you create instances of our API very often then setting Token is easier and preferred way to do. To set your Token call our SetToken method</p>
+      <p>To set your token, you can call our Token Method directly like</p>
+      <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SetToken</span><span class="p">(</span><span class="s1">&#39;ThisIsMySecureToken&#39;</span><span class="p">);</span>
+</code></pre></div>
+      <p>please keep the Token in safe place</p>
+    </div>
+  </section>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='language'>Languages</a></h2>
+    </header>
+    <p>You can check our supported Language Information here:</p>
+    <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="nv">$languages</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">Languages</span><span class="p">();</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$languages</span><span class="p">);</span>
+</code></pre></div>
+  </section>
+  <section>
+    <hr>
+    <header>
+      <h2><a name='order-translations'>Order Translations</a></h2>
+    </header>
+    <div>
+      <p>In this section we will show you how easy it is to Order translations from our service for different types of resource files</p>
+      <p>Our system is quite flexible, as it is even possible to count the number of words before making the actual order for translations</p>
+      <p>This assumes you are passing Valid IOS Strings to test</p>
+      <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SaveIosStringsFile</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;/home/john/work/my-project/resources/Localizable.strings&#39;</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words.&quot;</span><span class="p">;</span>
+</code></pre></div>
+      <p>The Methods SaveIosStringsFile requires 3 parameters to be passed. </p>
+      <div class="highlight"><pre><code class="php"><span class="x">SaveIosStringsFile($identifier, $language, $file)</span>
+</code></pre></div>
+      <p>
+        First one is <strong>Identifier</strong>
+        The second one is <strong>Language id</strong>. See above in <a href="#language">Language section</a> to know how to retrieve the supported language information
+        The Third parameter is the actual <strong>file</strong> with its full path that you want to translate
+      </p>
+      <p>If you are not sure the file that you are passing through is valid IOS String, then you can do something like</p>
+      <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SaveIosStringsFile</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;/home/john/work/my-project/resources/Localizable.strings&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words.&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">error_log</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+      <h4 class="how-to">Order Translation for IOS Strings file</h4>
+      <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SaveIosStringsFile</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;/home/john/work/my-project/resources/Localizable.strings&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">FileTranslate</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="s1">&#39;This is description of My-project etc.&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.example.org/callback-me.php&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words (for all target languages) were ordered.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">error_log</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+      <h4 class="how-to">Order Translation for Android Strings file</h4>
+      <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SaveAndroidStringsFile</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;/home/john/work/my-project/resources/Localizable.strings&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">FileTranslate</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="s1">&#39;This is description of My-project etc.&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.example.org/callback-me.php&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words (for all target languages) were ordered.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">error_log</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+      <p>Our system also supports translations of Android Array files</p>
+      <h4 class="how-to">Order Translation for Android Array file</h4>
+      <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SaveAndroidArraysFile</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;/home/john/work/my-project/resources/Localizable.strings&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">FileTranslate</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="s1">&#39;This is description of My-project etc.&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.example.org/callback-me.php&#39;</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words (for all target languages) were ordered.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">error_log</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+    </div>
+  </section>
+</div>
+  </div>
+</article>
+        </section>
+      </div>
+    </div> <!-- .wrapper -->
+
+    <footer class="footer">
+      <div class="container">
+  <div class="upper-footer">
+  <div class="col-sm-3">
+    <a href="https://www.transfluent.com/register/" class="btn btn-danger btn-lg" target="_blank">Sign up for free now</a><br/><br/>
+    <p>Sign up now and be amazed by our rapid human-powered translations. You only pay for the words we translate.</p>
+  </div>
+  <div class="col-sm-3">
+    <ul ng-controller="siteLinksCtrl">
+      <li ng-repeat="link in links"><a href="{[ link.uri ]}" target="_blank">{[ link.text ]}</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-4">
+    <ul ng-controller="productsLinksCtrl">
+      <li ng-repeat="link in links"><a href="{[ link.uri ]}" target="_blank">{[ link.text ]}</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-2">
+    <a href="https://twitter.com/Transfluent_EN" target="_blank"><span class="fa fa-twitter-square fa-2x"></span></a>
+    <a href="https://www.youtube.com/user/TransfluentOfficial" target="_blank"><span class="fa fa-youtube-square fa-2x"></span></a>
+  </div>
+</div>
+</div>
+<div class="container-fluid team-footer">
+  <div>
+  <ul ng-controller="teamCtrl">
+    <li class="col-sm-2" ng-repeat="member in team">
+      <img ng-src="{[ member.image ]}" alt="{[ member.name ]}" class="img-responsive img-circle team-members-images"><br>
+      Name: {[ member.name ]} <br>
+      Email: <a href="mailto:{[  member.email ]}" target="_top">{[  member.email ]}</a> <br>
+      Github: <a href="https://github.com/{[ member.github ]}" target="_blank">{[ member.github ]}</a> <br>
+    </li>
+  </ul>
+</div>
+</div>
+<div class="container">
+  <!--<div class="lower-footer">
+  <div class="col-md-6 col-sm-12 text-left">
+    <p>
+      Transfluent &copy; 2014. All rights reserved. Made with love in Jyväskylä, Finland
+    </p>
+    <div id="twitter">
+      <a href="https://twitter.com/transfluent_en" class="twitter-follow-button" data-show-count="false">Follow @transfluent_en</a>
+      <script>!function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, "script", "twitter-wjs");</script>
+    </div>
+  </div>
+  <div class="col-md-6 hidden-xs hidden-sm">
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftransfluent&amp;width=400&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=114329478669702&colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:80px;" allowTransparency="true"></iframe>
+  </div>
+</div>
+-->
+</div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

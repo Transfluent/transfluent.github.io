@@ -127,6 +127,11 @@ pre ::selection {
   background: #e296e2;
 }
 
+/* line 80, ../_sass/layout/_body.scss */
+.how-to {
+  padding-top: 10px;
+}
+
 /* line 1, ../_sass/layout/_footer.scss */
 .footer {
   font-family: "Roboto", Helvetica, sans-serif;

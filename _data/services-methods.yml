@@ -10,6 +10,17 @@
     - OK:  
       - Default: '{"status":"OK","response":"Hello World"}'
     - Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
-    
-- Name: How To
+
+#- Name: Translation-Levels
+#  Description: |
+#                There are 7 levels of languages supported by Transfluent.
+#                0 = Machine Translation
+#                1 = Standard Level widely known as Native, translation service from native Speaker of the language;
+#                2 = Professional Level, translation service from a Professional Translator;
+#                3 = Proof Read, one professional Translator translates and another professional translator does proof reading before translated text is returned to the client;
+#                4 = Free, Free of Charge Translations;
+#                5 = Proof Read only;
+#                6 = Native level Proof read only;
+#  
+- Name: How-To
   Description: This is a simple step wise guide how to get started to connect to our service via our API.

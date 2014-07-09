@@ -1,9 +1,4 @@
 <div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
-<div ng-if="method.Code">
-{% highlight php %}
-{[ method.Code ]}
-{% endhighlight %}
-</div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">
     <td>Method</td>

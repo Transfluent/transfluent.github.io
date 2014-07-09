@@ -89,12 +89,8 @@
   <div class='api-body panel-body'>
     <div ng-controller="languagesCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='Languages'">
+    <div ng-if="method.Name =='Languages'">
       <div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
-<div ng-if="method.Code">
-<div class="highlight"><pre><code class="php"><span class="x">{[ method.Code ]}</span>
-</code></pre></div>
-</div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">
     <td>Method</td>
@@ -140,6 +136,71 @@
     </div>
   </div>
 </div>
+      <section>
+        <header>
+          <h4>Usage Example</h4>
+        </header>
+        <div>
+          <div class="highlight"><pre><code class="ruby"><span class="n">curl</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">transfluent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">languages</span>
+
+<span class="no">Sample</span> <span class="ss">Output</span><span class="p">:</span>
+<span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="ss">:&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="p">:</span><span class="o">[</span><span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="ss">:&quot;English (United Kingdom)&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="ss">:&quot;en-gb&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}},{</span><span class="s2">&quot;2&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="ss">:&quot;French (France)&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="ss">:&quot;fr-fr&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}}</span><span class="o">]</span><span class="p">}</span>
+</code></pre></div>
+        </div>
+      </section>
+      <section>
+        <header>
+          <h4>PHP Example</h4>
+        </header>
+        <div>
+          <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="nv">$languages</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">Languages</span><span class="p">();</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$languages</span><span class="p">);</span>
+
+<span class="c1">// Sample Output</span>
+
+
+   <span class="p">[</span><span class="mi">70</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="mi">137</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+                <span class="p">(</span>
+                    <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Uzbek</span>
+                    <span class="p">[</span><span class="nx">code</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">uz</span><span class="o">-</span><span class="nx">uz</span>
+                    <span class="p">[</span><span class="nx">id</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">137</span>
+                <span class="p">)</span>
+
+        <span class="p">)</span>
+
+    <span class="p">[</span><span class="mi">71</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="mi">138</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+                <span class="p">(</span>
+                    <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Mongolian</span>
+                    <span class="p">[</span><span class="nx">code</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">mn</span><span class="o">-</span><span class="nx">mn</span>
+                    <span class="p">[</span><span class="nx">id</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">138</span>
+                <span class="p">)</span>
+
+        <span class="p">)</span>
+
+    <span class="p">[</span><span class="mi">72</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="mi">139</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+                <span class="p">(</span>
+                    <span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Nepali</span>
+                    <span class="p">[</span><span class="nx">code</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">ne</span><span class="o">-</span><span class="nx">np</span>
+                    <span class="p">[</span><span class="nx">id</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">139</span>
+                <span class="p">)</span>
+
+        <span class="p">)</span>
+ 
+</code></pre></div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

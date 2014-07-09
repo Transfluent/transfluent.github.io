@@ -1,12 +1,12 @@
 ---
 layout: api
-title: Languages
-section: api/Languages
+title: LanguagesCheck
+section: api/LanguagesCheck
 ---
 
 <div ng-controller="languagesCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='{{ page.title }}'">
+    <div ng-if="method.Name =='{{ page.title}}'">
       {% include template-logic.html %}
     </div>
   </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Text Translate Transfluent API Documentation</title>
+    <title>LanguagesCheck Transfluent API Documentation</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -84,12 +84,12 @@
         <section class="main-content col-xs-12 col-sm-9">
           <article class="panel panel-primary">
   <header class='api-header panel-heading'>
-    <h3 class='api-title'>Text Translate</h3>
+    <h3 class='api-title'>LanguagesCheck</h3>
   </header>
   <div class='api-body panel-body'>
-    <div ng-controller="textCtrl">
+    <div ng-controller="languagesCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='TextTranslate'">
+    <div ng-if="method.Name =='LanguagesCheck'">
       <div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">
@@ -136,6 +136,42 @@
     </div>
   </div>
 </div>
+      <section>
+        <header>
+          <h4>Usage Example</h4>
+        </header>
+        <div>
+          <div class="highlight"><pre><code class="ruby"><span class="n">curl</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">transfluent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">languages</span><span class="o">/</span><span class="n">check?level</span><span class="o">=</span><span class="mi">4</span><span class="o">&amp;</span><span class="n">source_language</span><span class="o">=</span><span class="mi">1</span><span class="o">&amp;</span><span class="n">target_language</span><span class="o">=</span><span class="mi">11</span><span class="o">&amp;</span><span class="n">return_other_levels</span><span class="o">=&amp;</span><span class="n">customer_id</span><span class="o">=</span>
+
+<span class="no">Sample</span> <span class="ss">Output</span><span class="p">:</span>
+<span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="ss">:&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="p">:</span><span class="o">[</span><span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="ss">:&quot;English (United Kingdom)&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="ss">:&quot;en-gb&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}},{</span><span class="s2">&quot;2&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="ss">:&quot;French (France)&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="ss">:&quot;fr-fr&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}}</span><span class="o">]</span><span class="p">}</span>
+</code></pre></div>
+
+level [=3]
+    - source_language
+    - target_language
+    - return_other_levels
+    - customer_id
+        </div>
+      </section>
+      <section>
+        <header>
+          <h4>PHP Example</h4>
+        </header>
+        <div>
+          <div class="highlight"><pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s2">&quot;BackendClient.php&quot;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Transfluent\BackendClient\BackendClient</span> <span class="k">as</span> <span class="nx">Transfluent</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Transfluent</span><span class="p">(</span><span class="s1">&#39;example@example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;my-password&#39;</span><span class="p">);</span>
+<span class="nv">$languages</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">Languages</span><span class="p">();</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$languages</span><span class="p">);</span>
+
+<span class="c1">// Sample Output</span>
+</code></pre></div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

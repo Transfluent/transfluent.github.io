@@ -1,13 +1,19 @@
 - Name: Languages
+  Description: Check all the supported languages by Transfluent
   Method: GET
   URL: https://transfluent.com/v2/languages/ 
+  Returns:
+    - OK:  
+      - Default: '{"status":"OK","response":[{"1":{"name":"English (United Kingdom)","code":"en-gb","id":1}},{"2":{"name":"French (France)","code":"fr-fr","id":2}}]}'
     
 - Name: LanguagesCheck
-  Description: Check if language pair is supported on requested level
+  Description: |
+                Check if language pair is supported on requested level.
+                The language level is optional and set to 3 by default.
   Method: GET
   URL: https://transfluent.com/v2/languages/check/
   Parameters: 
-    - level
+    - level [=3]
     - source_language
     - target_language
     - return_other_levels

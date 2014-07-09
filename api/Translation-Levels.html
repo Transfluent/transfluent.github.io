@@ -1,21 +1,13 @@
 ---
 layout: api
-title: Hello
-section: api/Hello
+title: Translation-Levels
+section: api/Translation-Levels
 ---
 
 <div ng-controller="servicesCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
     <div ng-if="method.Name =='{{ page.title}}'">
       {% include template-logic.html %}
-      <section>
-        <header>
-          <h4>Usage Example</h4>
-        </header>
-        <div>
-          {% include examples/hello.html %}
-        </div>
-      </section>
     </div>
   </div>
 </div>

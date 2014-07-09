@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Text Translate Transfluent API Documentation</title>
+    <title>Translation-Levels Transfluent API Documentation</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -84,12 +84,12 @@
         <section class="main-content col-xs-12 col-sm-9">
           <article class="panel panel-primary">
   <header class='api-header panel-heading'>
-    <h3 class='api-title'>Text Translate</h3>
+    <h3 class='api-title'>Translation-Levels</h3>
   </header>
   <div class='api-body panel-body'>
-    <div ng-controller="textCtrl">
+    <div ng-controller="servicesCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='TextTranslate'">
+    <div ng-if="method.Name =='Translation-Levels'">
       <div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">

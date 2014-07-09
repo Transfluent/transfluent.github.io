@@ -8,6 +8,22 @@ section: api/Authenticate
   <div ng-repeat="method in navs| filter: searchTerm">
     <div ng-if="method.Name=='{{ page.title }}'">
       {% include template-logic.html %}
+      <section>
+        <header>
+          <h4>Usage Example</h4>
+        </header>
+        <div>
+          {% include examples/authenticate.html %}
+        </div>
+      </section>
+      <section>
+        <header>
+          <h4>PHP Example</h4>
+        </header>
+        <div>
+          {% include codes/authenticate.php %}
+        </div>
+      </section>
     </div>
   </div>
 </div>

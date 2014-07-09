@@ -89,12 +89,8 @@
   <div class='api-body panel-body'>
     <div ng-controller="servicesCtrl">
   <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='Hello'">
+    <div ng-if="method.Name =='Hello'">
       <div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
-<div ng-if="method.Code">
-<div class="highlight"><pre><code class="php"><span class="x">{[ method.Code ]}</span>
-</code></pre></div>
-</div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">
     <td>Method</td>
@@ -140,6 +136,18 @@
     </div>
   </div>
 </div>
+      <section>
+        <header>
+          <h4>Usage Example</h4>
+        </header>
+        <div>
+          <div class="highlight"><pre><code class="ruby"><span class="n">curl</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">transfluent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">hello</span><span class="o">/</span><span class="no">Rajib</span>
+
+<span class="ss">Output</span><span class="p">:</span>
+<span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="ss">:&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="ss">:&quot;Hello Rajib&quot;</span><span class="p">}</span>
+</code></pre></div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

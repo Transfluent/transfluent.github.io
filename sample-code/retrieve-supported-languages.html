@@ -9,7 +9,7 @@ link: retrieve-supported-languages
     <div ng-if="codes.Link =='{{ page.link}}'">
       <div ng-if="codes.Description" ng-bind-html="codes.Description | linebreak | to_trusted"></div>      
       <div>
-        {% include retrieve-supported-languages.php %}
+        {% include codes/retrieve-supported-languages.php %}
       </div>
     </div>
   </div>

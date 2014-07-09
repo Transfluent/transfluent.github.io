@@ -2,10 +2,6 @@
   Description: |
                 You can retrieve the authentication token by calling this method. The token is valid until your password changes. 
                 If you save the token locally, please store it securely to keep it secret.
-                To retrive the authentication token initialize our BackendClient Class like:-
-  Code: |
-        <?php 
-        $client = new Transfluent\BackendClient('example@example.org', 'my-password');
   Method: GET
   URL: https://transfluent.com/v2/authenticate/
   Parameters: 

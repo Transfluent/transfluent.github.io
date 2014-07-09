@@ -9,7 +9,7 @@ link: retrieve-translated-file
     <div ng-if="codes.Link =='{{ page.link}}'">
       <div ng-if="codes.Description" ng-bind-html="codes.Description | linebreak | to_trusted"></div>      
       <div>
-        {% include retrieve-translated-file.php %}
+        {% include codes/retrieve-translated-file.php %}
       </div>
     </div>
   </div>

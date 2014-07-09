@@ -8,22 +8,6 @@ section: api/LanguagesCheck
   <div ng-repeat="method in navs| filter: searchTerm">
     <div ng-if="method.Name =='{{ page.title}}'">
       {% include template-logic.html %}
-      <section>
-        <header>
-          <h4>Usage Example</h4>
-        </header>
-        <div>
-          {% include examples/languages-check.html %}
-        </div>
-      </section>
-      <section>
-        <header>
-          <h4>PHP Example</h4>
-        </header>
-        <div>
-          {% include codes/languages-check.php %}
-        </div>
-      </section>
     </div>
   </div>
 </div>

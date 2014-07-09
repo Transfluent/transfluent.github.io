@@ -10,5 +10,4 @@ print_r($languages);
 
 // Sample Output
 
-
 {% endhighlight %}

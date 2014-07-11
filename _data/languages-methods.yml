@@ -1,5 +1,7 @@
 - Name: Languages
-  Description: Check all the supported languages by Transfluent
+  Description: |
+                You can Check all the supported languages by Transfluent using Languages method.
+                It will return the languages in JSON format which contains id, name and code.
   Method: GET
   URL: https://transfluent.com/v2/languages/ 
   Returns:

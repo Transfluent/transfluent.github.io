@@ -5,7 +5,8 @@
   Method: GET
   URL: https://transfluent.com/v2/hello/
   Parameters: 
-    - name
+    - value: name
+      desc: 
   Returns:
     - OK:  
       - Default: '{"status":"OK","response":"Hello World"}'

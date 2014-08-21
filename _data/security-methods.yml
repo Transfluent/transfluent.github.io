@@ -5,8 +5,10 @@
   Method: GET
   URL: https://transfluent.com/v2/authenticate/
   Parameters: 
-    - email
-    - password
+    - value: email
+      desc: User email
+    - value: password
+      desc: User Password
   Returns:
     - OK:  
       - Default: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'

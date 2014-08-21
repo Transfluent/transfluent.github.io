@@ -103,7 +103,7 @@
   <tr ng-if="method.Parameters">
     <td>Parameters</td>
     <td>
-      <span ng-repeat="params in method.Parameters"><a  href="#">{[ params ]}</a>, </span>
+      <span ng-repeat="params in method.Parameters"><a  href="#">{[ params.value ]}</a>, </span>
     </td>
   </tr>
 </table>
@@ -199,6 +199,7 @@
 <div class="container-fluid team-footer">
   <div>
   <ul ng-controller="teamCtrl">
+    <li class="col-sm-2"></li>
     <li class="col-sm-2" ng-repeat="member in team">
       <img ng-src="{[ member.image ]}" alt="{[ member.name ]}" class="img-responsive img-circle team-members-images"><br>
       Name: {[ member.name ]} <br>

@@ -103,9 +103,11 @@
   <tr ng-if="method.Parameters">
     <td>Parameters</td>
     <td>
-      <span ng-repeat="params in method.Parameters"><a  href="#">{[ params.value ]}</a>, </span>
+      <span ng-repeat="params in method.Parameters"><a href="#" ng-click="showDetails = ! showDetails">{[ params.value ]}</a>, 
+        <p ng-show="showDetails" class="param-details">{[ params.desc ]}</p>
+      </span>
     </td>
-  </tr>
+  </tr>  
 </table>
 <div ng-if="method.Returns">
   <p>Returns:</p>

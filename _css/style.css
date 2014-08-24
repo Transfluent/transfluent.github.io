@@ -132,6 +132,12 @@ pre ::selection {
   padding-top: 10px;
 }
 
+/* line 84, ../_sass/layout/_body.scss */
+.param-details {
+  color: black;
+  background: yellow;
+}
+
 /* line 1, ../_sass/layout/_footer.scss */
 .footer {
   font-family: "Roboto", Helvetica, sans-serif;

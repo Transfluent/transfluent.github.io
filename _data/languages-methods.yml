@@ -1,5 +1,7 @@
 - Name: Languages
-  Description: Check all the supported languages by Transfluent
+  Description: |
+                You can Check all the supported languages by Transfluent using Languages method.
+                It will return the languages in JSON format which contains id, name and code.
   Method: GET
   URL: https://transfluent.com/v2/languages/ 
   Returns:
@@ -13,14 +15,24 @@
   Method: GET
   URL: https://transfluent.com/v2/languages/check/
   Parameters: 
-    - level [=3]
-    - source_language
-    - target_language
-    - return_other_levels
-    - customer_id
+    - value: level [=3]
+      desc: |
+        Translator level: 
+        pair of translators (#3), 
+        a professional translator (#2) 
+        or a native speaker (#1)
+    - value: source_language
+      desc: 
+    - value: target_language
+      desc: 
+    - value: return_other_levels
+      desc: Return available levels
+    - value: customer_id
+      desc: Customer id. Optionally you can call the method without providing customer id but you MUST provide a valid authentication token.
     
 - Name: LanguagesPairs
   Method: GET
   URL: https://transfluent.com/v2/languages/pairs/
-  Parameters: 
-    - version
+  Parameters:  
+    - value: version
+      desc: 

@@ -104,7 +104,7 @@
     <td>Parameters</td>
     <td>
       <span ng-repeat="params in method.Parameters"><a href="#" ng-click="showDetails = ! showDetails">{[ params.value ]}</a>, 
-        <p ng-show="showDetails" class="param-details">{[ params.desc ]}</p>
+        <p ng-show="showDetails" class="param-details"><span ng-if="params.optional">{[ "[Optional]" ]}</span><br>{[ params.desc ]}</p>
       </span>
     </td>
   </tr>  
@@ -347,7 +347,7 @@
 
     <footer class="footer">
       <!-- <div class="container">
-  <div class="upper-footer">
+  <!-- <div class="upper-footer">
   <div class="col-sm-3">
     <a href="https://www.transfluent.com/register/" class="btn btn-danger btn-lg" target="_blank">Sign up for free now</a><br/><br/>
     <p>Sign up now and be amazed by our rapid human-powered translations. You only pay for the words we translate.</p>
@@ -368,6 +368,7 @@
     <a href="https://www.youtube.com/user/TransfluentOfficial" target="_blank"><span class="fa fa-youtube-square fa-2x"></span></a>
   </div>
 </div>
+-->
 </div>
 -->
 <div class="container-fluid team-footer">

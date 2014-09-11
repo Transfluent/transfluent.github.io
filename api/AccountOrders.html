@@ -1,0 +1,13 @@
+---
+layout: api
+title: AccountOrders
+section: api/AccountOrders
+---
+
+<div ng-controller="textCtrl">
+  <div ng-repeat="method in navs| filter: searchTerm">
+    <div ng-if="method.Name=='{{ page.title }}'">
+      {% include template-logic.html %}
+    </div>
+  </div>
+</div>

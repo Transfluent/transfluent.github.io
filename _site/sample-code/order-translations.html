@@ -101,15 +101,15 @@
 
 <span class="k">try</span> <span class="p">{</span>
     <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">SaveIosStringsFile</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;/home/john/work/my-project/resources/Localizable.strings&#39;</span><span class="p">);</span>
-    <span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">FileTranslate</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="s1">&#39;This is description of My-project etc.&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.example.org/callback-me.php&#39;</span><span class="p">);</span>
-    <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">word_count</span><span class="si">}</span><span class="s2"> words (for all target languages) were ordered.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;The file contains </span><span class="si">{</span><span class="nv">$response</span><span class="p">[</span><span class="s1">&#39;word_count&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> words.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">FileTranslate</span><span class="p">(</span><span class="s1">&#39;my-project/Localizable.strings&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="s1">&#39;This is description of My-project etc.&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.example.org/callback-me.php&#39;</span><span class="p">,</span> <span class="nx">BackendClient</span><span class="o">::</span><span class="na">LEVEL_PRO_PROOF_READ</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$response</span><span class="p">[</span><span class="s1">&#39;word_count&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> words (for all target languages) were ordered.&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
     <span class="nb">error_log</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
     <span class="k">exit</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
+
       </div>
     </div>
   </div>

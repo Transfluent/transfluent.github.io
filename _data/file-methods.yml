@@ -81,6 +81,8 @@
         Please refer to /languages/-method for full list of language ids.
     - value: token
       desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+    - value: quote
+      desc: When set to true (quote=1), a quote will be returned instead of processing the payload and placing the order.
   Returns:
     - OK:  
       - Default: '{"status":"OK","response":{"word_count":87,"ordered_word_count":12}}'

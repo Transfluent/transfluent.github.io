@@ -72,7 +72,7 @@
         Please refer to /languages/-method for full list of language ids.      
     - value: level [=3]
       desc: |
-        Translator level: pair of translators (#3), a professional translator (#2) or a native speaker (#1)
+        Translator level: expert (#7), business translation with proof-reading (#3), business translation (#2), economy translation (#7) or a native/student translator (#1)
     - value: identifier
       desc: File identifier (string). May contain special characters, recommended maximum length is 255 characters.
     - value: language

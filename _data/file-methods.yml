@@ -68,17 +68,15 @@
       
     - value: target_languages
       desc: |
-        Target languages to translate file content into. Provide language ids as an JSON-array (JSON: [1,4,11]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11). E.g. 1 = English (GB), 11 = Finnish. 
-        Please refer to /languages/-method for full list of language ids.      
+        Target languages to translate texts into. Provide language ids/codes as an JSON-array (e.g. [1,4,11] or ["fi", "fr"]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11 or target_languages[]=fi&target_languages[]=fr). Please refer to /languages/-method for full list of language ids and codes.
     - value: level [=3]
       desc: |
-        Translator level: expert (#7), business translation with proof-reading (#3), business translation (#2), economy translation (#7) or a native/student translator (#1)
+        Translator level: economy, native, business, pair [of business translators] or expert. Default is pair of business translators. Valid values are: eco|economy|pro|business|expert|native|pair
     - value: identifier
       desc: File identifier (string). May contain special characters, recommended maximum length is 255 characters.
     - value: language
       desc: |
-        Language id (int). The human language of the content. E.g. 1 = English (GB), 11 = Finnish. 
-        Please refer to /languages/-method for full list of language ids.
+        Language id (int) or language code (string). Language of source file. E.g. en-gb or 1 for English. Please refer to /languages/-method for full list of language ids and codes.
     - value: token
       desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
     - value: quote

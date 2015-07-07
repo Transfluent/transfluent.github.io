@@ -92,10 +92,10 @@
     - value: group_id
       desc: Group ids are used to create separated namespaces for multiple projects to avoid unintended text_id collisions (e.g. "project_slash")
     - value: source_language
-      desc: Language id (int). The human language source text is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+      desc: Language id (int) or language code (string). Language of source text. E.g. en-gb or 1 for English. Please refer to /languages/-method for full list of language ids and codes.
     - value: target_languages
       desc: |
-          Target languages to translate texts into. Provide language ids as an JSON-array (JSON: [1,4,11]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11). E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+          Target languages to translate texts into. Provide language ids/codes as an JSON-array (e.g. [1,4,11] or ["fi", "fr"]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11 or target_languages[]=fi&target_languages[]=fr). Please refer to /languages/-method for full list of language ids and codes.
     - value: texts
       desc: |
           Texts to translate. Provide array as string (JSON: [{"id":"my_text_id"},{"id":"some_another_key"}]) or post fields (texts[][id]=my_text_id&texts[][id]=some_another_key)
@@ -109,7 +109,7 @@
       desc: This parameter has been deprecated and will be removed soon.
     - value: level [=2]
       desc: |
-          Translator level: pair of translators (#3), a professional translator (#2) or a native speaker (#1)
+          Translator level: economy, native, business or expert. Default is business [translator]. Valid values are: eco|economy|pro|business|native
     - value: deliver_by_email
       desc: Deliver ready translation by email in addition to possible callback.
     - value: deliver_to_email

@@ -1,6 +1,6 @@
 {% highlight ruby %}
-curl https://transfluent.com/v2/languages
+curl https://transfluent.com/languages
 
 Sample Output:
-{"status":"OK","response":[{"1":{"name":"English (United Kingdom)","code":"en-gb","id":1}},{"2":{"name":"French (France)","code":"fr-fr","id":2}}]}
+{"names":{"fr-fr":"French (France)","de-de":"German","es-es":"Spanish (Spain)","xx-xx":"Pseudo language"},"pairs":{"economy":{"en-gb":["de-de","es-la","ar-sa"],"fi-fi":["sv-se","en-gb","en-us"]},"professional":{"hy-am":["en-us","en-gb"],"bs-ba":["en-us","en-gb"],"bg-bg":["en-us","en-gb"],"zh-hk":["en-us","en-gb"]}}}
 {% endhighlight %}

@@ -68,27 +68,27 @@
       - POST: |
             {"status":"OK","response":{"word_count":2,"saved_texts_count":2,"not_changed_count":0,"failed_count":0,"failed_keys":""}}
       
-- Name: TextsOrders
-  Method: GET
-  URL: https://transfluent.com/v2/texts/orders/
-  Parameters: 
-    - value: limit [=100]
-    - value: offset
-    - value: group_id
-      desc: Group id for texts (alphanumeric string, recommended max length 32 characters). If provided, all text ids in group are visible only in the group (e.g. text ids won't collide between groups).
-      optional: yes
-    - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method 
-  Returns:
-    - OK: 
-      - GET: |
-            {"status":"OK","response":[{"order_id":"41495","status_text":"Accepted","status":"5","source_language":1,"target_language":4,"group_id":null,"key":"haave_testimonial","key_id":"haave_testimonial","text":{"source":"[q]\"Simplest and most automatic way to translate iOS apps. Highly recommended.\"[/q] - Tuomas Rasila, CEO, [a]Haave Inc, DocScanner team[/a]","translated":"[q]\"最简单和最自动的翻译 iOS 应用程序的方法。强烈推荐。\"[/q] - [a]Haave 公司 DocScanner 团队[/a]"}}]}
+#- Name: TextsOrders
+#  Method: GET
+#  URL: https://transfluent.com/v2/texts/orders/
+#  Parameters:
+#    - value: limit [=100]
+#    - value: offset
+#    - value: group_id
+#      desc: Group id for texts (alphanumeric string, recommended max length 32 characters). If provided, all text ids in group are visible only in the group (e.g. text ids won't collide between groups).
+#      optional: yes
+#    - value: token
+#      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+#  Returns:
+#    - OK:
+#      - GET: |
+#            {"status":"OK","response":[{"order_id":"41495","status_text":"Accepted","status":"5","source_language":1,"target_language":4,"group_id":null,"key":"haave_testimonial","key_id":"haave_testimonial","text":{"source":"[q]\"Simplest and most automatic way to translate iOS apps. Highly recommended.\"[/q] - Tuomas Rasila, CEO, [a]Haave Inc, DocScanner team[/a]","translated":"[q]\"最简单和最自动的翻译 iOS 应用程序的方法。强烈推荐。\"[/q] - [a]Haave 公司 DocScanner 团队[/a]"}}]}
             
 - Name: TextsTranslate
   Description: You can order translations for new and changed texts by calling this method.
   Method: GET
   URL: https://transfluent.com/v2/texts/translate/
-  Parameters: 
+  Parameters:
     - value: group_id
       desc: Group ids are used to create separated namespaces for multiple projects to avoid unintended text_id collisions (e.g. "project_slash")
     - value: source_language
@@ -117,64 +117,64 @@
     - value: project_title
       desc: Title for the project to identify it on delivery. Usage depends on order source and delivery method
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method 
+      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
   Returns:
-    - OK: 
+    - OK:
       - Default: |
             {"status":"OK","response":{"word_count":441,"ordered_word_count":441}}
-    
-    
-- Name: TextWordCount
-  Description: Retrieve word count and translation price per language by text and group id.
-  Method: GET/POST
-  URL: https://transfluent.com/v2/text/word/count/
-  Parameters: 
-    - value: level [=3]
-      desc: |
-          Translator level: pair of translators (#3), a professional translator (#2) or a native speaker (#1)
-    - value: text_id
-      desc: Text id (alphanumeric string, recommended max length 64 characters). If group id is provided, text id is visible only in the group (e.g. text ids won't collide between groups).
-    - value: group_id
-      desc: Group id for texts (alphanumeric string, recommended max length 32 characters). If provided, all text ids in group are visible only in the group (e.g. text ids won't collide between groups).
-      optional: yes
-    - value: language
-      desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
-    - value: text
-      desc: |
-            Text: either source text to translate or previously made translation you want to save into our system. May contain HTML or any other markup.
-    - value: invalidate_translations [=1]
-      desc: |
-            A boolean value (1/0;on/off) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably don't want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it's really important to set invalidate_translations off! Warning! Affects ALL texts set on the same request. If you need to invalidate some and keep others, you have to perform two requests.
-    - value: is_draft
-      desc: A boolean value (1/0;on/off) which controls if translations is a draft or not. Draft translations are checked by a translator when translation request is placed.
-      optional: yes
-    - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method 
-  Returns:
-    - OK: 
-      - POST: |
-            {"status":"OK","response":true}
-    
-- Name: FreeTextWordCount
-  Description: Retrieve text word count and translation price per language.
-  Method: GET
-  URL: https://transfluent.com/v2/free/text/word/count/
-  Parameters: 
-    - value: free_text
-    - value: level [=3]
-      desc: |
-          Translator level: pair of translators (#3), a professional translator (#2) or a native speaker (#1)
-    - value: source_language
-    - value: target_language
-    - value: currency_code
-      desc: Force prices in currency. Defaults to customer's local currency.
-    
-- Name: AccountOrders
-  Method: GET
-  URL: https://transfluent.com/v2/account/orders/
-  Parameters: 
-    - value: page
-    - value: items_per_page [=10]
-    - value: orderId
-    - value: customer_id
-      desc: Customer id. Optionally you can call the method without providing customer id but you MUST provide a valid authentication token.
+
+
+#- Name: TextWordCount
+#  Description: Retrieve word count and translation price per language by text and group id.
+#  Method: GET/POST
+#  URL: https://transfluent.com/v2/text/word/count/
+#  Parameters:
+#    - value: level [=3]
+#      desc: |
+#          Translator level: pair of translators (#3), a professional translator (#2) or a native speaker (#1)
+#    - value: text_id
+#      desc: Text id (alphanumeric string, recommended max length 64 characters). If group id is provided, text id is visible only in the group (e.g. text ids won't collide between groups).
+#    - value: group_id
+#      desc: Group id for texts (alphanumeric string, recommended max length 32 characters). If provided, all text ids in group are visible only in the group (e.g. text ids won't collide between groups).
+#      optional: yes
+#    - value: language
+#      desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+#    - value: text
+#      desc: |
+#            Text: either source text to translate or previously made translation you want to save into our system. May contain HTML or any other markup.
+#    - value: invalidate_translations [=1]
+#      desc: |
+#            A boolean value (1/0;on/off) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably don't want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it's really important to set invalidate_translations off! Warning! Affects ALL texts set on the same request. If you need to invalidate some and keep others, you have to perform two requests.
+#    - value: is_draft
+#      desc: A boolean value (1/0;on/off) which controls if translations is a draft or not. Draft translations are checked by a translator when translation request is placed.
+#      optional: yes
+#    - value: token
+#      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+#  Returns:
+#    - OK:
+#      - POST: |
+#            {"status":"OK","response":true}
+#
+#- Name: FreeTextWordCount
+#  Description: Retrieve text word count and translation price per language.
+#  Method: GET
+#  URL: https://transfluent.com/v2/free/text/word/count/
+#  Parameters:
+#    - value: free_text
+#    - value: level [=3]
+#      desc: |
+#          Translator level: pair of translators (#3), a professional translator (#2) or a native speaker (#1)
+#    - value: source_language
+#    - value: target_language
+#    - value: currency_code
+#      desc: Force prices in currency. Defaults to customer's local currency.
+#
+#- Name: AccountOrders
+#  Method: GET
+#  URL: https://transfluent.com/v2/account/orders/
+#  Parameters:
+#    - value: page
+#    - value: items_per_page [=10]
+#    - value: orderId
+#    - value: customer_id
+#      desc: Customer id. Optionally you can call the method without providing customer id but you MUST provide a valid authentication token.

@@ -1,52 +1,53 @@
 <div class='search-form'>
-  <div class="input-group">
-    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-    <input type="search" class="form-control" placeholder="Search the documentation" name="apisearch" ng-model='searchTerm'>
-  </div>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <input type="search" class="form-control" placeholder="Search the documentation" name="apisearch" ng-model='searchTerm'>
+    </div>
 </div>
 
 <div class='navigation-links'>
-  <ul ng-controller="servicesCtrl"> 
-    <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>   
-  </ul>
-  <ul ng-controller="securityCtrl"> 
-    <li ng-hide="searchTerm">Authentication</li>
-    <li>
-      <ul>
-        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
-      </ul>
-    </li>    
-  </ul>
-  <ul ng-controller="languagesCtrl"> 
-    <li ng-hide="searchTerm">Languages</li>
-    <li>
-      <ul>
-        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
-      </ul>
-    </li>    
-  </ul>
-  <ul ng-controller="textCtrl"> 
-    <li ng-hide="searchTerm">Text Methods</li>
-    <li>
-      <ul>
+    <ul ng-controller="servicesCtrl">
+        <li><a href="/">Get started</a></li>
         <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
-      </ul>
-    </li>    
-  </ul>
-  <ul ng-controller="fileCtrl"> 
-    <li ng-hide="searchTerm">File Methods</li>
-    <li>
-      <ul>
-        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
-      </ul>
-    </li>    
-  </ul>
-  <ul ng-controller="sampleCodeCtrl"> 
-    <li ng-hide="searchTerm"><a href="/sample-code/example-code.html">Example Code To:</a></li>
-    <li>
-      <ul>
-        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
-      </ul>
-    </li>    
-  </ul>
+    </ul>
+    <ul ng-controller="securityCtrl">
+        <li ng-hide="searchTerm">Authentication</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="languagesCtrl">
+        <li ng-hide="searchTerm">Languages</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="textCtrl">
+        <li ng-hide="searchTerm">Text&amp;HTML</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="fileCtrl">
+        <li ng-hide="searchTerm">Resource files</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="sampleCodeCtrl">
+        <li ng-hide="searchTerm"><a href="/sample-code/example-code.html">Example Code To:</a></li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>

@@ -13,7 +13,7 @@
     <li ng-hide="searchTerm">Authentication</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>
@@ -21,7 +21,7 @@
     <li ng-hide="searchTerm">Languages</li>
     <li>
       <ul>
-        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
       </ul>
     </li>    
   </ul>

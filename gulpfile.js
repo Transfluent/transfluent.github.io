@@ -36,8 +36,8 @@ gulp.task('minify', function () {
 	gulp.src('_css/*.css')
 	        .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
 		.pipe(minifycss())
-		.pipe(livereload())
 		.pipe(gulp.dest('css'))
+    //.pipe(livereload())
 });
 
 gulp.task('jsonify', function(){

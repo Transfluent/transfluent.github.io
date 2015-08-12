@@ -89,119 +89,40 @@
             </h3>
         </header>
         <div class="panel-body">
-            <p>..to scale from 1 word into millions of words, yet providing excellent quality and having ability to translate into numerous of languages with very little effort from the customer.
+            <p style="font-size: 110%;">..to scale from 1 word into millions of words, yet providing excellent quality and having ability to translate into numerous of languages with very little effort from the customer.
                 <br><br>Key to fulfill this promise is our innovative use of technology in the translation process. Our API is in the core enabling all this. On this website you will find detailed documentation of our API and description how to the translation process works.
             </p>
 
+            <h3 style="margin-top: 3rem;">Get started</h3>
+
+            <div style="margin-top: 3rem;">
+                <h4>User accounts</h4>
+                To get going, you will need a Transfluent user account. Either <a href="https://www.transfluent.com/en/sign-up/" target="_blank">create a new user account</a> by yourself or ask your company's account owner to create one for you.
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h4>Development and testing</h4>
+                While developing and testing your integration, you probably do not want to spend your own money for testing. Just for that, we provide a <strong>Pseudo language</strong> translation. The language code for pseudo language is <strong>xx-xx</strong> and the language id is <strong>500</strong>. Use English (<code>en-gb</code>) as source language and Pseudo language as target language and the order will be processed for free. Instead of actual translation, you will get your source text reversed (e.g. &quot;Hello&quot; -&gt; &quot;olleH&quot;). Placing Pseudo language orders makes sense for testing the whole process from end to end and depending on your use case possibly to pinpoint any non-translated parts on your end.
+            </div>
+
             <div style="margin-top: 3rem;">
                 <h4>Supported languages</h4>
-                <a href="https://www.transfluent.com/en/pricing/#supported-language-pairs">Check supported language pairs</a> from our website or call our API's <strong>languages</strong> method to list languages names and language pairs. You can do it using curl: <code>curl https://transfluent.com/languages/</code> or you can even do it with your browser: <a href="https://transfluent.com/languages/" rel="nofollow" target="_blank">HTTP GET https://transfluent.com/languages/</a>. The output is always <a href="https://en.wikipedia.org/wiki/JSON" target="_blank" rel="nofollow">JSON</a>. As you can see, it is easy to get started with the API.
+                <a href="https://www.transfluent.com/en/pricing/#supported-language-pairs">Check supported language pairs</a> from our website or call our API's <strong>languages</strong> method to list languages names and language pairs. The API methods can be called using ready-made clients or command line tools, for example call using <strong>curl</strong>: <code>curl https://transfluent.com/languages/</code> or you can even do it with your browser: <a href="https://transfluent.com/languages/" rel="nofollow" target="_blank">HTTP GET https://transfluent.com/languages/</a>. The output is always <a href="https://en.wikipedia.org/wiki/JSON" target="_blank" rel="nofollow">JSON</a>. As you can see, it is easy to get started with the API.
             </div>
 
-
-        </div>
-    </article>
-
-    <br><br>
-
-
-
-
-    <article class="panel panel-primary">
-        <header class="panel-heading">
-            <h3>RESTfulness</h3>
-        </header>
-        <div class="panel-body">
-            <p>The API is RESTful. It reads and writes JSON</p>
-            <p>
-                To Test the API visit the URI at
-                <a href="https://transfluent.com/v2/hello/World/" title='Transfluent Backend API' target="_blank">
-                    https://transfluent.com/v2/hello/World
-                </a>
-                which should show the result like
-            </p>
-            <div>
-                <div class="highlight"><pre><code class="javascript">                <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Hello World&quot;</span><span class="p">}</span>
-                
-</code></pre></div>
+            <div style="margin-top: 3rem;">
+                <h4>Payments</h4>
+                The easiest way to pay is by credit card. You or your company's account owner can setup a credit card in <a href="https://www.transfluent.com/my-account/#/creditcard" target="_blank">My Account</a>. It is recommended to add a backup card so there will not be any interruption in the service if the primary card fails. If you prefer invoicing, please contact <a href="mailto:sales@transfluent.com">sales</a>.
             </div>
-            <p>You can change the last word in the link (Hello in this case) to something else, still the response will be same.
-                Lets say change the world to my Name i.e Rajib,
-                <a href="https://transfluent.com/v2/hello/Rajib/"  title='Transfluent Backend API' target="_blank">
-                    https://transfluent.com/v2/hello/Rajib
-                </a>
-                Which should show the result like
-            </p>
-            <div>
-                <div class="highlight"><pre><code class="javascript">                <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Hello Rajib&quot;</span><span class="p">}</span>
-                
-</code></pre></div>
+
+            <div style="margin-top: 3rem;">
+                <h4>Use cases</h4>
+                <ul>
+                    <li><strong>API v2/text*:</strong> Plain text and HTML content. Content is stored by key (and group). Our backend keeps track of versions, so unchanged texts will not be re-translated.</li>
+                    <li><strong>API v2/file*:</strong> Resource files. Usually integrated to the application build process. Our backend keeps track of file versions, so unchanged parts will not be re-translated.</li>
+                    <li><strong>Translation <a href="https://www.transfluent.com/translate/" target="_blank">Widget</a>:</strong> ad-hoc translation needs, delivery by email. Text or files. <a href="https://transfluent.partners/integrate/" target="_blank">Embedded version</a> available for intranet.</li>
+                </ul>
             </div>
-            <div>
-                Alternatively you can grab sample PHP client from
-                <a href="https://github.com/Transfluent/Transfluent-Backend-API-client" title='Transfluent Backend API' target="_blank">
-                    GitHub's project page.
-                </a>
-            </div>
-        </div>
-    </article>
-
-    <article class="panel panel-primary">
-        <header class="panel-heading">
-            <h3>Authentication</h3>
-        </header>
-        <div class="panel-body">
-            <p>
-                Some methods are public and available without authentication. Some methods are available on Transfluent.com user
-                session, e.g. CustomerEmail which is designed to serve the backend functionality via javascript to the customers.
-                For developers, the most interesting methods are those which are available via token authentication.
-                You can retrieve a token via <a href="/api/Authenticate.html" title="Authenticate method">Authenticate method</a>.
-            </p>
-        </div>
-    </article>
-
-    <article class="panel panel-primary">
-        <header class="panel-heading">
-            <h3>Security</h3>
-        </header>
-        <div class="panel-body">
-            <p>
-                Transfluent's Backend API supports HTTPS for all methods and requires it for most of them.
-                It is strongly encouraged to use HTTPS always.
-            </p>
-        </div>
-    </article>
-
-    <article class="panel panel-primary">
-        <header class="panel-heading">
-            <h3>Languages</h3>
-        </header>
-        <div class="panel-body">
-            <p>
-                Transfluent's Backend API uses internal language ids.
-                See <a href="/api/Languages.html" title="Languages method">Languages method</a> to retrieve them.
-            </p>
-        </div>
-    </article>
-
-    <article class="panel panel-primary">
-        <header class="panel-heading">
-            <h3>Errors</h3>
-        </header>
-        <div class="panel-body">
-            <p>
-                First check HTTP response code, next check response content. The API always returns a valid JSON response.
-                On error the status is "ERROR".
-            </p>
-            <div>
-                <div class="highlight"><pre><code class="javascript">                <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="o">:</span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span><span class="s2">&quot;error&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;EBackendSecurityViolation&quot;</span><span class="p">,</span><span class="s2">&quot;message&quot;</span><span class="o">:</span><span class="s2">&quot;Method requires secure connection (HTTPS), your request was unsafe.&quot;</span><span class="p">},</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;Method requires secure connection (HTTPS), your request was unsafe.&quot;</span><span class="p">}</span>
-                
-</code></pre></div>
-            </div>
-            <p>
-                It is recommended to match the error type (if non-generic type is provided) rather than trying to match the error
-                text which may change for any reason (fixing typos, providing varying information like ids etc.)
-            </p>
         </div>
     </article>
 </div>

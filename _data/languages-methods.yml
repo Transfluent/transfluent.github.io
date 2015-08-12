@@ -1,5 +1,5 @@
 - Name: List languages&pairs
-  Link: Languages
+  Link: languages
   Description: |
                 Retrieve list of language names and supported language pairs on each translator level.
   Method: GET

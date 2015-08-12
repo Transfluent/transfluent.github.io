@@ -1,16 +1,14 @@
-- Name: Authenticate
+- Name: Retrieve token
   Description: |
-                You can retrieve the authentication token by calling this method. The token is valid until your password changes. 
-                If you save the token locally, please store it securely to keep it secret.
-  Method: GET
-  URL: https://transfluent.com/v2/authenticate/
+                To call any methods requiring authentication, you need to retrieve an authentication token first. The token is valid until your password changes. <strong>If you store the token between sessions, please store it securely and keep it secret!</strong>
+  Method: POST
+  URL: https://transfluent.com/authenticate/
   Parameters: 
     - value: email
-      desc: User email
+      desc: Your Transfluent account's email address
     - value: password
-      desc: User Password
+      desc: Your password
   Returns:
     - OK:  
-      - Default: '{"status":"OK","response":{"token":"ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA...", "expires":"On password change"}}'
+      - Default: '{"status":"OK","response":{"token":"ABCD123...", "expires":"On password change"}}'
     - Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'
-  CurlTest: "#> curl -d 'email=user@example.org&password=your-password' https://transfluent.com/v2/authenticate/"

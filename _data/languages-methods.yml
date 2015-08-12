@@ -1,4 +1,4 @@
-- Name: Languages
+- Name: List languages&pairs
   Description: |
                 Retrieve list of language names and supported language pairs on each translator level.
   Method: GET

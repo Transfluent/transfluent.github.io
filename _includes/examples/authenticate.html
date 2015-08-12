@@ -1,6 +1,6 @@
 {% highlight ruby %}
-curl https://transfluent.com/v2/authenticate?email=my_email@domain.tilde&password=mySecuredPasswordWithLotsOfHashesAndKeys
+curl -d 'email=user@example.org&password=my-pass' https://transfluent.com/v2/authenticate
 
 Output:
-{"status":"OK","response":{"token":"YourAwesomeTokenNotInReadableFormatThough", "expires":"On password change"}}
+{"status":"OK","response":{"token":"ABCD123..", "expires":"On password change"}}
 {% endhighlight %}

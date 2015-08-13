@@ -50,7 +50,7 @@ table.table tr td:first-child {
     font-weight: bold;
 }
 
-section > h4 {
+section h4 {
     margin-top: 3.5rem;
 }
 

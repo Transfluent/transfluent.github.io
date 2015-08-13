@@ -28,6 +28,7 @@ body {
     font-family: "Kameron", serif;
     font-size: 18px;
     line-height: 24px;
+    padding-bottom: 15rem;
 }
 /* line 7, ../_sass/layout/_body.scss */
 body a {
@@ -219,6 +220,10 @@ pre ::selection {
     background: black;
     color: #47bcdd;
     margin-top: 5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 /* line 10, ../_sass/layout/_footer.scss */
 .footer a {

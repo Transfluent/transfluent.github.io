@@ -23,15 +23,21 @@
     <div ng-repeat="okey in returnings.OK">
       <p>When successful:</p>
       <div ng-if="okey.GET">
-        <p>GET:</p>
-        <pre ng-bind="okey.GET" class="success"></pre>
+        <p>Response to a GET request:</p>
+        {% highlight json %}
+        {{okey.GET}}
+        {% endhighlight %}
       </div>
       <div ng-if="okey.POST">
-        <p>POST:</p>
-        <pre ng-bind="okey.POST" class="success"></pre>
+        <p>Response to a POST request:</p>
+        {% highlight json %}
+        {{okey.POST}}
+        {% endhighlight %}
       </div>
       <div ng-if="okey.Default">
-        <pre ng-bind="okey.Default" class="success"></pre>
+        {% highlight json %}
+        {{okey.Default}}
+        {% endhighlight %}
       </div>
     </div>
     <div ng-if="returnings.Error">

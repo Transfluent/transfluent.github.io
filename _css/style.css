@@ -61,6 +61,10 @@ code {
     color: greenyellow;
     background-color: black;
     overflow: auto;
+    text-shadow: green 2px 2px 2px;
+}
+.highlight code {
+    text-shadow: none;
 }
 
 @keyframes FadeOutFadeInAnimation {

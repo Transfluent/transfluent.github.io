@@ -46,6 +46,10 @@ div + table.table {
     margin-top: 1.5rem;
 }
 
+table.table tr td:first-child {
+    font-weight: bold;
+}
+
 section > h4 {
     margin-top: 3.5rem;
 }

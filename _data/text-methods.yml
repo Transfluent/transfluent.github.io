@@ -6,7 +6,7 @@
     - value: text_id
       desc: <code>text_id</code> is a unique key for your content. It must be an alphanumeric string, maximum length is 64 characters. If <code>group_id</code> is provided, it will be prefixed with the group id, i.e. each group has namespace of its own for text ids.
     - value: group_id
-      desc: Group id for texts (alphanumeric string, recommended max length 32 characters). If provided, all text ids in group are visible only in the group (e.g. text ids won't collide between groups).
+      desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
       optional: yes
     - value: language
       desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
@@ -33,7 +33,7 @@
     - value: text_id
       desc: <code>text_id</code> is a unique key for your content. It must be an alphanumeric string, maximum length is 64 characters. If <code>group_id</code> is provided, it will be prefixed with the group id, i.e. each group has namespace of its own for text ids.
     - value: group_id
-      desc: Group id for texts (alphanumeric string, recommended max length 32 characters). If provided, all text ids in group are visible only in the group (e.g. text ids won't collide between groups).
+      desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
       optional: yes
     - value: language
       desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
@@ -48,7 +48,7 @@
   URL: https://transfluent.com/v2/texts/
   Parameters: 
     - value: group_id
-      desc: Group id for texts (alphanumeric string, recommended max length 32 characters). If provided, all text ids in group are visible only in the group (e.g. text ids won't collide between groups).
+      desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
     - value: language
       desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
     - value: texts
@@ -90,7 +90,7 @@
   URL: https://transfluent.com/v2/texts/translate/
   Parameters:
     - value: group_id
-      desc: Group ids are used to create separated namespaces for multiple projects to avoid unintended text_id collisions (e.g. "project_slash")
+      desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
     - value: source_language
       desc: Language id (int) or language code (string). Language of source text. E.g. en-gb or 1 for English. Please refer to /languages/-method for full list of language ids and codes.
     - value: target_languages

@@ -31,24 +31,4 @@ angular.module('transfluentAPI.controllers', [])
             $http.get('/json/text-methods.json').success(function(data) {
               $scope.navs = data;
             })
-          }])
-        .controller('teamCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
-            $http.get('/json/team.json').success(function(data) {
-              $scope.team = data;
-            })
-          }])
-        .controller('siteLinksCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
-            $http.get('/json/site-links.json').success(function(data) {
-              $scope.links = data;
-            })
-          }])
-        .controller('productsLinksCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
-            $http.get('/json/products-links.json').success(function(data) {
-              $scope.links = data;
-            })
-          }])
-        .controller('sampleCodeCtrl', ['$scope', '$sce', '$http', function($scope, $sce, $http) {
-            $http.get('/json/sample-code.json').success(function(data) {
-              $scope.navs = data;
-            })
           }]);

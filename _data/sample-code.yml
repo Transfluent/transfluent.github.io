@@ -1,23 +1,23 @@
-- Name: Order Translations
-  Link: order-translations
-  Description: |
-                This is an example code how to order translations for the resource file.
-                Call our Backend API with your registered username(email) and password.
-                Provide the path to the resource file that needs to be translated.
-                The API will provide the count for number of words in the files to be translated.
+#- Name: Order Translations
+#  Link: order-translations
+#  Description: |
+#                This is an example code how to order translations for the resource file.
+#                Call our Backend API with your registered username(email) and password.
+#                Provide the path to the resource file that needs to be translated.
+#                The API will provide the count for number of words in the files to be translated.
     
-- Name: Check Translations Status
-  Link: check-translations-status
-  Description: Example how to check translations status for a resource file
+#- Name: Check Translations Status
+#  Link: check-translations-status
+#  Description: Example how to check translations status for a resource file
     
-- Name: Retrieve Translated File
-  Link: retrieve-translated-file
-  Description: Example how to retrieve a translated resource file
+#- Name: Retrieve Translated File
+#  Link: retrieve-translated-file
+#  Description: Example how to retrieve a translated resource file
   
-- Name: Retrieve Supported Languages
-  Link: retrieve-supported-languages
-  Description: Example how to retrieve supported languages
+#- Name: Retrieve Supported Languages
+#  Link: retrieve-supported-languages
+#  Description: Example how to retrieve supported languages
     
-- Name: Authentication Tokens
-  Link: authentication-tokens
-  Description: Either specify email and password on object construct or retrieve a token, save it somewhere safe and use SetToken()-method to set the token. Latter method is recommended if your code constantly creates new instances of backend client. 
+#- Name: Authentication Tokens
+#  Link: authentication-tokens
+#  Description: Either specify email and password on object construct or retrieve a token, save it somewhere safe and use SetToken()-method to set the token. Latter method is recommended if your code constantly creates new instances of backend client.

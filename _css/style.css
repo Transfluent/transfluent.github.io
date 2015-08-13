@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Kameron|Trocchi|Roboto:400,500,400italic|Open+Sans:400,600");
 /* line 1, ../_sass/utility/_common_utility.scss */
-.pad-up-dn-1o, .footer, .upper-footer, .team-footer, .lower-footer {
+.pad-up-dn-1o, .footer, .upper-footer, .lower-footer {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -224,17 +224,6 @@ pre ::selection {
 /* line 22, ../_sass/layout/_footer.scss */
 .upper-footer a {
     color: #52d273;
-}
-
-/* line 27, ../_sass/layout/_footer.scss */
-.team-footer {
-    background: #333333;
-}
-
-/* line 32, ../_sass/layout/_footer.scss */
-.team-members-images {
-    max-height: 100px;
-    max-width: 100px;
 }
 
 /* line 37, ../_sass/layout/_footer.scss */

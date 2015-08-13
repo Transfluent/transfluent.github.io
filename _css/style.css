@@ -63,6 +63,8 @@ code {
     background-color: black;
     overflow: auto;
     text-shadow: green 2px 2px 2px;
+    word-break: break-word;
+    white-space: pre-line;
 }
 .highlight code {
     text-shadow: none;

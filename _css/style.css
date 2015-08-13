@@ -212,8 +212,13 @@ pre ::selection {
 
 /* line 84, ../_sass/layout/_body.scss */
 .param-details {
-    color: black;
-    background: yellow;
+    border: 1px solid #009cde;
+    display: block;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #00adef;
+    color: white;
+    font-size: 1.7rem;
 }
 
 /* line 1, ../_sass/layout/_footer.scss */

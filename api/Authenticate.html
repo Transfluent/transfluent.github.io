@@ -10,10 +10,18 @@ section: api/Authenticate
       {% include template-logic.html %}
       <section>
         <header>
-          <h4>Example response payload:</h4>
+          <h4>Example of successful authentication response (HTTP200, <code>Content-Type: application/json</code>):</h4>
         </header>
 {% highlight json %}
-{"status":"OK","response":{"token":"ABCD123...", "expires":"On password change"}}
+"A_TOKEN_WHICH_EXPIRES_WHEN_PASSWORD_IS_CHANGED"
+{% endhighlight %}
+      </section>
+        <section>
+        <header>
+          <h4>Example of failed authentication response (HTTP500, <code>Content-Type: application/json</code>):</h4>
+        </header>
+{% highlight json %}
+{"type":"Transfluent\\V3\\AuthenticationFailedException","message":"Authentication failed!"}
 {% endhighlight %}
       </section>
       <section>

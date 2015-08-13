@@ -24,20 +24,14 @@
       <p>When successful:</p>
       <div ng-if="okey.GET">
         <p>Response to a GET request:</p>
-        {% highlight json %}
-        <span ng-bind="okey.GET"></span>
-        {% endhighlight %}
+        <code ng-bind="okey.GET"></code>
       </div>
       <div ng-if="okey.POST">
         <p>Response to a POST request:</p>
-        {% highlight json %}
-        <span ng-bind="okey.POST"></span>
-        {% endhighlight %}
+        <code ng-bind="okey.POST"></code>
       </div>
       <div ng-if="okey.Default">
-        {% highlight json %}
-        <span ng-bind="okey.Default"></span>
-        {% endhighlight %}
+        <code ng-bind="okey.Default"></code>
       </div>
     </div>
     <div ng-if="returnings.Error">

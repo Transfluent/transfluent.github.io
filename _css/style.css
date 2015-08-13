@@ -89,6 +89,10 @@ code {
     animation: FadeOutFadeInAnimation 2s infinite;
 }
 
+h3 + p {
+    padding-left: 1rem;
+}
+
 @media (max-width: 767px) {
     .lower-footer > div > div {
         text-align: center;

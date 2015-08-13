@@ -50,6 +50,11 @@ section > h3 {
     margin-top: 3.5rem;
 }
 
+code {
+    color: greenyellow;
+    background-color: black;
+}
+
 /* line 20, ../_sass/layout/_body.scss */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", Helvetica, sans-serif;

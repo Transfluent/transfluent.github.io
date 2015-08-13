@@ -31,6 +31,9 @@ section: api/Callbacks
     "previous_text" : "Vive la France!"
 }
 {% endhighlight %}
+
+            <h4>Security</h4>
+            <p>It is highly recommended to include a secret key to the callback URL. E.g. <code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> where <code>auth-key</code> is your secret that you match before processing any callbacks. This provides security against third party providing unauthorized content to your system.</p>
         </div>
     </div>
 </div>

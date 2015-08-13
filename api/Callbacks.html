@@ -5,9 +5,14 @@ section: api/Callbacks
 ---
 
 <div ng-controller="servicesCtrl">
-  <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name =='{{ page.title}}'">
-      {{ method.Description }}
+    <div ng-repeat="method in navs| filter: searchTerm">
+        <div ng-if="method.Name =='{{ page.title}}'">
+            When placing your order, you may provide <code>callback_url</code> parameter.
+            A HTTP POST request with JSON payload will be made to the callback URL once translation is completed.
+
+            <pre class="success">
+                {"text_id":"example-translation-key","group_id":"Test-App","text":"Vive la France !","language":{"name":"French (France)","code":"fr-fr","id":2,"dir":"ltr"},"source_language":{"name":"English (Great Britain)","code":"en-gb","id":1,"dir":"ltr"},"level":"1","previous_text":"Vive la France!"}
+            </pre>
+        </div>
     </div>
-  </div>
 </div>

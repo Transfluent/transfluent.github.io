@@ -163,7 +163,7 @@ pre ::selection {
     font-weight: 500;
     background: black;
     color: #47bcdd;
-    margin-top: 10px;
+    margin-top: 5rem;
 }
 /* line 10, ../_sass/layout/_footer.scss */
 .footer a {

@@ -62,6 +62,40 @@ code {
     overflow: auto;
 }
 
+@keyframes FadeOutFadeInAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes FadeOutFadeInAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes FadeOutFadeInAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes FadeOutFadeInAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+.fa-heart {
+    -webkit-animation: FadeOutFadeInAnimation 1s infinite;
+    -moz-animation: FadeOutFadeInAnimation 1s infinite;
+    -ms-animation: FadeOutFadeInAnimation 1s infinite;
+    animation: FadeOutFadeInAnimation 1s infinite;
+}
+
+@media (max-width: 767px) {
+    .lower-footer > div > div {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
 /* line 20, ../_sass/layout/_body.scss */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", Helvetica, sans-serif;

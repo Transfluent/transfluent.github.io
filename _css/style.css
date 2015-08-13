@@ -61,6 +61,7 @@ code {
     color: greenyellow;
     background-color: black;
     overflow: auto;
+    font-family: "VT323";
 }
 
 @keyframes FadeOutFadeInAnimation {

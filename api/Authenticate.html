@@ -6,8 +6,17 @@ section: api/Authenticate
 
 <div ng-controller="securityCtrl">
     <div ng-repeat="method in navs| filter: searchTerm">
-        <div ng-if="method.Name=='{{ page.title }}'">
+        <code ng-if="method.Name=='{{ page.title }}'">
             {% include template-logic.html %}
+            <p>
+            Please note that you need to pass parameters as JSON object to the API. Check cURL example below for clarification.
+            </p>
+            <section>
+                <header>
+                    <h4>cURL Example</h4>
+                </header>
+                <code>curl -d '{"email":"account@example.org","password":"my-very-own-password"}' --header "Content-Type: application/json" https://transfluent.com/authenticate | python -m json.tool</code>
+            </section>
             <section>
                 <header>
                     <h4>Example of a successful authentication response (HTTP200, <code>Content-Type: application/json</code>):</h4>
@@ -21,7 +30,10 @@ section: api/Authenticate
                     <h4>Example of a failed authentication response (HTTP500, <code>Content-Type: application/json</code>):</h4>
                 </header>
 {% highlight json %}
-{"type":"Transfluent\\V3\\AuthenticationFailedException","message":"Authentication failed!"}
+{
+    "message": "Authentication failed!",
+    "type": "Transfluent\\V3\\AuthenticationFailedException"
+}
 {% endhighlight %}
             </section>
             <section>

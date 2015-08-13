@@ -1,5 +1,5 @@
 - Name: callback_url
-  Description: Callback URL which will be called once translation is completed. Please see: - Callbacks
+  Description: Callback URL which will be called once translation is completed. Please see:- Callbacks
   Optional: false
 
 - Name: comment

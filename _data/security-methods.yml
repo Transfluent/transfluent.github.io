@@ -1,4 +1,4 @@
-- Name: Retrieve token
+- Name: Retrieve a token
   Link: Authenticate
   Description: |
                 To call any methods requiring authentication, you need to retrieve an authentication token first. The token is valid until your password changes. <strong>If you store the token between sessions, please store it securely and keep it secret!</strong>

@@ -44,7 +44,8 @@ body ::selection {
 
 div + table.table {
     margin-top: 1.5rem;
-    overflow: auto;
+    word-break: break-all;
+    word-break: break-word;
 }
 
 table.table tr td:first-child {

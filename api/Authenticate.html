@@ -10,11 +10,11 @@ section: api/Authenticate
       {% include template-logic.html %}
       <section>
         <header>
-          <h4>Usage Example</h4>
+          <h4>Example response payload:</h4>
         </header>
-        <div>
-          {% include examples/authenticate.html %}
-        </div>
+{% highlight json %}
+{"status":"OK","response":{"token":"ABCD123...", "expires":"On password change"}}
+{% endhighlight %}
       </section>
       <section>
         <header>

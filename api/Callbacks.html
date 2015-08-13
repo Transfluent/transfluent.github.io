@@ -10,7 +10,7 @@ section: api/Callbacks
             When placing your order, you may provide <code>callback_url</code> parameter.
             A HTTP POST request with JSON payload will be made to the callback URL once translation is completed.
 
-            <pre class="success">{
+            {% highlight json %}{
     "text_id" : "example-translation-key",
     "group_id" : "Test-App",
     "text" : "Vive la France !",
@@ -29,7 +29,7 @@ section: api/Callbacks
     "level" : {"code" : "economy", "int" : 8},
     "previous_text" : "Vive la France!"
 }
-            </pre>
+{% endhighlight %}
         </div>
     </div>
 </div>

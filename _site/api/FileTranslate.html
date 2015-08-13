@@ -34,9 +34,8 @@
 </div>
 
 <div class='navigation-links'>
-    <ul ng-controller="servicesCtrl">
+    <ul>
         <li><a href="/">Get started</a></li>
-        <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
     </ul>
     <ul ng-controller="securityCtrl">
         <li ng-hide="searchTerm">Authentication</li>
@@ -64,6 +63,14 @@
     </ul>
     <ul ng-controller="fileCtrl">
         <li ng-hide="searchTerm">Resource files</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="servicesCtrl">
+        <li ng-hide="searchTerm">Development</li>
         <li>
             <ul>
                 <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>

@@ -1,201 +1,209 @@
 @import url("//fonts.googleapis.com/css?family=Kameron|Trocchi|Roboto:400,500,400italic|Open+Sans:400,600");
 /* line 1, ../_sass/utility/_common_utility.scss */
 .pad-up-dn-1o, .footer, .upper-footer, .team-footer, .lower-footer {
-  padding-top: 10px;
-  padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* line 6, ../_sass/utility/_common_utility.scss */
 .overflow, pre, .highlight code {
-  overflow: auto;
-  word-wrap: normal;
-  white-space: pre;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
 }
 
 /* line 1, ../_sass/utility/_twb_override.scss */
 .panel-heading {
-  background-color: #00adef !important;
-  padding: 0.1rem 1rem 0.5rem 1rem;
+    background-color: #00adef !important;
+    padding: 0.1rem 1rem 0.5rem 1rem;
 }
 
 .panel-heading h3 {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 /* line 1, ../_sass/layout/_body.scss */
 body {
-  background-color: white;
-  font-family: "Kameron", serif;
-  font-size: 18px;
-  line-height: 24px;
+    background-color: white;
+    font-family: "Kameron", serif;
+    font-size: 18px;
+    line-height: 24px;
 }
 /* line 7, ../_sass/layout/_body.scss */
 body a {
-  color: #e95065;
+    color: #00adef;
 }
 /* line 10, ../_sass/layout/_body.scss */
 body a:hover, body a:active {
-  color: #46bddf;
+    color: #46bddf;
 }
 /* line 15, ../_sass/layout/_body.scss */
 body ::selection {
-  background: #89ffaa;
+    background: #8cc63e;
+}
+
+div + table.table {
+    margin-top: 1.5rem;
+}
+
+section > h3 {
+    margin-top: 3.5rem;
 }
 
 /* line 20, ../_sass/layout/_body.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", Helvetica, sans-serif;
+    font-family: "Roboto", Helvetica, sans-serif;
 }
 
 /* line 24, ../_sass/layout/_body.scss */
 h1 {
-  font-size: 36px;
+    font-size: 36px;
 }
 
 /* line 28, ../_sass/layout/_body.scss */
 h2 {
-  font-size: 27px;
+    font-size: 27px;
 }
 
 /* line 32, ../_sass/layout/_body.scss */
 h3 {
-  font-size: 21.06px;
+    font-size: 21.06px;
 }
 
 /* line 36, ../_sass/layout/_body.scss */
 h4 {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 /* line 40, ../_sass/layout/_body.scss */
 h5 {
-  font-size: 14.94px;
+    font-size: 14.94px;
 }
 
 /* line 44, ../_sass/layout/_body.scss */
 h6 {
-  font-size: 12.06px;
+    font-size: 12.06px;
 }
 
 /* line 48, ../_sass/layout/_body.scss */
 li {
-  list-style: none;
+    list-style: none;
 }
 
 /* line 52, ../_sass/layout/_body.scss */
 pre {
-  font-family: "Roboto", Helvetica, sans-serif;
-  font-size: 15px;
-  padding: 10px 20px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 10px 20px;
 }
 /* line 13, ../_sass/utility/_common_utility.scss */
 pre::selection {
-  background: #49a7c3;
+    background: #49a7c3;
 }
 /* line 17, ../_sass/utility/_common_utility.scss */
 pre ::selection {
-  background: #e296e2;
+    background: #e296e2;
 }
 
 /* line 60, ../_sass/layout/_body.scss */
 .main-content {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 /* line 64, ../_sass/layout/_body.scss */
 .error {
-  background: #58494c;
-  color: #ed4e64;
+    background: #58494c;
+    color: #ed4e64;
 }
 
 /* line 69, ../_sass/layout/_body.scss */
 .success {
-  background: #49564c;
-  color: #51c96f;
+    background: #49564c;
+    color: #51c96f;
 }
 
 /* line 74, ../_sass/layout/_body.scss */
 .info {
-  background: #495458;
-  color: #49a7c3;
+    background: #495458;
+    color: #49a7c3;
 }
 /* line 13, ../_sass/utility/_common_utility.scss */
 .info::selection {
-  background: #49a7c3;
+    background: #49a7c3;
 }
 /* line 17, ../_sass/utility/_common_utility.scss */
 .info ::selection {
-  background: #e296e2;
+    background: #e296e2;
 }
 
 /* line 80, ../_sass/layout/_body.scss */
 .how-to {
-  padding-top: 10px;
+    padding-top: 10px;
 }
 
 /* line 84, ../_sass/layout/_body.scss */
 .param-details {
-  color: black;
-  background: yellow;
+    color: black;
+    background: yellow;
 }
 
 /* line 1, ../_sass/layout/_footer.scss */
 .footer {
-  font-family: "Roboto", Helvetica, sans-serif;
-  font-size: 13.5px;
-  font-weight: 500;
-  background: black;
-  color: #47bcdd;
-  margin-top: 10px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    background: black;
+    color: #47bcdd;
+    margin-top: 10px;
 }
 /* line 10, ../_sass/layout/_footer.scss */
 .footer a {
-  color: #e55066;
+    color: #e55066;
 }
 /* line 14, ../_sass/layout/_footer.scss */
 .footer ::selection {
-  background: #e296e2;
+    background: #e296e2;
 }
 
 /* line 22, ../_sass/layout/_footer.scss */
 .upper-footer a {
-  color: #52d273;
+    color: #52d273;
 }
 
 /* line 27, ../_sass/layout/_footer.scss */
 .team-footer {
-  background: #333333;
+    background: #333333;
 }
 
 /* line 32, ../_sass/layout/_footer.scss */
 .team-members-images {
-  max-height: 100px;
-  max-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
 }
 
 /* line 37, ../_sass/layout/_footer.scss */
 .lower-footer {
-  clear: both;
-  color: #e8c74f;
+    clear: both;
+    color: #e8c74f;
 }
 
 /* line 1, ../_sass/layout/_header.scss */
 .header {
-  margin: 20px;
+    margin: 20px 20px 3rem -10px;
 }
 
 /* line 1, ../_sass/layout/_navigation.scss */
 .navigation {
-  border-radius: 10px;
-  background: whitesmoke;
-  line-height: 30px;
+    border-radius: 10px;
+    background: whitesmoke;
+    line-height: 30px;
 }
 /* line 6, ../_sass/layout/_navigation.scss */
 .navigation ::selection {
-  background: #89ffaa;
+    background: #89ffaa;
 }
 
 /* line 11, ../_sass/layout/_navigation.scss */
 .search-form {
-  margin: 10px;
+    margin: 10px;
 }

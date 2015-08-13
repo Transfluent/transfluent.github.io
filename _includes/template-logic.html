@@ -12,7 +12,7 @@
     <td>Parameters</td>
     <td>
       <span ng-repeat="params in method.Parameters"><a href="#" ng-click="showDetails = ! showDetails">{[ params.value ]}</a><span ng-if="!$last">, </span>
-        <p ng-show="showDetails" class="param-details"><span ng-if="params.optional">{[ "[Optional]" ]}<br></span>{[ params.desc ]}</p>
+        <p ng-show="showDetails" class="param-details"><span ng-if="params.optional">{[ "[Optional]" ]}<br></span>{[ params.desc | to_trusted ]}</p>
       </span>
     </td>
   </tr>

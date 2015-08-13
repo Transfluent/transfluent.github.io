@@ -51,6 +51,7 @@ div + table.table {
 
 table.table tr td:first-child {
     font-weight: bold;
+    min-width: 120px;
 }
 
 section h4 {

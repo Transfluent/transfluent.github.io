@@ -89,7 +89,7 @@ code {
     animation: FadeOutFadeInAnimation 2s infinite;
 }
 
-h3 + p {
+h3 + p, h4 + p {
     padding-left: 1rem;
 }
 

@@ -1,0 +1,13 @@
+---
+layout: api
+title: Testing
+section: api/Testing
+---
+
+<div ng-controller="servicesCtrl">
+  <div ng-repeat="method in navs| filter: searchTerm">
+    <div ng-if="method.Name =='{{ page.title}}'">
+      {{ method.Description }}
+    </div>
+  </div>
+</div>

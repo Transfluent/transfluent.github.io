@@ -1,16 +1,16 @@
-- Name: Hello
-  Description: This method is just a dummy method to quickly familiarize yourself with the API.
-                The method accepts one parameter (name), if the URL satisfies the parameters then it outputs the result in  JSON format. 
-                See below the Error and Success messages.
-  Method: GET
-  URL: https://transfluent.com/v2/hello/
-  Parameters: 
-    - value: name
-      desc: 
-  Returns:
-    - OK:  
-      - Default: '{"status":"OK","response":"Hello World"}'
-    - Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
+#- Name: Hello
+#  Description: This method is just a dummy method to quickly familiarize yourself with the API.
+#                The method accepts one parameter (name), if the URL satisfies the parameters then it outputs the result in  JSON format.
+#                See below the Error and Success messages.
+#  Method: GET
+#  URL: https://transfluent.com/v2/hello/
+#  Parameters:
+#    - value: name
+#      desc:
+#  Returns:
+#    - OK:
+#      - Default: '{"status":"OK","response":"Hello World"}'
+#    - Error: '{"status":"ERROR","error":{"type":"EBackendParameterInvalid","message":"Name is required!"},"response":"Unfortunately an error occured. You might want to try again. If problem persists, please report this as a bug. We are sorry for inconvenience."}'
 
 #- Name: Translation-Levels
 #  Description: |
@@ -23,5 +23,10 @@
 #                5 = Proof Read only;
 #                6 = Native level Proof read only;
 #  
-- Name: How-To
-  Description: This is a simple step wise guide how to get started to connect to our service via our API.
+#- Name: How-To
+#  Description: This is a simple step wise guide how to get started to connect to our service via our API.
+
+- Name: Testing
+  Description: For development and testing your integration, we provide a <strong>Pseudo language</strong> translation. The language code for Pseudo language is <strong>xx-xx</strong>. Use English (<code>en</code>) as source language and Pseudo language as target language and the order will be processed for free. Instead of actual translation, you will get your source text reversed (e.g. &quot;Hello&quot; -&gt; &quot;olleH&quot;). Placing Pseudo language orders is useful for testing the whole process from end to end and, depending on your use case, possibly also for pinpointing any non-translated parts on your end.
+- Name: Callbacks
+  Description: Callbacks will be explained on this page soon.

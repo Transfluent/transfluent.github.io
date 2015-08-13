@@ -93,6 +93,10 @@ h3 + p, h4 + p {
     padding-left: 1rem;
 }
 
+.navigation-links ul ul {
+    padding-left: 2rem;
+}
+
 @media (max-width: 767px) {
     .lower-footer > div > div {
         text-align: center;

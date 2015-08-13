@@ -104,17 +104,17 @@
   <tr ng-if="method.Parameters">
     <td>Parameters</td>
     <td>
-      <span ng-repeat="params in method.Parameters"><a href="#" ng-click="showDetails = ! showDetails">{[ params.value ]}</a>, 
+      <span ng-repeat="params in method.Parameters"><a href="#" ng-click="showDetails = ! showDetails">{[ params.value ]}</a><span ng-if="!$last">, </span>
         <p ng-show="showDetails" class="param-details"><span ng-if="params.optional">{[ "[Optional]" ]}<br></span>{[ params.desc ]}</p>
       </span>
     </td>
-  </tr>  
+  </tr>
 </table>
 <div ng-if="method.Returns">
-  <p>Returns:</p>
+  <h3>Example return values:</h3>
   <div ng-repeat="returnings in method.Returns">
     <div ng-repeat="okey in returnings.OK">
-      <p>With Status OK:</p>
+      <p>When successful:</p>
       <div ng-if="okey.GET">
         <p>GET:</p>
         <pre ng-bind="okey.GET" class="success"></pre>
@@ -124,11 +124,11 @@
         <pre ng-bind="okey.POST" class="success"></pre>
       </div>
       <div ng-if="okey.Default">
-        <pre ng-bind="okey.Default" class="success"></pre>         
+        <pre ng-bind="okey.Default" class="success"></pre>
       </div>
     </div>
     <div ng-if="returnings.Error">
-      <p>With Status Error:</p>
+      <p>On an error:</p>
       <pre ng-bind="returnings.Error" class="error"></pre>
     </div>
     <div ng-if="returnings.Default">

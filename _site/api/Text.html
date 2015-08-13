@@ -70,14 +70,6 @@
             </ul>
         </li>
     </ul>
-    <ul ng-controller="sampleCodeCtrl">
-        <li ng-hide="searchTerm"><a href="/sample-code/example-code.html">Example Code To:</a></li>
-        <li>
-            <ul>
-                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/sample-code/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
-            </ul>
-        </li>
-    </ul>
 </div>
         </nav>
 

@@ -5,33 +5,33 @@ section: api/Authenticate
 ---
 
 <div ng-controller="securityCtrl">
-  <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='{{ page.title }}'">
-      {% include template-logic.html %}
-      <section>
-        <header>
-          <h4>Example of successful authentication response (HTTP200, <code>Content-Type: application/json</code>):</h4>
-        </header>
+    <div ng-repeat="method in navs| filter: searchTerm">
+        <div ng-if="method.Name=='{{ page.title }}'">
+            {% include template-logic.html %}
+            <section>
+                <header>
+                    <h4>Example of a successful authentication response (HTTP200, <code>Content-Type: application/json</code>):</h4>
+                </header>
 {% highlight json %}
 "A_TOKEN_WHICH_EXPIRES_WHEN_PASSWORD_IS_CHANGED"
 {% endhighlight %}
-      </section>
-        <section>
-        <header>
-          <h4>Example of failed authentication response (HTTP500, <code>Content-Type: application/json</code>):</h4>
-        </header>
+            </section>
+            <section>
+                <header>
+                    <h4>Example of a failed authentication response (HTTP500, <code>Content-Type: application/json</code>):</h4>
+                </header>
 {% highlight json %}
 {"type":"Transfluent\\V3\\AuthenticationFailedException","message":"Authentication failed!"}
 {% endhighlight %}
-      </section>
-      <section>
-        <header>
-          <h4>PHP Example</h4>
-        </header>
-        <div>
-          {% include codes/authenticate.php %}
+            </section>
+            <section>
+                <header>
+                    <h4>PHP Example</h4>
+                </header>
+                <div>
+                    {% include codes/authenticate.php %}
+                </div>
+            </section>
         </div>
-      </section>
     </div>
-  </div>
 </div>

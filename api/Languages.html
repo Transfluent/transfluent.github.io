@@ -8,14 +8,55 @@ section: api/Languages
   <div ng-repeat="method in navs| filter: searchTerm">
     <div ng-if="method.Name =='{{ page.title}}'">
       {% include template-logic.html %}
+
       <section>
         <header>
-          <h4>Usage Example</h4>
+          <h4>Example of a response (HTTP200, <code>Content-Type: application/json</code>):</h4>
         </header>
-        <div>
-          {% include examples/languages.html %}
-        </div>
+{% highlight json %}
+{
+  "names": {
+    "fr-fr": "French (France)",
+    "de-de": "German",
+    "es-es": "Spanish (Spain)",
+    "xx-xx": "Pseudo language"
+  },
+  "pairs": {
+    "economy": {
+      "en-gb": [
+        "de-de",
+        "es-la",
+        "ar-sa"
+      ],
+      "fi-fi": [
+        "sv-se",
+        "en-gb",
+        "en-us"
+      ]
+    },
+    "professional": {
+      "hy-am": [
+        "en-us",
+        "en-gb"
+      ],
+      "bs-ba": [
+        "en-us",
+        "en-gb"
+      ],
+      "bg-bg": [
+        "en-us",
+        "en-gb"
+      ],
+      "zh-hk": [
+        "en-us",
+        "en-gb"
+      ]
+    }
+  }
+}
+{% endhighlight %}
       </section>
+
       <section>
         <header>
           <h4>PHP Example</h4>

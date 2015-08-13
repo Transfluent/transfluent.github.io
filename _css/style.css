@@ -83,20 +83,26 @@ code {
     100% { opacity:1; }
 }
 .fa-heart {
-    -webkit-animation: FadeOutFadeInAnimation 3s infinite;
-    -moz-animation: FadeOutFadeInAnimation 3s infinite;
-    -ms-animation: FadeOutFadeInAnimation 3s infinite;
-    animation: FadeOutFadeInAnimation 3s infinite;
+    -webkit-animation: FadeOutFadeInAnimation 2s infinite;
+    -moz-animation: FadeOutFadeInAnimation 2s infinite;
+    -ms-animation: FadeOutFadeInAnimation 2s infinite;
+    animation: FadeOutFadeInAnimation 2s infinite;
 }
 
 @media (max-width: 767px) {
     .lower-footer > div > div {
         text-align: center;
         margin-bottom: 2rem;
-        float: none;
+        float: none !important;
     }
     .lower-footer p {
         text-align: center;
+    }
+    .navigation {
+        padding-top: 1rem;
+    }
+    .search-form {
+        display: none;
     }
 }
 

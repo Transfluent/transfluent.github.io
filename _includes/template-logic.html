@@ -25,18 +25,18 @@
       <div ng-if="okey.GET">
         <p>Response to a GET request:</p>
         {% highlight json %}
-        {{okey.GET}}
+        <span ng-bind="okey.GET"></span>
         {% endhighlight %}
       </div>
       <div ng-if="okey.POST">
         <p>Response to a POST request:</p>
         {% highlight json %}
-        {{okey.POST}}
+        <span ng-bind="okey.POST"></span>
         {% endhighlight %}
       </div>
       <div ng-if="okey.Default">
         {% highlight json %}
-        {{okey.Default}}
+        <span ng-bind="okey.Default"></span>
         {% endhighlight %}
       </div>
     </div>

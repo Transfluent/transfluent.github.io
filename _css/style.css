@@ -230,6 +230,9 @@ pre ::selection {
     margin-right: 0.5rem;
     display: inline-block;
 }
+.param-details a {
+    color: #ddd !important;
+}
 
 /* line 1, ../_sass/layout/_footer.scss */
 .footer {

@@ -11,12 +11,12 @@
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
     
 - Name: FileSave
-  Description: You can easily save your project's resource file to our backend by making a POST request to /file/save/.
-  Method: GET/POST
+  Description: Save a file and later order translations for it.
+  Method: POST
   URL: https://transfluent.com/v2/file/save/
   Parameters: 
     - value: content
-      desc: File content must always be base64 encoded.
+      desc: File content <strong>must be</strong> base64 encoded.
     - value: type
       desc: |
         Supported types are: <ul><li>iOS-strings</li><li>Android-strings</li><li>Android-arrays</li><li>MooTools-locale</li><li>js-file</li><li>WP-RESX</li><li>Properties-file</li><li>YAML-file</li><li>XML-file</li><li>po-file</li><li>Excel-file</li><li>json-file</li></ul>

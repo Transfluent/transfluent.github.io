@@ -2,47 +2,45 @@
 <?php
 require "BackendClient.php";
 
-use Transfluent\BackendClient\BackendClient as Transfluent;
+use Transfluent\BackendClient as Transfluent;
 
 $client = new Transfluent('example@example.org', 'my-password');
 $languages = $client->Languages();
-print_r($languages);
+var_dump($languages);
 
 // Sample Output
-
-
-   [70] => Array
-        (
-            [137] => Array
-                (
-                    [name] => Uzbek
-                    [code] => uz-uz
-                    [id] => 137
-                )
-
-        )
-
-    [71] => Array
-        (
-            [138] => Array
-                (
-                    [name] => Mongolian
-                    [code] => mn-mn
-                    [id] => 138
-                )
-
-        )
-
-    [72] => Array
-        (
-            [139] => Array
-                (
-                    [name] => Nepali
-                    [code] => ne-np
-                    [id] => 139
-                )
-
-        )
+/*
+array(112) {
+    [0] =>
+  array(1) {
+        [1] =>
+    array(4) {
+            'name' =>
+      string(23) "English (Great Britain)"
+      'code' =>
+      string(5) "en-gb"
+      'id' =>
+      int(1)
+      'dir' =>
+      string(3) "ltr" // Writing direction: LTR = Left to Right, RTL = Right to Left
+    }
+  }
+  [1] =>
+  array(1) {
+        [2] =>
+    array(4) {
+            'name' =>
+      string(15) "French (France)"
+      'code' =>
+      string(5) "fr-fr"
+      'id' =>
+      int(2)
+      'dir' =>
+      string(3) "ltr"
+    }
+  }
+  ...
+*/
  
 
 {% endhighlight %}

@@ -9,7 +9,7 @@
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
       optional: yes
     - value: language
-      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: text
       desc: |
         Text: either source text to translate or previously made translation you want to save into our system. May contain HTML. Please use UTF-8.
@@ -17,7 +17,7 @@
       desc: <code>invalidate_translations</code> is a boolean value (<code>1/0</code> or <code>on/off</code>) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably do not want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it is important to set <code>invalidate_translations</code> off!
       optional: yes
     - value: token
-      desc: Authentication token. Please see :- Authenticate
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
 #  Returns:
 #    - OK:
 #        - POST: '{"status":"OK","response":true}'
@@ -33,9 +33,9 @@
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
       optional: yes
     - value: language
-      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
-      desc: Authentication token. Please see :- Authenticate
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
   Returns:
     - OK: 
       - Default: '{"status":"OK","response":{"is_translated":true}}'
@@ -47,7 +47,7 @@
     - value: group_id
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
     - value: language
-      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: texts
       desc: |
             POST-only. Array of text keys and content. Either JSON array (string; e.g. {"foo": "Foooooooooooooooo", "bar": "Bar"}) or a POST parameter array (e.g. texts[foo]=Foooooooo&texts[bar]=Bar).
@@ -59,7 +59,7 @@
     - value: offset [=0]
       desc: GET-only
     - value: token
-      desc: Authentication token. Please see :- Authenticate
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
   Returns:
     - OK: 
       - GET: |
@@ -91,17 +91,17 @@
     - value: group_id
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
     - value: source_language
-      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: target_languages
       desc: |
-          Target languages to translate texts into. Provide language codes as a JSON-array (e.g. ["fi", "fr-fr"]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11 or target_languages[]=fi&target_languages[]=fr-fr). Please see :- Languages
+          Target languages to translate texts into. Provide language codes as a JSON-array (e.g. ["fi", "fr-fr"]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11 or target_languages[]=fi&target_languages[]=fr-fr). Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: texts
       desc: |
           Texts to translate. Provide array as string (JSON: [{"id":"my_text_id"},{"id":"some_another_key"}]) or post fields (texts[][id]=my_text_id&texts[][id]=some_another_key)
     - value: comment
       desc: Context information and other relevant information to the translator such as tone (formal/informal).
     - value: callback_url
-      desc: Callback URL which will be called once translation is completed. Please see:- Callbacks
+      desc: Callback URL which will be called once translation is completed. Please see <a href="/api/Callbacks.html">Callbacks</a> for more details.
     - value: max_words [=1000]
       desc: To avoid surprisingly costly orders, you can specify maximum word count to order. If limit is exceeded, the order will fail.
     - value: level [=business]
@@ -117,7 +117,7 @@
       desc: Title for the project to identify it on delivery.
       optional: yes
     - value: token
-      desc: Authentication token. Please see :- Authenticate
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
   Returns:
     - OK:
       - Default: |

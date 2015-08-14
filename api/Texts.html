@@ -5,9 +5,50 @@ section: api/Texts
 ---
 
 <div ng-controller="textCtrl">
-  <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='{{ page.title }}'">
-      {% include template-logic.html %}
+    <div ng-repeat="method in navs| filter: searchTerm">
+        <div ng-if="method.Name=='{{ page.title }}'">
+            {% include template-logic.html %}
+
+            <section>
+                <header>
+                    <h4>cURL Example to retrieve texts</h4>
+                </header>
+                <code>curl "https://transfluent.com/v2/texts/?group_id=SampleProject&language=en-gb&token=YOUR-TOKEN-GOES-HERE" | python -m json.tool</code>
+            </section>
+            <section>
+                <header>
+                    <h4>Successful response (HTTP200, <code>Content-Type: application/json</code>):</h4>
+                </header>
+{% highlight json %}
+{
+    "response": {
+        "sample-key": {
+            "group_id": "SampleProject",
+            "language": {
+                "code": "en-gb",
+                "dir": "ltr",
+                "id": 1,
+                "name": "English (Great Britain)"
+            },
+            "text": "This is an example of source text",
+            "text_id": "sample-key"
+        },
+        "some-other-key": {
+            "group_id": "SampleProject",
+            "language": {
+                "code": "en-gb",
+                "dir": "ltr",
+                "id": 1,
+                "name": "English (Great Britain)"
+            },
+            "text": "My second text",
+            "text_id": "some-other-key"
+        }
+    },
+    "status": "OK"
+}
+{% endhighlight %}
+            </section>
+        </div>
     </div>
-  </div>
 </div>

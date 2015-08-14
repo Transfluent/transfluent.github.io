@@ -50,14 +50,14 @@
       desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: texts
       desc: |
-            POST-only. Array of text keys and content. Either JSON array (string; e.g. {"foo": "Foooooooooooooooo", "bar": "Bar"}) or a POST parameter array (e.g. texts[foo]=Foooooooo&texts[bar]=Bar).
-    - value: invalidate_translations [=1]
+            <span class="label label-warning">POST-only</span> An array of text keys and content. E.g. <code>..,"texts": {"text-key-1": "My first text", "text-key-2": "My second text"},..</code>
+    - value: invalidate_translations [=on]
       desc: |
             <code>invalidate_translations</code> is a boolean value (<code>1/0</code> or <code>on/off</code>) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably do not want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it is important to set <code>invalidate_translations</code> off! <span class="label label-warning">Warning! Affects ALL texts set on the same request. If you need to invalidate some and keep others, you have to perform two requests.</span>
-    - value: limit [=100]
-      desc: GET-only
+    - value: limit [=10]
+      desc: <span class="label label-warning">GET-only</span> Limit number of text items in the response payload. Maximum is 100.
     - value: offset [=0]
-      desc: GET-only
+      desc: <span class="label label-warning">GET-only</span> Begin listing of text items in the payload from Nth item.
     - value: token
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
   Returns:

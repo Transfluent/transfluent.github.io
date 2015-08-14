@@ -106,8 +106,8 @@
     - value: callback_url
       desc: Callback URL which will be called once the translation is completed. Please see <a href="/api/Callbacks.html">Callbacks</a> for more details.
       optional: yes
-    - value: max_words [=1000]
-      desc: To avoid surprisingly costly orders, you can specify maximum word count to order. If limit is exceeded, the order will fail.
+    - value: max_words [=-1]
+      desc: To avoid surprisingly costly orders, you can specify a maximum word count. If the limit is exceeded, the order will fail. By default, there is no limit.
       optional: yes
     - value: level [=business]
       desc: |

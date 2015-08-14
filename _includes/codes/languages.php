@@ -5,7 +5,7 @@ require "BackendClient.php";
 use Transfluent\BackendClient as Transfluent;
 
 $client = new Transfluent('example@example.org', 'my-password');
-$languages = $client->Languages();
+$languages = $client->Languages(); // This calls v2/languages method which has a bit different payload than the one described above
 var_dump($languages);
 
 // Sample Output

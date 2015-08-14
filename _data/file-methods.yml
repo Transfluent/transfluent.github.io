@@ -51,36 +51,35 @@
 #      - Default: '{"status":"OK","response":{"progress":"11.49%","word_count":87,"word_count_translated":10,"missing_keys":[]}}'
     
 - Name: FileTranslate
-  Description: You can easily translate texts from your project's resource file by making a POST request to /file/translate/. Please note that previously translated, unchanged items won't be re-translated. All new and changed items will be translated.
-  Method: GET/POST
+  Description: Order translations for your files. Please note that previously translated, unchanged items in the files will not be re-translated. All new and changed items will be translated.
+  Method: POST
   URL: https://transfluent.com/v2/file/translate/
   Parameters: 
     - value: callback_url
       desc: |
         A POST request with a JSON payload will be sent to callback URL. It will contain an array of links to updated files. The array is indexed by language ids. Example callback payload:
-        {"updated_files":{"4":"https:\/\/transfluent.com\/v2\/file\/read\/?token=foobar123&identifier=my-project-Localizable.strings&language=4"}}
+        <code>{"updated_files":{"4":"https:\/\/transfluent.com\/v2\/file\/read\/?token=TOKEN-GOES-HERE&identifier=my-project-Localizable.strings&language=4"}}</code>
     - value: comment
       desc: Comment to the translator. E.g. context information, requested text style (formal/informal) etc.
       optional: yes
-      
     - value: target_languages
       desc: |
-        Target languages to translate texts into. Provide language codes as an array (e.g. ["fi", "fr"] or ["sv-se]). Please refer to /languages/-method for full list of language ids and codes.
-    - value: level [=3]
+        Target languages to translate texts into. Provide language codes as an array (e.g. ["fi", "fr"] or ["sv-se]). Please see <a href="/api/Languages.html">Languages</a> for more details.
+    - value: level [=pair]
       desc: |
-        Translator level: economy, native, business, pair [of business translators] or expert. Default is pair of business translators. Valid values are: eco|economy|pro|business|expert|native|pair
+        Translator level: economy, business, pair [of business translators]. Default is pair of business translators. Valid values are: economy|business|pair
     - value: identifier
-      desc: File identifier (string). May contain special characters, recommended maximum length is 255 characters.
+      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
     - value: language
       desc: |
         <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
-    - value: quote
-      desc: When set to true (quote=1), a quote will be returned instead of processing the payload and placing the order.
-  Returns:
-    - OK:  
-      - Default: '{"status":"OK","response":{"word_count":87,"ordered_word_count":12}}'
+    - value: quote [=off]
+      desc: <code>quote</code> is a boolean which set <code>on</code> will return a quote instead of processing the payload and placing the order.
+#  Returns:
+#    - OK:
+#      - Default: '{"status":"OK","response":{"word_count":87,"ordered_word_count":12}}'
     
 #- Name: FileTranslations
 #  Description: This method allows you to import translations from an Excel worksheet to our string translation system. Please ask details from us if you plan to use this!

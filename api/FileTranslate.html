@@ -5,9 +5,51 @@ section: api/FileTranslate
 ---
 
 <div ng-controller="fileCtrl">
-  <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='{{ page.title }}'">
-      {% include template-logic.html %}
+    <div ng-repeat="method in navs| filter: searchTerm">
+        <div ng-if="method.Name=='{{ page.title }}'">
+            {% include template-logic.html %}
+
+            <section>
+                <header>
+                    <h4>cURL Example to get a quote</h4>
+                </header>
+                <code>curl -d '{"quote": "on","language":"en-gb","identifier": "example.json","target_languages":["fi-fi"],"level":"business","token":"YOUR-TOKEN-GOES-HERE"}' --header "Content-Type: application/json" https://transfluent.com/v2/file/translate/ | python -m json.tool</code>
+            </section>
+            <section>
+                <header>
+                    <h4>Successfully requested a quote (HTTP200, <code>Content-Type: application/json</code>):</h4>
+                </header>
+{% highlight json %}
+{
+    "response": {
+        "total_price": "1,08\u20ac",
+        "word_count": 6,
+        "word_count_altered": 6
+    },
+    "status": "OK"
+}
+{% endhighlight %}
+            </section>
+            <section>
+                <header>
+                    <h4>cURL Example to order translations for a file</h4>
+                </header>
+                <code>curl -d '{"language":"en-gb","identifier": "example.json","target_languages":["fi-fi"],"level":"business","token":"YOUR-TOKEN-GOES-HERE"}' --header "Content-Type: application/json" https://transfluent.com/v2/file/translate/ | python -m json.tool</code>
+            </section>
+            <section>
+                <header>
+                    <h4>Successfully ordered translations for the file (HTTP200, <code>Content-Type: application/json</code>):</h4>
+                </header>
+{% highlight json %}
+{
+    "response": {
+        "ordered_word_count": 6,
+        "word_count": 6
+    },
+    "status": "OK"
+}
+{% endhighlight %}
+            </section>
+        </div>
     </div>
-  </div>
 </div>

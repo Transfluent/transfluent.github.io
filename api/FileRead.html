@@ -5,9 +5,39 @@ section: api/FileRead
 ---
 
 <div ng-controller="fileCtrl">
-  <div ng-repeat="method in navs| filter: searchTerm">
-    <div ng-if="method.Name=='{{ page.title }}'">
-      {% include template-logic.html %}
+    <div ng-repeat="method in navs| filter: searchTerm">
+        <div ng-if="method.Name=='{{ page.title }}'">
+            {% include template-logic.html %}
+
+            <section>
+                <header>
+                    <h4>cURL Example to retrieve a file</h4>
+                </header>
+                <code>curl "https://transfluent.com/v2/file/read/?identifier=test.json&language=en-gb&token=YOUR-TOKEN-GOES-HERE" --verbose</code>
+            </section>
+            <section>
+                <header>
+                    <h4>Successfully retrieved file (HTTP200, <code>Content-Description: File Transfer; Content-Disposition: attachment; filename="teston_en-gb.js"</code>):</h4>
+                </header>
+{% highlight json %}
+{"test":"This is just a small test"}
+{% endhighlight %}
+            </section>
+            <section>
+                <header>
+                    <h4>Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):</h4>
+                </header>
+{% highlight json %}
+{
+    "status": "ERROR",
+    "error": {
+        "type": "ELanguageNotSupportedException",
+        "message": "Language is not supported: af-az"
+    }
+}
+{% endhighlight %}
+            </section>
+
+        </div>
     </div>
-  </div>
 </div>

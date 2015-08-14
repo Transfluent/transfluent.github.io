@@ -4,13 +4,13 @@
   URL: https://transfluent.com/v2/file/read/
   Parameters: 
     - value: identifier
-      desc: File identifier (string). May contain special characters, recommended maximum length is 255 characters.
+      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
     - value : language
       desc: Language id (int). The human language of the content. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
   Returns: 
-    - Other: "Attention! Exceptionally this method won't response with a JSON package. It will set 'Content-Disposition: attachment; filename=..' HTTP header and force your client to download the file."
+    - Other: "Attention! Exceptionally this method downloads the file, instead of returning a JSON response. The method will set 'Content-Disposition: attachment; filename=..' HTTP header and suggest your client to initiate a file download."
     
 - Name: FileSave
   Description: You can easily save your project's resource file to our backend by making a POST request to /file/save/.
@@ -26,12 +26,13 @@
     - value: type
       desc: |
         Supported types are:- iOS-strings, Android-strings, Android-arrays, MooTools-locale, js-file, Symbian-TS, WP-RESX, Properties-file, YAML-file, XML-file, po-file, Excel-file, json-file
-    - value: save_only_data
-      desc: If you have previously translated content, you may save the translations by specifying this variable as true (1;on). Remember to use the same file identifier as the source file has.
+    - value: save_only_data [=off]
+      desc: <code>save_only_data</code> is a boolean. If you have previously translated content, you may save the translations by specifying this variable as true (<code>1</code> or <code>on</code>). Remember to use the same file identifier as the source file has.
+      optional: yes
     - value: identifier
-      desc: File identifier (string). May contain special characters, recommended maximum length is 255 characters.
+      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
     - value: language
-      desc: Language id (int). The human language of the content. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
       desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
   Returns:
@@ -44,11 +45,11 @@
   URL: https://transfluent.com/v2/file/status/
   Parameters: 
     - value: identifier
-      desc: File identifier (string). May contain special characters, recommended maximum length is 255 characters.
+      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
     - value: language
-      desc: Language id (int). The human language of the content. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
   Returns:
     - OK:  
       - Default: '{"status":"OK","response":{"progress":"11.49%","word_count":87,"word_count_translated":10}}'
@@ -68,7 +69,7 @@
       
     - value: target_languages
       desc: |
-        Target languages to translate texts into. Provide language ids/codes as an JSON-array (e.g. [1,4,11] or ["fi", "fr"]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11 or target_languages[]=fi&target_languages[]=fr). Please refer to /languages/-method for full list of language ids and codes.
+        Target languages to translate texts into. Provide language codes as an array (e.g. ["fi", "fr"] or ["sv-se]). Please refer to /languages/-method for full list of language ids and codes.
     - value: level [=3]
       desc: |
         Translator level: economy, native, business, pair [of business translators] or expert. Default is pair of business translators. Valid values are: eco|economy|pro|business|expert|native|pair
@@ -76,9 +77,9 @@
       desc: File identifier (string). May contain special characters, recommended maximum length is 255 characters.
     - value: language
       desc: |
-        Language id (int) or language code (string). Language of source file. E.g. en-gb or 1 for English. Please refer to /languages/-method for full list of language ids and codes.
+        <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
     - value: quote
       desc: When set to true (quote=1), a quote will be returned instead of processing the payload and placing the order.
   Returns:

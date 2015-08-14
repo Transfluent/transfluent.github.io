@@ -8,6 +8,26 @@ section: api/TextStatus
   <div ng-repeat="method in navs| filter: searchTerm">
     <div ng-if="method.Name=='{{ page.title }}'">
       {% include template-logic.html %}
+
+      <section>
+        <header>
+          <h4>cURL Example to check status</h4>
+        </header>
+        <code>curl "https://transfluent.com/v2/text/status/?text_id=sample-key&group_id=SampleProject&language=fi-fi&token=YOUR-TOKEN-GOES-HERE" | python -m json.tool</code>
+      </section>
+      <section>
+        <header>
+          <h4>Successful response (HTTP200, <code>Content-Type: application/json</code>):</h4>
+        </header>
+{% highlight json %}
+{
+    "response": {
+        "is_translated": false
+    },
+    "status": "OK"
+}
+{% endhighlight %}
+      </section>
     </div>
   </div>
 </div>

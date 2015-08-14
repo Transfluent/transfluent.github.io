@@ -1,38 +1,37 @@
 - Name: FileRead
-  Description: You can easily retrieve your project's original/translated resource file from our backend by making a GET request to /file/read/.
+  Description: Retrieve translated files by calling this method.
   Method: GET
   URL: https://transfluent.com/v2/file/read/
   Parameters: 
     - value: identifier
       desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
     - value : language
-      desc: Language id (int). The human language of the content. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
-  Returns: 
-    - Other: "Attention! Exceptionally this method downloads the file, instead of returning a JSON response. The method will set 'Content-Disposition: attachment; filename=..' HTTP header and suggest your client to initiate a file download."
     
 - Name: FileSave
   Description: You can easily save your project's resource file to our backend by making a POST request to /file/save/.
   Method: GET/POST
   URL: https://transfluent.com/v2/file/save/
   Parameters: 
-    - value: format [=UTF-8]
-      desc: |
-        Supported formats are:- UTF-8, UTF-16. UTF-8 should be used for everything except iOS .strings files. 
-        They are UTF-16 encoded and the format parameter must be specified as UTF-16 for them.
     - value: content
-      desc: File content must be base64 encoded.
+      desc: File content must always be base64 encoded.
     - value: type
       desc: |
-        Supported types are:- iOS-strings, Android-strings, Android-arrays, MooTools-locale, js-file, Symbian-TS, WP-RESX, Properties-file, YAML-file, XML-file, po-file, Excel-file, json-file
-    - value: save_only_data [=off]
-      desc: <code>save_only_data</code> is a boolean. If you have previously translated content, you may save the translations by specifying this variable as true (<code>1</code> or <code>on</code>). Remember to use the same file identifier as the source file has.
-      optional: yes
+        Supported types are: <ul><li>iOS-strings</li><li>Android-strings</li><li>Android-arrays</li><li>MooTools-locale</li><li>js-file</li><li>WP-RESX</li><li>Properties-file</li><li>YAML-file</li><li>XML-file</li><li>po-file</li><li>Excel-file</li><li>json-file</li></ul>
     - value: identifier
       desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
     - value: language
       desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
+    - value: save_only_data [=off]
+      desc: <code>save_only_data</code> is a boolean. If you have previously translated content, you may save the translations by specifying this variable as true (<code>1</code> or <code>on</code>). Remember to use the same file identifier as the source file has.
+      optional: yes
+    - value: format [=UTF-8]
+      desc: |
+        Supported formats are:- UTF-8, UTF-16. UTF-8 should be used for everything except iOS .strings files.
+        They are UTF-16 encoded and the format parameter must be specified as UTF-16 for them.
+      optional: yes
     - value: token
       desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
   Returns:

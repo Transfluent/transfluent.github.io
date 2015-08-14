@@ -46,6 +46,23 @@ layout: default
             </div>
 
             <div style="margin-top: 3rem;">
+                <h4>Translation process example</h4>
+                <h5>First phase (once)</h5>
+                <ol>
+                    <li>Authenticate: Retrieve a token from the API and store it locally</li>
+                    <li>List of languages: Retrieve list of language names&codes and supported pairs from the API</li>
+                </ol>
+                <h5>Second phase (continuous translations)</h5>
+                <ol>
+                    <li>Save new content to the API by calling /v2/text/ or /v2/file/save/</li>
+                    <li>Order translations by calling /v2/texts/translate/ or /v2/file/translate/</li>
+                    <li>Receive a callback and handle completed translations on your end. Alternatively you can poll /v2/text/status/ or /v2/file/status/ to see if the translations have been completed.</li>
+                    <li>If you did not process the callback, you can retrieve the translations by calling /v2/text/ or /v2/file/read/.</li>
+                    <li>Now you are done. To translate more, go to first step of this phase.</li>
+                </ol>
+            </div>
+
+            <div style="margin-top: 3rem;">
                 <h4>Please note</h4>
                 <p>We would like to remind you of few important points that might cause issues later on if not addressed early on.</p>
                 <ul>

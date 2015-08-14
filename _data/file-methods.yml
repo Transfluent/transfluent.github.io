@@ -33,10 +33,7 @@
         They are UTF-16 encoded and the format parameter must be specified as UTF-16 for them.
       optional: yes
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
-  Returns:
-    - OK:  
-      - Default: '{"status":"OK","response":{"word_count":390,"word_count_altered":29}}'
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
 
 - Name: FileStatus
   Description: You can easily check what is the translation progress of your submitted file.
@@ -49,9 +46,9 @@
       desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
-  Returns:
-    - OK:  
-      - Default: '{"status":"OK","response":{"progress":"11.49%","word_count":87,"word_count_translated":10}}'
+#  Returns:
+#    - OK:
+#      - Default: '{"status":"OK","response":{"progress":"11.49%","word_count":87,"word_count_translated":10,"missing_keys":[]}}'
     
 - Name: FileTranslate
   Description: You can easily translate texts from your project's resource file by making a POST request to /file/translate/. Please note that previously translated, unchanged items won't be re-translated. All new and changed items will be translated.

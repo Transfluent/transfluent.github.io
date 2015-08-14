@@ -18,9 +18,9 @@
       optional: yes
     - value: token
       desc: Authentication token. Please see :- Authenticate
-  Returns:
-    - OK:
-        - POST: '{"status":"OK","response":true}'
+#  Returns:
+#    - OK:
+#        - POST: '{"status":"OK","response":true}'
         
 - Name: TextStatus
   Description: Check if text has been translated to specified language.

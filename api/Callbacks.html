@@ -10,8 +10,9 @@ section: api/Callbacks
             <p>When placing your order, you may provide <code>callback_url</code> parameter.
             A HTTP POST request with JSON payload will be made to the callback URL once translation is completed.</p>
 
-            <h4>Example callback payload:</h4>
-            {% highlight json %}{
+            <h4>Example callback for text orders:</h4>
+{% highlight json %}
+{
     "text_id" : "example-translation-key",
     "group_id" : "Test-App",
     "text" : "Vive la France !",
@@ -29,6 +30,18 @@ section: api/Callbacks
     },
     "level" : {"code" : "economy", "int" : 8},
     "previous_text" : "Vive la France!"
+}
+{% endhighlight %}
+
+            <h4>Example callback for file orders:</h4>
+{% highlight json %}
+{
+    "updated_files": {
+        "4": "https:\/\/transfluent.com\/v2\/file\/read\/?token=TOKEN-GOES-HERE&identifier=my-project-Localizable.strings&language=4"
+    },
+    "languages": {
+        "4": "zh-cn"
+    }
 }
 {% endhighlight %}
 

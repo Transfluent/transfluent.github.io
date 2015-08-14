@@ -54,29 +54,31 @@
   Description: Order translations for your files. Please note that previously translated, unchanged items in the files will not be re-translated. All new and changed items will be translated.
   Method: POST
   URL: https://transfluent.com/v2/file/translate/
-  Parameters: 
-    - value: callback_url
+  Parameters:
+    - value: identifier
+      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
+    - value: language
       desc: |
-        A POST request with a JSON payload will be sent to callback URL. It will contain an array of links to updated files. The array is indexed by language ids. Example callback payload:
-        <code>{"updated_files":{"4":"https:\/\/transfluent.com\/v2\/file\/read\/?token=TOKEN-GOES-HERE&identifier=my-project-Localizable.strings&language=4"}}</code>
-    - value: comment
-      desc: Comment to the translator. E.g. context information, requested text style (formal/informal) etc.
-      optional: yes
+        <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: target_languages
       desc: |
         Target languages to translate texts into. Provide language codes as an array (e.g. ["fi", "fr"] or ["sv-se]). Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: level [=pair]
       desc: |
         Translator level: economy, business, pair [of business translators]. Default is pair of business translators. Valid values are: economy|business|pair
-    - value: identifier
-      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
-    - value: language
+    - value: callback_url
       desc: |
-        <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
-    - value: token
-      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
+        A POST request with a JSON payload will be sent to callback URL. It will contain an array of links to updated files. The array is indexed by language ids and the ids are linked to language codes in languages array. Example callback payload:
+        <code>{"updated_files":{"4":"https:\/\/transfluent.com\/v2\/file\/read\/?token=TOKEN-GOES-HERE&identifier=my-project-Localizable.strings&language=4"},"languages": {"4":"zh-cn"}}</code>
+      optional: yes
+    - value: comment
+      desc: Comment to the translator. E.g. context information, requested text style (formal/informal) etc.
+      optional: yes
     - value: quote [=off]
       desc: <code>quote</code> is a boolean which set <code>on</code> will return a quote instead of processing the payload and placing the order.
+      optional: yes
+    - value: token
+      desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
 #  Returns:
 #    - OK:
 #      - Default: '{"status":"OK","response":{"word_count":87,"ordered_word_count":12}}'

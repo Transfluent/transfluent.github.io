@@ -14,16 +14,16 @@
   Description: Save a file and later order translations for it.
   Method: POST
   URL: https://transfluent.com/v2/file/save/
-  Parameters: 
+  Parameters:
+    - value: identifier
+      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
+    - value: language
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: content
       desc: File content <strong>must be</strong> base64 encoded.
     - value: type
       desc: |
         Supported types are: <ul><li>iOS-strings</li><li>Android-strings</li><li>Android-arrays</li><li>MooTools-locale</li><li>js-file</li><li>WP-RESX</li><li>Properties-file</li><li>YAML-file</li><li>XML-file</li><li>po-file</li><li>Excel-file</li><li>json-file</li></ul>
-    - value: identifier
-      desc: <code>identifier</code> is unique identifier for the file. It may contain letters, numbers and special characters (e.g. ":/." etc.), maximum length is 255 characters.
-    - value: language
-      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: save_only_data [=off]
       desc: <code>save_only_data</code> is a boolean. If you have previously translated content, you may save the translations by specifying this variable as true (<code>1</code> or <code>on</code>). Remember to use the same file identifier as the source file has.
       optional: yes

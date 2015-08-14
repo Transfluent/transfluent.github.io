@@ -49,6 +49,52 @@ section: api/Texts
 }
 {% endhighlight %}
             </section>
+
+            <section>
+                <header>
+                    <h4>cURL Example to save texts</h4>
+                </header>
+                <code>curl -d '{"group_id":"SampleProject","language":"en-gb","texts":{"text-key-1":"My first text","text-key-2":"My second text"},"token":"YOUR-TOKEN-GOES-HERE"}' --header "Content-Type: application/json" https://transfluent.com/v2/text/ | python -m json.tool</code>
+            </section>
+            <section>
+                <header>
+                    <h4>Successfully saved (HTTP200, <code>Content-Type: application/json</code>):</h4>
+                </header>
+{% highlight json %}
+{
+    "response": {
+        "failed_count": 0,
+        "failed_keys": "",
+        "not_changed_count": 0,
+        "saved_texts_count": 2,
+        "word_count": 6
+    },
+    "status": "OK"
+}
+{% endhighlight %}
+            </section>
+            <section>
+                <header>
+                    <h4>cURL Example (how not) to save texts</h4>
+                </header>
+                <code>curl -d '{"group_id":"SampleProject","language":"en-gb","texts":{"key-for-failing-empty-text":"","text-key-2":"My second text"},"token":"YOUR-TOKEN-GOES-HERE"}' --header "Content-Type: application/json" https://transfluent.com/v2/text/ | python -m json.tool</code>
+            </section>
+            <section>
+                <header>
+                    <h4>Failed to save (HTTP400, <code>Content-Type: application/json</code>):</h4>
+                </header>
+{% highlight json %}
+{
+    "error": {
+        "message": "An empty string can not be saved",
+        "type": "EBackendParameterInvalid"
+    },
+    "response": "Unfortunately an error occurred. You might want to try again. If the problem persists, please contact support@transfluent.com. We are sorry for the inconvenience caused to you.",
+    "status": "ERROR"
+}
+{% endhighlight %}
+            </section>
+
         </div>
     </div>
 </div>

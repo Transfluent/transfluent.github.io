@@ -62,10 +62,10 @@
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
   Returns:
     - OK: 
-      - GET: |
-            {"status":"OK","response":{"foo":{"text_id":"foo","group_id":"Test","language": {"name":"English","code":"en-gb","id":1},"text":"Fooooooo"},"bar": {"text_id":"bar","group_id":"Test","language":{"name":"English","code":"en-gb","id":1},"text":"Bar"}}}
-      - POST: |
-            {"status":"OK","response":{"word_count":2,"saved_texts_count":2,"not_changed_count":0,"failed_count":0,"failed_keys":""}}
+#      - GET: |
+#            {"status":"OK","response":{"foo":{"text_id":"foo","group_id":"Test","language": {"name":"English","code":"en-gb","id":1},"text":"Fooooooo"},"bar": {"text_id":"bar","group_id":"Test","language":{"name":"English","code":"en-gb","id":1},"text":"Bar"}}}
+#      - POST: |
+#            {"status":"OK","response":{"word_count":2,"saved_texts_count":2,"not_changed_count":0,"failed_count":0,"failed_keys":""}}
       
 #- Name: TextsOrders
 #  Method: GET

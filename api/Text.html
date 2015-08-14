@@ -17,7 +17,7 @@ section: api/Text
             </section>
             <section>
                 <header>
-                    <h4>Example of a response to a successful request (HTTP200, <code>Content-Type: application/json</code>):</h4>
+                    <h4>Successfully saved (HTTP200, <code>Content-Type: application/json</code>):</h4>
                 </header>
 {% highlight json %}
 {
@@ -28,7 +28,7 @@ section: api/Text
             </section>
             <section>
                 <header>
-                    <h4>Example of an error (HTTP401, <code>Content-Type: application/json</code>):</h4>
+                    <h4>Failed to save (HTTP401, <code>Content-Type: application/json</code>):</h4>
                 </header>
 {% highlight json %}
 {
@@ -38,6 +38,24 @@ section: api/Text
     },
     "response": "Token is invalid or has expired!",
     "status": "ERROR"
+}
+{% endhighlight %}
+            </section>
+
+            <section>
+                <header>
+                    <h4>cURL Example to retrieve a text</h4>
+                </header>
+                <code>curl "https://transfluent.com/v2/text/?text_id=sample-key&group_id=SampleProject&language=en-gb&token=YOUR-TOKEN-GOES-HERE" | python -m json.tool</code>
+            </section>
+            <section>
+                <header>
+                    <h4>Successful response (HTTP200, <code>Content-Type: application/json</code>):</h4>
+                </header>
+{% highlight json %}
+{
+    "response": "This is an example of source text",
+    "status": "OK"
 }
 {% endhighlight %}
             </section>

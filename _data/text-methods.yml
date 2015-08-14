@@ -1,5 +1,5 @@
 - Name: Text
-  Description: Retrieve (GET) or save (POST) texts to the system.
+  Description: Retrieve stored texts by HTTP GET request. Save texts to the system using HTTP POST request. Texts may contain HTML markup, it will be preserved in translation and the markup will be excluded from word count.
   Method: GET/POST
   URL: https://transfluent.com/v2/text/
   Parameters: 
@@ -9,18 +9,15 @@
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
       optional: yes
     - value: language
-      desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
     - value: text
       desc: |
-        Text: either source text to translate or previously made translation you want to save into our system. May contain HTML or any other markup.
-    - value: invalidate_translations [=1]
-      desc: A boolean value (1/0;on/off) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably don't want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it's really important to set invalidate_translations off!
-      optional: yes
-    - value: is_draft
-      desc: A boolean value (1/0;on/off) which controls if translations is a draft or not. Draft translations are checked by a translator when translation request is placed.
+        Text: either source text to translate or previously made translation you want to save into our system. May contain HTML. Please use UTF-8.
+    - value: invalidate_translations [=on]
+      desc: <code>invalidate_translations</code> is a boolean value (<code>1/0</code> or <code>on/off</code>) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably do not want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it is important to set <code>invalidate_translations</code> off!
       optional: yes
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+      desc: Authentication token. Please see :- Authenticate
   Returns:
     - OK:
         - POST: '{"status":"OK","response":true}'
@@ -36,9 +33,9 @@
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
       optional: yes
     - value: language
-      desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method 
+      desc: Authentication token. Please see :- Authenticate
   Returns:
     - OK: 
       - Default: '{"status":"OK","response":{"is_translated":true}}'
@@ -50,17 +47,19 @@
     - value: group_id
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
     - value: language
-      desc: Language id (int). The human language text provided is written in. E.g. 1 = English (GB), 11 = Finnish. Please refer to /languages/-method for full list of language ids.
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
     - value: texts
       desc: |
             POST-only. Array of text keys and content. Either JSON array (string; e.g. {"foo": "Foooooooooooooooo", "bar": "Bar"}) or a POST parameter array (e.g. texts[foo]=Foooooooo&texts[bar]=Bar).
     - value: invalidate_translations [=1]
       desc: |
-            A boolean value (1/0;on/off) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably don't want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it's really important to set invalidate_translations off! Warning! Affects ALL texts set on the same request. If you need to invalidate some and keep others, you have to perform two requests.
+            <code>invalidate_translations</code> is a boolean value (<code>1/0</code> or <code>on/off</code>) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably do not want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it is important to set <code>invalidate_translations</code> off! <span class="label label-warning">Warning! Affects ALL texts set on the same request. If you need to invalidate some and keep others, you have to perform two requests.</span>
     - value: limit [=100]
-    - value: offset
+      desc: GET-only
+    - value: offset [=0]
+      desc: GET-only
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method 
+      desc: Authentication token. Please see :- Authenticate
   Returns:
     - OK: 
       - GET: |
@@ -92,32 +91,33 @@
     - value: group_id
       desc: <code>group_id</code> is a unique group name for your text keys. It is recommended to use your project or app name to avoid text id collisions between projects. If provided, it must be an alphanumeric string and it has maximum length of 32 characters.
     - value: source_language
-      desc: Language id (int) or language code (string). Language of source text. E.g. en-gb or 1 for English. Please refer to /languages/-method for full list of language ids and codes.
+      desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see :- Languages
     - value: target_languages
       desc: |
-          Target languages to translate texts into. Provide language ids/codes as an JSON-array (e.g. [1,4,11] or ["fi", "fr"]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11 or target_languages[]=fi&target_languages[]=fr). Please refer to /languages/-method for full list of language ids and codes.
+          Target languages to translate texts into. Provide language codes as a JSON-array (e.g. ["fi", "fr-fr"]) or use post fields (target_languages[]=1&target_languages[]=4&target_languages[]=11 or target_languages[]=fi&target_languages[]=fr-fr). Please see :- Languages
     - value: texts
       desc: |
           Texts to translate. Provide array as string (JSON: [{"id":"my_text_id"},{"id":"some_another_key"}]) or post fields (texts[][id]=my_text_id&texts[][id]=some_another_key)
     - value: comment
-      desc: Context information and other relevant information to the translator
+      desc: Context information and other relevant information to the translator such as tone (formal/informal).
     - value: callback_url
       desc: Callback URL which will be called once translation is completed. Please see:- Callbacks
     - value: max_words [=1000]
       desc: To avoid surprisingly costly orders, you can specify maximum word count to order. If limit is exceeded, the order will fail.
-    - value: force [=1]
-      desc: This parameter has been deprecated and will be removed soon.
-    - value: level [=2]
+    - value: level [=business]
       desc: |
-          Translator level: economy, native, business or expert. Default is business [translator]. Valid values are: eco|economy|pro|business|native
-    - value: deliver_by_email
-      desc: Deliver ready translation by email in addition to possible callback.
+          Translator level: economy or business. Default is business [translator]. Valid values are: <ul><li>economy</li><li>business</li></ul>
+    - value: deliver_by_email [=off]
+      desc: <code>deliver_by_email</code> is a boolean value which controls if the completed translation is delivered by email to customer's email address.
+      optional: yes
     - value: deliver_to_email
-      desc: If $deliver_by_email is true, deliver to this address instead of the customer address.
+      desc: If <code>deliver_by_email</code> is on, deliver to this email address instead of customer's email address.
+      optional: yes
     - value: project_title
-      desc: Title for the project to identify it on delivery. Usage depends on order source and delivery method
+      desc: Title for the project to identify it on delivery.
+      optional: yes
     - value: token
-      desc: Authentication token which can be acquired with valid transfluent.com account credentials using authenticate-method
+      desc: Authentication token. Please see :- Authenticate
   Returns:
     - OK:
       - Default: |

@@ -7,8 +7,8 @@ section: api/SDKs
 <div ng-controller="servicesCtrl">
     <div ng-repeat="method in navs| filter: searchTerm">
         <div ng-if="method.Name =='{{ page.title}}'">
+            <img src="/images/libs.png" style="float: right; margin: -5rem 0 1rem 1rem;">
             <h4>SDKs</h4>
-            <img src="/images/libs.png" style="float: right; margin: 1rem; margin-right: 0;">
             <p>Transfluent provides minimal SDKs for <a href="https://github.com/Transfluent/Transfluent-PHP-SDK" target="_blank">PHP</a> and <a href="https://github.com/Transfluent/Transfluent-Ruby" target="_blank">Ruby</a> which helps you to get started quickly. For Python, there is a third party <a href="https://github.com/jpvanhal/python-transfluent" target="_blank">client library</a> available - thanks to <a href="https://github.com/jpvanhal">Janne Vanhala</a>.</p>
         </div>
     </div>

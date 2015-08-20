@@ -45,7 +45,17 @@ angular.module('transfluentAPI', [
         "home-main-use-cases-title": "Use cases",
         "home-main-use-cases-first": "Plain text and HTML content. Content is stored by key (and group). Our backend keeps track of versions, so unchanged texts will not be re-translated.",
         "home-main-use-cases-second": "Resource files. Usually integrated to the application build process. Our backend keeps track of file versions, so unchanged parts will not be re-translated.",
-        "home-main-use-cases-third": "<strong>Translation <a href=\"https://www.transfluent.com/translate/\" target=\"_blank\">Widget</a>:</strong> ad-hoc translation needs, delivery by email. Text or files. <a href=\"https://transfluent.partners/integrate/\" target=\"_blank\">Embedded version</a> available for intranet."
+        "home-main-use-cases-third": "<strong>Translation <a href=\"https://www.transfluent.com/translate/\" target=\"_blank\">Widget</a>:</strong> ad-hoc translation needs, delivery by email. Text or files. <a href=\"https://transfluent.partners/integrate/\" target=\"_blank\">Embedded version</a> available for intranet.",
+        "home-main-process-title": "Translation process example",
+        "home-main-process-phase-1-title": "Setting up phase",
+        "home-main-process-phase-2-title": "Continuous translation phase",
+        "home-main-process-phase-1-step-1": "<strong>Authenticate:</strong> Retrieve a token from the API and store it locally",
+        "home-main-process-phase-1-step-2": "<strong>Retrieve list of languages:</strong> Retrieve list of language names&codes and supported pairs from the API. It is recommended to refresh the listing every now and then as our list of languages and supported pairs increases often.",
+        "home-main-process-phase-2-step-1": "<strong>Save</strong> new content to the API by calling /v2/text/ or /v2/file/save/",
+        "home-main-process-phase-2-step-2": "<strong>Order</strong> translations by calling /v2/texts/translate/ or /v2/file/translate/",
+        "home-main-process-phase-2-step-3": "<strong>Receive a callback</strong> and handle completed translations on your end. Alternatively you can poll /v2/text/status/ or /v2/file/status/ to see if the translations have been completed.",
+        "home-main-process-phase-2-step-4": "If you did not process the callback, you can <strong>retrieve the translations</strong> by calling /v2/text/ or /v2/file/read/.",
+        "home-main-process-phase-2-step-5": "<strong>Now you are done.</strong> To translate more, go to first step of this phase."
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -83,7 +93,17 @@ angular.module('transfluentAPI', [
         "home-main-use-cases-title": "使用事例",
         "home-main-use-cases-first": "プレーンテキストとHTMLコンテンツ。コンテンツはキー（およびグループ）により保存されます。バージョンの記録は当社バックエンドにより保持されているため、変更のないテキストは再翻訳されません。",
         "home-main-use-cases-second": "リソースファイル。通常はアプリケーションビルドプロセスに統合されています。バージョンの記録は当社バックエンドにより保持されているため、変更のないテキストは再翻訳されません。",
-        "home-main-use-cases-third": "<strong><a href=\"https://www.transfluent.com/translate/\" target=\"_blank\">翻訳ウィジェット：</a></strong>その時々の翻訳ニーズに合わせ、Eメールにて納品いたします。テキストあるいはファイルを選べます。イントラネット用に埋め込みバージョンも利用可能です。"
+        "home-main-use-cases-third": "<strong><a href=\"https://www.transfluent.com/translate/\" target=\"_blank\">翻訳ウィジェット：</a></strong>その時々の翻訳ニーズに合わせ、Eメールにて納品いたします。テキストあるいはファイルを選べます。イントラネット用に埋め込みバージョンも利用可能です。",
+        "home-main-process-title": "翻訳過程の例",
+        "home-main-process-phase-1-title": "フェーズの設定",
+        "home-main-process-phase-2-title": "翻訳の流れ",
+        "home-main-process-phase-1-step-1": "<strong>認証する：</strong>APIからトークンを取得し、ローカル保存します。",
+        "home-main-process-phase-1-step-2": "<strong>言語のリストを取得する：</strong>APIから言語名とコード、対応している組み合わせのリストを取得します。当社で対応している言語のリストは頻繁に増えますので、時々リストを更新することをおすすめします。",
+        "home-main-process-phase-2-step-1": "▪ /v2/text/あるいは/v2/file/save/を呼び出してAPIに新しいコンテンツを保存します。",
+        "home-main-process-phase-2-step-2": "▪ /v2/texts/translate/あるいは/v2/file/translate/を呼び出して翻訳を発注します。",
+        "home-main-process-phase-2-step-3": "▪ コールバックを受け取った後、完成した翻訳をお客様側で処理できます。もう一つの方法としては、/v2/text/status/ あるいは/v2/file/status/を呼び出して、翻訳が完了されたかどうかを確認することもできます。",
+        "home-main-process-phase-2-step-4": "▪ コールバックの処理を行わなかった場合は、/v2/text/あるいは/v2/file/read/を呼び出して翻訳を受け取ることができます。",
+        "home-main-process-phase-2-step-5": "▪ これで完了です。さらに翻訳を行う場合は、この流れの一番初めの段階に戻ってください。"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

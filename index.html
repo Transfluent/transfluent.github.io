@@ -44,19 +44,19 @@ layout: default
             </div>
 
             <div style="margin-top: 3rem;">
-                <h4>Translation process example</h4>
-                <h5>Setting up phase</h5>
+                <h4 translate="home-main-process-title"></h4>
+                <h5 translate="home-main-process-phase-1-title"></h5>
                 <ol>
-                    <li><strong>Authenticate:</strong> Retrieve a token from the API and store it locally</li>
-                    <li><strong>Retrieve list of languages:</strong> Retrieve list of language names&codes and supported pairs from the API. It is recommended to refresh the listing every now and then as our list of languages and supported pairs increases often.</li>
+                    <li translate="home-main-process-phase-1-step-1"></li>
+                    <li translate="home-main-process-phase-1-step-2"></li>
                 </ol>
-                <h5>Continuous translation phase</h5>
+                <h5 translate="home-main-process-phase-2-title"></h5>
                 <ol>
-                    <li><strong>Save</strong> new content to the API by calling /v2/text/ or /v2/file/save/</li>
-                    <li><strong>Order</strong> translations by calling /v2/texts/translate/ or /v2/file/translate/</li>
-                    <li><strong>Receive a callback</strong> and handle completed translations on your end. Alternatively you can poll /v2/text/status/ or /v2/file/status/ to see if the translations have been completed.</li>
-                    <li>If you did not process the callback, you can <strong>retrieve the translations</strong> by calling /v2/text/ or /v2/file/read/.</li>
-                    <li><strong>Now you are done.</strong> To translate more, go to first step of this phase.</li>
+                    <li translate="home-main-process-phase-2-step-1"></li>
+                    <li translate="home-main-process-phase-2-step-2"></li>
+                    <li translate="home-main-process-phase-2-step-3"></li>
+                    <li translate="home-main-process-phase-2-step-4"></li>
+                    <li translate="home-main-process-phase-2-step-5"></li>
                 </ol>
             </div>
 

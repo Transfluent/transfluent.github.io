@@ -11,22 +11,22 @@ section: api/FileRead
 
             <section>
                 <header>
-                    <h4>cURL Example to retrieve a file</h4>
+                    <h4 translate="curl-example-file-get-title"></h4>
                 </header>
                 <code>curl "https://transfluent.com/v2/file/read/?identifier=example.json&language=en-gb&token=YOUR-TOKEN-GOES-HERE"</code>
             </section>
             <section>
                 <header>
-                    <h4>Successfully retrieved file (HTTP200, <code>Content-Description: File Transfer; Content-Disposition: attachment; filename="teston_en-gb.js"</code>):</h4>
+                    <h4 translate="curl-response-file-get-ok-title"></h4>
                 </header>
 {% highlight json %}
 {"test":"This is just a small test"}
 {% endhighlight %}
             </section>
-            <p>Attention! When the request is successful, this method sends the file content, instead of returning a JSON response. The method will set <code>Content-Disposition: attachment; filename=..</code> HTTP header and suggest your client to initiate a file download.</p>
+            <p translate="file-get-response-type-notice"></p>
             <section>
                 <header>
-                    <h4>Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):</h4>
+                    <h4 translate="curl-response-file-get-fail-title"></h4>
                 </header>
 {% highlight json %}
 {

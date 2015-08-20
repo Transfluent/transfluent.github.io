@@ -92,7 +92,15 @@ angular.module('transfluentAPI', [
         "curl-example-place-order-title": "cURL Example to place an order",
         "curl-response-place-order-ok-title": "Successfully placed an order (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-response-place-order-failed-title": "Failed to place the order due payment issue (HTTP500, <code>Content-Type: application/json</code>):",
-        "order-details-info": "You can check the order details in the <a href=\"https://www.transfluent.com/my-account/\" target=\"_blank\">My Account</a> page by order id (e.g. #332666)."
+        "order-details-info": "You can check the order details in the <a href=\"https://www.transfluent.com/my-account/\" target=\"_blank\">My Account</a> page by order id (e.g. #332666).",
+        "api-FileRead-desc": "Retrieve translated files by calling this method.",
+        "api-FileSave-desc": "Save a file and later order translations for it.",
+        "api-FileStatus-desc": "You can easily check what is the translation progress of your submitted file.",
+        "api-FileTranslate-desc": "Order translations for your files. Please note that previously translated, unchanged items in the files will not be re-translated. All new and changed items will be translated.",
+        "curl-example-file-get-title": "cURL Example to retrieve a file",
+        "curl-response-file-get-ok-title": "Successfully retrieved file (HTTP200, <code>Content-Description: File Transfer; Content-Disposition: attachment; filename=\"test_en-gb.js\"</code>):",
+        "file-get-response-type-notice": "Attention! When the request is successful, this method sends the file content, instead of returning a JSON response. The method will set <code>Content-Disposition: attachment; filename=..</code> HTTP header and suggest your client to initiate a file download.",
+        "curl-response-file-get-fail-title": "Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):"
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -177,7 +185,15 @@ angular.module('transfluentAPI', [
         "curl-example-place-order-title": "発注時のcURL例",
         "curl-response-place-order-ok-title": "Successfully placed an order (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-response-place-order-failed-title": "Failed to place the order due payment issue (HTTP500, <code>Content-Type: application/json</code>):",
-        "order-details-info": "You can check the order details in the <a href=\"https://www.transfluent.com/my-account/\" target=\"_blank\">My Account</a> page by order id (e.g. #332666)."
+        "order-details-info": "You can check the order details in the <a href=\"https://www.transfluent.com/my-account/\" target=\"_blank\">My Account</a> page by order id (e.g. #332666).",
+        "api-FileRead-desc": "このメソッドを呼び出すことにより、翻訳済みのファイルを取得することができます。",
+        "api-FileSave-desc": "ファイルを保存し、後で翻訳を発注します。",
+        "api-FileStatus-desc": "提出したファイルの翻訳状況を簡単にチェックすることができます。",
+        "api-FileTranslate-desc": "ファイルの翻訳を発注します。ファイル内の翻訳済み、無変更部分は再翻訳されませんのでご注意ください。新しい、および変更があった部分は翻訳されます。",
+        "curl-example-file-get-title": "ファイルを取得する際のcURL例",
+        "curl-response-file-get-ok-title": "Successfully retrieved file (HTTP200, <code>Content-Description: File Transfer; Content-Disposition: attachment; filename=\"test_en-gb.js\"</code>):",
+        "file-get-response-type-notice": "Attention! When the request is successful, this method sends the file content, instead of returning a JSON response. The method will set <code>Content-Disposition: attachment; filename=..</code> HTTP header and suggest your client to initiate a file download.",
+        "curl-response-file-get-fail-title": "Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

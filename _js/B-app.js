@@ -35,7 +35,7 @@ angular.module('transfluentAPI', [
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
         "English": "English",
-        "Search the documentation": "Search the documentation",
+        "Search the documentation": "ドキュメンテーションを検索",
         "Get started": 'はじめに',
         "Authentication": "認証",
         "Retrieve a token": "トークンの取得",

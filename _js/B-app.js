@@ -71,7 +71,9 @@ angular.module('transfluentAPI', [
         "api-Authenticate-desc": "To call any methods requiring authentication, you need to retrieve an authentication token first. The token is valid until your password changes. <strong>If you store the token between sessions, please store it securely and keep it secret!</strong>",
         "api-method": "Method",
         "api-url": "URL",
-        "api-parameters": "Parameters"
+        "api-parameters": "Parameters",
+        "authentication-curl-ok-example": "Example of a successful authentication response (HTTP200, <code>Content-Type: application/json</code>):",
+        "authentication-curl-fail-example": "Example of a failed authentication response (HTTP500, <code>Content-Type: application/json</code>):"
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -135,7 +137,9 @@ angular.module('transfluentAPI', [
         "api-Authenticate-desc": "認証が必要になるメソッドを呼び出すにはまず認証トークンを取得する必要があります。トークンはパスワードを変更するまで有効です。<strong>セッションの間にトークンを保存する場合は　安全な場所に保存し、誰にも言わないでください。</strong>",
         "api-method": "メソッド",
         "api-url": "URL",
-        "api-parameters": "パラメータ"
+        "api-parameters": "パラメータ",
+        "authentication-curl-ok-example": "認証応答の成功例（ HTTP200, <code>Content-Type: application/json</code>）：",
+        "authentication-curl-fail-example": "認証応答の失敗例（HTTP500, <code>Content-Type: application/json</code>）："
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

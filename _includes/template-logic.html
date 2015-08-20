@@ -1,4 +1,4 @@
-<div ng-if="method.Description" ng-bind-html="'api-' + method.Name + '-desc' | translate"></div>
+<div ng-if="method.Description" translate="api-{[method.Name]}-desc"></div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">
     <td translate="api-method"></td>

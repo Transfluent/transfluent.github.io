@@ -1,4 +1,5 @@
 var gulp        = require('gulp'),
+    sort        = require('gulp-sort'),
     gutil       = require('gulp-util'),
     livereload  = require('gulp-livereload'),
     prefix      = require('gulp-autoprefixer'),

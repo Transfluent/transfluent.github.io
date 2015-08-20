@@ -83,7 +83,16 @@ angular.module('transfluentAPI', [
         "curl-successfully-saved-text": "Successfully saved (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-failed-to-save-text": "Failed to save (HTTP401, <code>Content-Type: application/json</code>):",
         "api-TextStatus-desc": "Check if text has been translated to specified language.",
-        "curl-example-check-text-status-title": "cURL Example to check status"
+        "curl-example-check-text-status-title": "cURL Example to check status",
+        "curl-example-retrieve-texts-title": "cURL Example to retrieve texts",
+        "curl-example-save-texts-title": "cURL Example to save texts",
+        "curl-example-save-texts-fail-title": "cURL Example (how not) to save texts",
+        "curl-response-save-texts-fail-title": "Failed to save (HTTP400, <code>Content-Type: application/json</code>):",
+        "api-TextsTranslate-desc": "By calling this method you can order translations for your text keys. Our system keeps version information about the keys, so only new keys and changed texts will be translated.",
+        "curl-example-place-order-title": "cURL Example to place an order",
+        "curl-response-place-order-ok-title": "Successfully placed an order (HTTP200, <code>Content-Type: application/json</code>):",
+        "curl-response-place-order-failed-title": "Failed to place the order due payment issue (HTTP500, <code>Content-Type: application/json</code>):",
+        "order-details-info": "You can check the order details in the <a href=\"https://www.transfluent.com/my-account/\" target=\"_blank\">My Account</a> page by order id (e.g. #332666)."
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -159,7 +168,16 @@ angular.module('transfluentAPI', [
         "curl-successfully-saved-text": "Successfully saved (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-failed-to-save-text": "Failed to save (HTTP401, <code>Content-Type: application/json</code>):",
         "api-TextStatus-desc": "テキストが指定した言語に翻訳されているか確認します。",
-        "curl-example-check-text-status-title": "ステータスチェックの際のcURL例"
+        "curl-example-check-text-status-title": "ステータスチェックの際のcURL例",
+        "curl-example-retrieve-texts-title": "テキストを取得する際のcURL例",
+        "curl-example-save-texts-title": "cURL Example to save texts",
+        "curl-example-save-texts-fail-title": "cURL Example (how not) to save texts",
+        "curl-response-save-texts-fail-title": "Failed to save (HTTP400, <code>Content-Type: application/json</code>):",
+        "api-TextsTranslate-desc": "このメソッドを呼び出すことにより、テキストキーの翻訳を発注することができます。当社システムがキーのバージョン情報を保存しているため、新しいキーと変更されたテキストのみが翻訳されます。",
+        "curl-example-place-order-title": "発注時のcURL例",
+        "curl-response-place-order-ok-title": "Successfully placed an order (HTTP200, <code>Content-Type: application/json</code>):",
+        "curl-response-place-order-failed-title": "Failed to place the order due payment issue (HTTP500, <code>Content-Type: application/json</code>):",
+        "order-details-info": "You can check the order details in the <a href=\"https://www.transfluent.com/my-account/\" target=\"_blank\">My Account</a> page by order id (e.g. #332666)."
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

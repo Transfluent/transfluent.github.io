@@ -18,9 +18,6 @@
       optional: yes
     - value: token
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
-#  Returns:
-#    - OK:
-#        - POST: '{"status":"OK","response":true}'
         
 - Name: TextStatus
   Description: Check if text has been translated to specified language.

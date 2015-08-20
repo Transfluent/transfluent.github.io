@@ -26,10 +26,11 @@ gulp.task('compass', function(){
 
 gulp.task('scripts', function () {
 	gulp.src('_js/*.js')
-		.pipe(concat("scripts.js"))
+    .pipe(sort())
+    .pipe(concat("scripts.js"))
     .pipe(ngmin())
-		.pipe(uglify())
-		.pipe(gulp.dest('js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'))
 });
 
 gulp.task('minify', function () {

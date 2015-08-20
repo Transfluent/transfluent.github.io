@@ -39,7 +39,13 @@ angular.module('transfluentAPI', [
         "home-main-development-title": "Development and testing",
         "home-main-development-body": "For development and testing your integration, we provide a <strong>Pseudo language</strong> translation. The language code for Pseudo language is <strong>xx-xx</strong>. Use English (<code>en</code>) as source language and Pseudo language as target language and the order will be processed for free. Instead of actual translation, you will get your source text reversed (e.g. &quot;Hello&quot; -&gt; &quot;olleH&quot;). Placing Pseudo language orders is useful for testing the whole process from end to end and, depending on your use case, possibly also for pinpointing any non-translated parts on your end.",
         "home-main-supported-languages-title": "Supported languages",
-        "home-main-supported-languages-body": "<a href=\"https://www.transfluent.com/en/pricing/#supported-language-pairs\">Check supported language pairs</a> from our website or call our API's <strong>languages</strong> method to list languages names and language pairs. The API methods can be called using ready-made clients or command line tools, for example call using <strong>curl</strong>: <code>curl https://transfluent.com/languages/</code> or you can even do it with your browser: <a href=\"https://transfluent.com/languages/\" rel=\"nofollow\" target=\"_blank\">HTTP GET https://transfluent.com/languages/</a>. The output is always <a href=\"https://en.wikipedia.org/wiki/JSON\" target=\"_blank\" rel=\"nofollow\">JSON</a>. As you can see, it is easy to get started with the API."
+        "home-main-supported-languages-body": "<a href=\"https://www.transfluent.com/en/pricing/#supported-language-pairs\">Check supported language pairs</a> from our website or call our API's <strong>languages</strong> method to list languages names and language pairs. The API methods can be called using ready-made clients or command line tools, for example call using <strong>curl</strong>: <code>curl https://transfluent.com/languages/</code> or you can even do it with your browser: <a href=\"https://transfluent.com/languages/\" rel=\"nofollow\" target=\"_blank\">HTTP GET https://transfluent.com/languages/</a>. The output is always <a href=\"https://en.wikipedia.org/wiki/JSON\" target=\"_blank\" rel=\"nofollow\">JSON</a>. As you can see, it is easy to get started with the API.",
+        "home-main-payments-title": "Payments",
+        "home-main-payments-body": "The easiest way to pay is by credit card. You or your company's account owner can setup a credit card in the <a href=\"https://www.transfluent.com/my-account/#/creditcard\" target=\"_blank\">My Account</a> page. It is recommended to add a backup card so there will not be any interruption in the service if the primary card fails.",
+        "home-main-use-cases-title": "Use cases",
+        "home-main-use-cases-first": "Plain text and HTML content. Content is stored by key (and group). Our backend keeps track of versions, so unchanged texts will not be re-translated.",
+        "home-main-use-cases-second": "Resource files. Usually integrated to the application build process. Our backend keeps track of file versions, so unchanged parts will not be re-translated.",
+        "home-main-use-cases-third": "<strong>Translation <a href=\"https://www.transfluent.com/translate/\" target=\"_blank\">Widget</a>:</strong> ad-hoc translation needs, delivery by email. Text or files. <a href=\"https://transfluent.partners/integrate/\" target=\"_blank\">Embedded version</a> available for intranet."
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -71,7 +77,13 @@ angular.module('transfluentAPI', [
         "home-main-development-title": "開発およびテスト",
         "home-main-development-body": "お客様側の統合を開発およびテストするために、当社では擬似言語翻訳を提供しております。擬似言語の言語コードは<strong>xx-xx</strong>です。ソース言語を英語（<code>en</code>）、ターゲット言語を擬似言語に設定すると、その注文は無料で処理されます。実際の翻訳の代わりに、元の文章は前後逆に変換されます。（例：\"Hello\" → \"olleH\"）　擬似言語翻訳は、利用方法によっては過程の全体を初めから終わりまでテストしたり、また場合によりお客様側の非翻訳部分を特定したりするために役立てることができます。",
         "home-main-supported-languages-title": "対応言語",
-        "home-main-supported-languages-body": "対応言語については当社ウェブサイトから確認するか、当社APIの言語メソッドを呼び出して、言語名と言語の組み合わせをリストアップしてください。APIメソッドは、既存のクライアントあるいはコマンドラインツールを使って呼び出せます。例えばcURLを用いるか（<code>curl https://transfluent.com/languages/</code>）、あるいはお客様のブラウザを使うこともできます。（<a href=\"https://transfluent.com/languages/\" rel=\"nofollow\" target=\"_blank\">HTTP GET https://transfluent.com/languages/</a>） 出力は常にJSONとなります。この通り、APIの使用は簡単に始めることができます。"
+        "home-main-supported-languages-body": "対応言語については当社ウェブサイトから確認するか、当社APIの言語メソッドを呼び出して、言語名と言語の組み合わせをリストアップしてください。APIメソッドは、既存のクライアントあるいはコマンドラインツールを使って呼び出せます。例えばcURLを用いるか（<code>curl https://transfluent.com/languages/</code>）、あるいはお客様のブラウザを使うこともできます。（<a href=\"https://transfluent.com/languages/\" rel=\"nofollow\" target=\"_blank\">HTTP GET https://transfluent.com/languages/</a>） 出力は常にJSONとなります。この通り、APIの使用は簡単に始めることができます。",
+        "home-main-payments-title": "お支払い",
+        "home-main-payments-body": "最も簡単なお支払い方法はクレジットカードです。クレジットカードの登録は、お客様個人あるいは会社のアカウント所有者のマイアカウントページにて行うことができます。もし初めに登録したカードが使えなかった場合にもサービスが中断されないように、予備のカードを追加することをおすすめします。",
+        "home-main-use-cases-title": "使用事例",
+        "home-main-use-cases-first": "プレーンテキストとHTMLコンテンツ。コンテンツはキー（およびグループ）により保存されます。バージョンの記録は当社バックエンドにより保持されているため、変更のないテキストは再翻訳されません。",
+        "home-main-use-cases-second": "リソースファイル。通常はアプリケーションビルドプロセスに統合されています。バージョンの記録は当社バックエンドにより保持されているため、変更のないテキストは再翻訳されません。",
+        "home-main-use-cases-third": "<strong><a href=\"https://www.transfluent.com/translate/\" target=\"_blank\">翻訳ウィジェット：</a></strong>その時々の翻訳ニーズに合わせ、Eメールにて納品いたします。テキストあるいはファイルを選べます。イントラネット用に埋め込みバージョンも利用可能です。"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

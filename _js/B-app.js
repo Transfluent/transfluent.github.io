@@ -100,7 +100,12 @@ angular.module('transfluentAPI', [
         "curl-example-file-get-title": "cURL Example to retrieve a file",
         "curl-response-file-get-ok-title": "Successfully retrieved file (HTTP200, <code>Content-Description: File Transfer; Content-Disposition: attachment; filename=\"test_en-gb.js\"</code>):",
         "file-get-response-type-notice": "Attention! When the request is successful, this method sends the file content, instead of returning a JSON response. The method will set <code>Content-Disposition: attachment; filename=..</code> HTTP header and suggest your client to initiate a file download.",
-        "curl-response-file-get-fail-title": "Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):"
+        "curl-response-file-get-fail-title": "Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):",
+        "curl-example-file-save-title": "cURL Example to save a file",
+        "curl-response-file-save-ok-title": "Successfully saved the file (HTTP200, <code>Content-Type: application/json</code>):",
+        "curl-response-file-save-fail-title": "Failed to save the file (HTTP400, <code>Content-Type: application/json</code>):",
+        "file-save-failure-explained": "This could happen e.g. if the JSON file is not valid JSON.",
+        "curl-example-file-status-title": "cURL Example to check the file status"
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -193,7 +198,12 @@ angular.module('transfluentAPI', [
         "curl-example-file-get-title": "ファイルを取得する際のcURL例",
         "curl-response-file-get-ok-title": "Successfully retrieved file (HTTP200, <code>Content-Description: File Transfer; Content-Disposition: attachment; filename=\"test_en-gb.js\"</code>):",
         "file-get-response-type-notice": "Attention! When the request is successful, this method sends the file content, instead of returning a JSON response. The method will set <code>Content-Disposition: attachment; filename=..</code> HTTP header and suggest your client to initiate a file download.",
-        "curl-response-file-get-fail-title": "Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):"
+        "curl-response-file-get-fail-title": "Failed to retrieve the file (HTTP400, <code>Content-Type: application/json</code>):",
+        "curl-example-file-save-title": "cURL Example to save a file",
+        "curl-response-file-save-ok-title": "Successfully saved the file (HTTP200, <code>Content-Type: application/json</code>):",
+        "curl-response-file-save-fail-title": "Failed to save the file (HTTP400, <code>Content-Type: application/json</code>):",
+        "file-save-failure-explained": "JSONファイルが有効なJSONでない時などに起こる可能性があります。",
+        "curl-example-file-status-title": "cURL Example to check the file status"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

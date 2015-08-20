@@ -3,7 +3,8 @@
 angular.module('transfluentAPI', [
     'transfluentAPI.controllers',
     'transfluentAPI.filters',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ngCookies'
 ])
 .config(function($interpolateProvider, $translateProvider) {
     $interpolateProvider.startSymbol('{[').endSymbol(']}');
@@ -55,6 +56,7 @@ angular.module('transfluentAPI', [
         "Callbacks": "コールバック"
     });
     $translateProvider.preferredLanguage('en');
+    $translateProvider.useCookieStorage();
 })
 .controller('LanguageSelector', function ($scope, $translate) {
     $scope.ChangeLanguage = function (key) {

@@ -105,7 +105,13 @@ angular.module('transfluentAPI', [
         "curl-response-file-save-ok-title": "Successfully saved the file (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-response-file-save-fail-title": "Failed to save the file (HTTP400, <code>Content-Type: application/json</code>):",
         "file-save-failure-explained": "This could happen e.g. if the JSON file is not valid JSON.",
-        "curl-example-file-status-title": "cURL Example to check the file status"
+        "curl-example-file-status-title": "cURL Example to check the file status",
+        "curl-example-file-translate-quote-title": "cURL Example to get a quote",
+        "curl-response-file-translate-quote-title": "Successfully requested a quote (HTTP200, <code>Content-Type: application/json</code>):",
+        "curl-example-file-translate-order-title": "cURL Example to order translations for a file",
+        "curl-response-file-translate-order-title": "Successfully ordered translations for the file (HTTP200, <code>Content-Type: application/json</code>):",
+        "testing-information": "For development and testing your integration, we provide a <strong>Pseudo language</strong> translation. The language code for Pseudo language is <strong>xx-xx</strong>. Use English (<code>en</code>) as source language and Pseudo language as target language and the order will be processed for free. Instead of actual translation, you will get your source text reversed (e.g. &quot;Hello&quot; -&gt; &quot;olleH&quot;). Placing Pseudo language orders is useful for testing the whole process from end to end and, depending on your use case, possibly also for pinpointing any non-translated parts on your end.",
+        "sdk-information": "Transfluent provides minimal SDKs for <a href=\"https://github.com/Transfluent/Transfluent-PHP-SDK\" target=\"_blank\">PHP</a> and <a href=\"https://github.com/Transfluent/Transfluent-Ruby\" target=\"_blank\">Ruby</a> which helps you to get started quickly. For Python, there is a third party <a href=\"https://github.com/jpvanhal/python-transfluent\" target=\"_blank\">client library</a> available - thanks to <a href=\"https://github.com/jpvanhal\">Janne Vanhala</a>."
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -135,7 +141,7 @@ angular.module('transfluentAPI', [
         "home-main-user-accounts-title": "ユーザーアカウント",
         "home-main-user-accounts-body": "利用には、Transfluentのユーザーアカウントが必要になります。新しいユーザーアカウントをご自身で作成するか、御社のアカウント所有者に作成を依頼してください。",
         "home-main-development-title": "開発およびテスト",
-        "home-main-development-body": "お客様側の統合を開発およびテストするために、当社では擬似言語翻訳を提供しております。擬似言語の言語コードは<strong>xx-xx</strong>です。ソース言語を英語（<code>en</code>）、ターゲット言語を擬似言語に設定すると、その注文は無料で処理されます。実際の翻訳の代わりに、元の文章は前後逆に変換されます。（例：\"Hello\" → \"olleH\"）　擬似言語翻訳は、利用方法によっては過程の全体を初めから終わりまでテストしたり、また場合によりお客様側の非翻訳部分を特定したりするために役立てることができます。",
+        "home-main-development-body": "お客様側の統合を開発およびテストするために、当社では擬似言語翻訳を提供しております。擬似言語の言語コードは<strong>xx-xx</strong>です。ソース言語を英語（<code>en</code>）、ターゲット言語を擬似言語に設定すると、その注文は無料で処理されます。実際の翻訳の代わりに、元の文章は前後逆に変換されます。（例：&quot;Hello&quot; → &quot;olleH&quot;）　擬似言語翻訳は、利用方法によっては過程の全体を初めから終わりまでテストしたり、また場合によりお客様側の非翻訳部分を特定したりするために役立てることができます。",
         "home-main-supported-languages-title": "対応言語",
         "home-main-supported-languages-body": "対応言語については当社ウェブサイトから確認するか、当社APIの言語メソッドを呼び出して、言語名と言語の組み合わせをリストアップしてください。APIメソッドは、既存のクライアントあるいはコマンドラインツールを使って呼び出せます。例えばcURLを用いるか（<code>curl https://transfluent.com/languages/</code>）、あるいはお客様のブラウザを使うこともできます。（<a href=\"https://transfluent.com/languages/\" rel=\"nofollow\" target=\"_blank\">HTTP GET https://transfluent.com/languages/</a>） 出力は常にJSONとなります。この通り、APIの使用は簡単に始めることができます。",
         "home-main-payments-title": "お支払い",
@@ -203,7 +209,13 @@ angular.module('transfluentAPI', [
         "curl-response-file-save-ok-title": "Successfully saved the file (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-response-file-save-fail-title": "Failed to save the file (HTTP400, <code>Content-Type: application/json</code>):",
         "file-save-failure-explained": "JSONファイルが有効なJSONでない時などに起こる可能性があります。",
-        "curl-example-file-status-title": "cURL Example to check the file status"
+        "curl-example-file-status-title": "cURL Example to check the file status",
+        "curl-example-file-translate-quote-title": "見積りを得る際のcURL例",
+        "curl-response-file-translate-quote-title": "Successfully requested a quote (HTTP200, <code>Content-Type: application/json</code>):",
+        "curl-example-file-translate-order-title": "ファイルの翻訳を発注する際のcURL例",
+        "curl-response-file-translate-order-title": "Successfully ordered translations for the file (HTTP200, <code>Content-Type: application/json</code>):",
+        "testing-information": "お客様側の統合を開発およびテストするために、当社では擬似言語翻訳を提供しております。擬似言語の言語コードは<strong>xx-xx</strong>です。ソース言語を英語（<code>en</code>）、ターゲット言語を擬似言語に設定すると、その注文は無料で処理されます。実際の翻訳の代わりに、元の文章は前後逆に変換されます。（例：&quot;Hello&quot; → &quot;olleH&quot;）擬似言語翻訳は、利用方法によっては過程の全体を初めから終わりまでテストしたり、また場合によりお客様側の非翻訳部分を特定したりするために役立てることができます。",
+        "sdk-information": "Transfluent provides minimal SDKs for <a href=\"https://github.com/Transfluent/Transfluent-PHP-SDK\" target=\"_blank\">PHP</a> and <a href=\"https://github.com/Transfluent/Transfluent-Ruby\" target=\"_blank\">Ruby</a> which helps you to get started quickly. For Python, there is a third party <a href=\"https://github.com/jpvanhal/python-transfluent\" target=\"_blank\">client library</a> available - thanks to <a href=\"https://github.com/jpvanhal\">Janne Vanhala</a>."
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

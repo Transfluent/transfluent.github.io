@@ -1,15 +1,15 @@
-<div ng-if="method.Description" ng-bind-html="method.Description | linebreak | to_trusted"></div>
+<div ng-if="method.Description" ng-bind-html="'api-' + method.Name + '-desc' | translate"></div>
 <table class="table table-bordered table-hover table-striped table-responsive" ng-show="method.Method">
   <tr ng-if="method.Method">
-    <td>Method</td>
+    <td translate="api-method"></td>
     <td>{[ method.Method ]}</td>
   </tr>
   <tr ng-if="method.URL">
-    <td>URL</td>
+    <td translate="api-url"></td>
     <td><a href="{[ method.URL ]}" target="_blank" title="Method link">{[ method.URL ]}</a></td>
   </tr>
   <tr ng-if="method.Parameters">
-    <td>Parameters</td>
+    <td translate="api-parameters"></td>
     <td>
       <span ng-repeat="params in method.Parameters"><a href="#" ng-click="showDetails = ! showDetails">{[ params.value ]}</a><span ng-if="!$last">, </span>
         <p ng-show="showDetails" class="param-details"><span ng-if="params.optional" class="label label-warning">{[ "optional" ]}<br></span><span ng-bind-html="params.desc | to_trusted"></span></p>
@@ -17,32 +17,3 @@
     </td>
   </tr>
 </table>
-<div ng-if="method.Returns">
-  <h3>Example return values:</h3>
-  <div ng-repeat="returnings in method.Returns">
-    <div ng-repeat="okey in returnings.OK">
-      <p>When successful:</p>
-      <div ng-if="okey.GET">
-        <p>Response to a GET request:</p>
-        <code ng-bind="okey.GET"></code>
-      </div>
-      <div ng-if="okey.POST">
-        <p>Response to a POST request:</p>
-        <code ng-bind="okey.POST"></code>
-      </div>
-      <div ng-if="okey.Default">
-        <code ng-bind="okey.Default"></code>
-      </div>
-    </div>
-    <div ng-if="returnings.Error">
-      <p>On an error:</p>
-      <pre ng-bind="returnings.Error" class="error"></pre>
-    </div>
-    <div ng-if="returnings.Default">
-      <pre ng-bind="returnings.Default" class="success"></pre>
-    </div>
-    <div ng-if="returnings.Other">
-      <blockquote ng-bind="returnings.Other" class="info"></blockquote>
-    </div>
-  </div>
-</div>

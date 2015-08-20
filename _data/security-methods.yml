@@ -9,7 +9,3 @@
       desc: Your Transfluent account's email address
     - value: password
       desc: Your password
-#  Returns:
-#    - OK:
-#      - Default: ''
-#    - Error: '{"status":"ERROR","error":{"type":"EBackendSecurityViolation","message":"Authentication failed!"},"response":"Login failed. Please try again."}'

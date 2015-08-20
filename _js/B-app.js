@@ -73,7 +73,9 @@ angular.module('transfluentAPI', [
         "api-url": "URL",
         "api-parameters": "Parameters",
         "authentication-curl-ok-example": "Example of a successful authentication response (HTTP200, <code>Content-Type: application/json</code>):",
-        "authentication-curl-fail-example": "Example of a failed authentication response (HTTP500, <code>Content-Type: application/json</code>):"
+        "authentication-curl-fail-example": "Example of a failed authentication response (HTTP500, <code>Content-Type: application/json</code>):",
+        "api-Languages-desc": "Retrieve list of language names and supported language pairs on each translator level.",
+        "languages-curl-response-example": "Example of a response (HTTP200, <code>Content-Type: application/json</code>):"
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -139,7 +141,9 @@ angular.module('transfluentAPI', [
         "api-url": "URL",
         "api-parameters": "パラメータ",
         "authentication-curl-ok-example": "認証応答の成功例（ HTTP200, <code>Content-Type: application/json</code>）：",
-        "authentication-curl-fail-example": "認証応答の失敗例（HTTP500, <code>Content-Type: application/json</code>）："
+        "authentication-curl-fail-example": "認証応答の失敗例（HTTP500, <code>Content-Type: application/json</code>）：",
+        "api-Languages-desc": "各翻訳者ごとの言語名および対応できる言語組み合わせのリストを取得します。",
+        "languages-curl-response-example": "応答例（ HTTP200, <code>Content-Type: application/json</code>）："
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

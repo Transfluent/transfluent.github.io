@@ -9,6 +9,8 @@ angular.module('transfluentAPI', [
     $interpolateProvider.startSymbol('{[').endSymbol(']}');
 
     $translateProvider.translations('en', {
+        "Japanese": "Japanese",
+        "English": "English",
         "Search the documentation": "Search the documentation",
         "Get started": 'Get started',
         "Authentication": "Authentication",
@@ -30,6 +32,8 @@ angular.module('transfluentAPI', [
         "Callbacks": "Callbacks"
     });
     $translateProvider.translations('ja', {
+        "Japanese": "Japanese",
+        "English": "English",
         "Search the documentation": "Search the documentation",
         "Get started": 'はじめに',
         "Authentication": "認証",

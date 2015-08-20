@@ -27,7 +27,7 @@ gulp.task('compass', function(){
 
 gulp.task('scripts', function () {
 	gulp.src('_js/*.js')
-    .pipe(sort())
+    .pipe(sort({asc: false}))
     .pipe(concat("scripts.js"))
     .pipe(ngmin())
     .pipe(uglify())

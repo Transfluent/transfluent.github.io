@@ -55,7 +55,16 @@ angular.module('transfluentAPI', [
         "home-main-process-phase-2-step-2": "<strong>Order</strong> translations by calling /v2/texts/translate/ or /v2/file/translate/",
         "home-main-process-phase-2-step-3": "<strong>Receive a callback</strong> and handle completed translations on your end. Alternatively you can poll /v2/text/status/ or /v2/file/status/ to see if the translations have been completed.",
         "home-main-process-phase-2-step-4": "If you did not process the callback, you can <strong>retrieve the translations</strong> by calling /v2/text/ or /v2/file/read/.",
-        "home-main-process-phase-2-step-5": "<strong>Now you are done.</strong> To translate more, go to first step of this phase."
+        "home-main-process-phase-2-step-5": "<strong>Now you are done.</strong> To translate more, go to first step of this phase.",
+        "home-main-tips-title": "Please note",
+        "home-main-tips-body": "We would like to remind you of few important points that might cause issues later on if not addressed early on.",
+        "home-main-tips-1": "<strong>Charset encoding.</strong> We always provide UTF-8 or UTF-16 encoded content. We highly recommend to use UTF-8.",
+        "home-main-tips-2": "<strong>Writing direction.</strong> Some languages are written from right to left, e.g. Arabic.",
+        "home-main-tips-3": "<strong>Plurals.</strong> Some languages have more plural forms than two.",
+        "home-main-tips-4": "<strong>Space.</strong> Some languages need more space in length on a screen and also in bytes on a storage device. This is utmost important if your translation has either limited storage length or if the text must fit on screen. We provide <a href=\"https://www.transfluent.com/en/appstore-description-estimator/\" target=\"_blank\">a tool</a> to estimate translation size for AppStore descriptions, it can be used for other estimation purposes as well.",
+        "home-main-tips-5": "<strong>Tags/placeholders.</strong> Instead of combining strings (e.g. &quot;Hello &quot; + name), prefer using tags and placeholders (e.g. &quot; Hello [name]&quot;). That is because some language have different order of words and therefore combining strings might be problematic. Our translation system supports and our translators are familiar with the most common tags for each resource type but if you are translating plain text, it might be worthwhile to mention about your tags/placeholders in the translator instructions.",
+        "home-main-tips-6": "<strong>Tone&amp;context.</strong> Please provide as accurate instructions and supporting context as you can, it will help the translators to do a better job.",
+        "home-main-tips-7": "<strong>Hardcoded content.</strong> To fully localize a website or a game, you might encounter issues with some content being &quot;hardcoded&quot; in the source language. This is usually the case with images and strings that are not passed through the localization system. To identify these, you can use our Pseudo language as target language and then see if all content gets reversed or not."
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -103,7 +112,16 @@ angular.module('transfluentAPI', [
         "home-main-process-phase-2-step-2": "▪ /v2/texts/translate/あるいは/v2/file/translate/を呼び出して翻訳を発注します。",
         "home-main-process-phase-2-step-3": "▪ コールバックを受け取った後、完成した翻訳をお客様側で処理できます。もう一つの方法としては、/v2/text/status/ あるいは/v2/file/status/を呼び出して、翻訳が完了されたかどうかを確認することもできます。",
         "home-main-process-phase-2-step-4": "▪ コールバックの処理を行わなかった場合は、/v2/text/あるいは/v2/file/read/を呼び出して翻訳を受け取ることができます。",
-        "home-main-process-phase-2-step-5": "▪ これで完了です。さらに翻訳を行う場合は、この流れの一番初めの段階に戻ってください。"
+        "home-main-process-phase-2-step-5": "▪ これで完了です。さらに翻訳を行う場合は、この流れの一番初めの段階に戻ってください。",
+        "home-main-tips-title": "注意",
+        "home-main-tips-body": "早い段階で処理しておかなければ後になって問題となるかも知れない、いくつかの重要なポイントについて触れておきたいと思います。",
+        "home-main-tips-1": "<strong>Charsetエンコーディング：</strong>当社では常にUTF-8あるいはUTF-16にエンコードされたコンテンツを提供しています。UTF-8を使用することを強く推奨します。",
+        "home-main-tips-2": "<strong>記述方向：</strong>アラブ語など、一部の言語は右から左に記述されます。",
+        "home-main-tips-3": "<strong>複数形：</strong>一部の言語は、2つ以上の複数形を有しています。",
+        "home-main-tips-4": "<strong>スペース：</strong>言語によっては、スクリーン上でのスペースや保存デバイス上でのバイト数を、他の言語よりも要するものがあります。これは翻訳の保存容量が限られている場合、あるいは文章をスクリーン上に収めなければならない場合などに非常に重要になります。当社ではAppStoreの説明用に翻訳サイズを推定するツールを提供しており、他のサイズ推定にも利用することができます。",
+        "home-main-tips-5": "<strong>タグ/プレースホルダー：</strong>&quot;Hello &quot; + 名前のように文字列を繋げるのではなく、&quot; Hello [名前]&quot;のようにタグとプレースホルダーを使用することが推奨されます。一部の言語は語順が違うため、文字列を繋げることは問題になりかねません。当社の翻訳システムは各リソースタイプの一般的なタグのほとんどに対応しており、翻訳者もそういったタグについては熟知していますが、プレーンテキストを翻訳する場合は、翻訳者への指示内でタグ/プレースホルダーに関して触れておいた方がいいでしょう",
+        "home-main-tips-6": "<strong>トーンとコンテキスト：</strong>翻訳者がよりよい結果を出せるよう、可能な限り細かな指示と参考となるコンテキストを提供してください。",
+        "home-main-tips-7": "<strong>ハードコードされたコンテンツ：</strong>ウェブサイトやゲームを完全にローカライズする際に、一部のコンテンツがソース言語においてハードコードされているという問題に直面することがあります。これは多くの場合ローカライゼーションのシステムを通していない画像や文字列が原因です。こういった問題を特定するためには、当社の擬似言語をターゲット言語に設定し、全てのコンテンツが前後逆になっているかどうか確認します。"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

@@ -1,7 +1,7 @@
 <div class='search-form'>
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-        <input type="search" class="form-control" placeholder="Search the documentation" name="apisearch" ng-model='searchTerm'>
+        <input type="search" class="form-control" placeholder="{{ 'Search the documentation' | translate }}" name="apisearch" ng-model='searchTerm'>
     </div>
 </div>
 
@@ -10,7 +10,7 @@
         <li><a href="/" translate="Get started"></a></li>
     </ul>
     <ul ng-controller="securityCtrl">
-        <li ng-hide="searchTerm">Authentication</li>
+        <li ng-hide="searchTerm" translate="Authentication"></li>
         <li>
             <ul>
                 <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name | translate ]}</a></li>
@@ -18,34 +18,34 @@
         </li>
     </ul>
     <ul ng-controller="languagesCtrl">
-        <li ng-hide="searchTerm">Languages</li>
+        <li ng-hide="searchTerm" translate="Languages"></li>
         <li>
             <ul>
-                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name | translate ]}</a></li>
             </ul>
         </li>
     </ul>
     <ul ng-controller="textCtrl">
-        <li ng-hide="searchTerm">Text&amp;HTML</li>
+        <li ng-hide="searchTerm" translate="Text&amp;HTML"></li>
         <li>
             <ul>
-                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name | translate ]}</a></li>
             </ul>
         </li>
     </ul>
     <ul ng-controller="fileCtrl">
-        <li ng-hide="searchTerm">Resource files</li>
+        <li ng-hide="searchTerm" translate="Resource files"></li>
         <li>
             <ul>
-                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name | translate ]}</a></li>
             </ul>
         </li>
     </ul>
     <ul ng-controller="servicesCtrl">
-        <li ng-hide="searchTerm">Development</li>
+        <li ng-hide="searchTerm" translate="Development"></li>
         <li>
             <ul>
-                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name | translate ]}</a></li>
             </ul>
         </li>
     </ul>

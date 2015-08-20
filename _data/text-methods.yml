@@ -33,9 +33,6 @@
       desc: <code>language</code> is the language code (e.g. <code>en-gb</code>) which the text is written in. Please see <a href="/api/Languages.html">Languages</a> for more details.
     - value: token
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
-#  Returns:
-#    - OK:
-#      - Default: '{"status":"OK","response":{"is_translated":true}}'
       
 - Name: Texts
   Method: GET/POST

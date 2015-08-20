@@ -81,7 +81,9 @@ angular.module('transfluentAPI', [
         "curl-successful-response": "Successful response (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-example-save-source-text": "cURL Example to save a source text",
         "curl-successfully-saved-text": "Successfully saved (HTTP200, <code>Content-Type: application/json</code>):",
-        "curl-failed-to-save-text": "Failed to save (HTTP401, <code>Content-Type: application/json</code>):"
+        "curl-failed-to-save-text": "Failed to save (HTTP401, <code>Content-Type: application/json</code>):",
+        "api-TextStatus-desc": "Check if text has been translated to specified language.",
+        "curl-example-check-text-status-title": "cURL Example to check status"
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -155,7 +157,9 @@ angular.module('transfluentAPI', [
         "curl-successful-response": "Successful response (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-example-save-source-text": "ソーステキストを保存する際のcURL例",
         "curl-successfully-saved-text": "Successfully saved (HTTP200, <code>Content-Type: application/json</code>):",
-        "curl-failed-to-save-text": "Failed to save (HTTP401, <code>Content-Type: application/json</code>):"
+        "curl-failed-to-save-text": "Failed to save (HTTP401, <code>Content-Type: application/json</code>):",
+        "api-TextStatus-desc": "テキストが指定した言語に翻訳されているか確認します。",
+        "curl-example-check-text-status-title": "ステータスチェックの際のcURL例"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

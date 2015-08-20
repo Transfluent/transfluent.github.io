@@ -7,8 +7,8 @@ section: api/Support
 <div ng-controller="servicesCtrl">
     <div ng-repeat="method in navs| filter: searchTerm">
         <div ng-if="method.Name =='{{ page.title}}'">
-            <h4>Need guidance? Got stuck? Have a question?</h4>
-            <p>Drop us a line to <code>coders</code> (the domain is <code>transfluent.com</code>) and we will get back to you.</p>
+            <h4 translate="support-title"></h4>
+            <p translate="support-body"></p>
         </div>
     </div>
 </div>

@@ -31,6 +31,8 @@ angular.module('transfluentAPI', [
         "Development": "Development",
         "Testing": "Testing",
         "Callbacks": "Callbacks",
+        "SDKs": "SDKs",
+        "Support": "Support",
         "home-main-copy": "Transfluent is the only translation provider to scale from 1 word into millions of words, yet providing excellent quality and having ability to translate into numerous of languages with very little effort from the customer.",
         "home-main-beef": "The key to fulfill this promise is our innovative use of technology in the translation process. Our API is in the core enabling all this. In this documentation you will find detailed information of our API and description how to the translation process works.",
         "home-main-get-started": "All of our implementations are built on our API. The translation process over our API is straight forward and simple: authenticate, submit content, place the order and receive the translation (via an API call or by receiving a callback).",
@@ -116,10 +118,14 @@ angular.module('transfluentAPI', [
         "curl-example-callback-for-text-title": "Example callback for text orders:",
         "curl-example-callback-for-file-title": "Example callback for file orders:",
         "callback-security-title": "Security",
-        "callback-security-body": "It is highly recommended to include a secret key to the callback URL. E.g. <code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> where <code>auth-key</code> parameter contains your secret that must match before your application starts processing any callback. This provides security against third party providing unauthorized content to your system."
+        "callback-security-body": "It is highly recommended to include a secret key to the callback URL. E.g. <code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> where <code>auth-key</code> parameter contains your secret that must match before your application starts processing any callback. This provides security against third party providing unauthorized content to your system.",
+        "support-title": "Need guidance? Got stuck? Have a question?",
+        "support-body": "Drop us a line to <code>coders</code> (the domain is <code>transfluent.com</code>) and we will get back to you.",
+        "back-link": "Back to our website",
+        "made-with-love": "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://www.transfluent.com/about/our-company/\">Team Transfluent</a>."
     });
     $translateProvider.translations('ja', {
-        "Japanese": "Japanese",
+        "Japanese": "日本語",
         "English": "English",
         "Search the documentation": "ドキュメンテーションを検索",
         "Get started": 'はじめに',
@@ -140,6 +146,8 @@ angular.module('transfluentAPI', [
         "Development": "開発",
         "Testing": "テスト",
         "Callbacks": "コールバック",
+        "SDKs": "SDKs",
+        "Support": "サポート",
         "home-main-copy": "Transfluentは、1単語から数百万単語まで、お客様にほとんど負担をかけずに優れた品質と数多くの言語への翻訳を可能にする唯一の翻訳業者です。",
         "home-main-beef": "これを実現するキーポイントは、翻訳過程における当社の革新的な技術の利用方法です。これはAPIを核とすることで実現しています。この資料は、当社のAPIおよび翻訳過程がどう行われるかに関する詳細な情報 をお届けします。",
         "home-main-get-started": "当社の実装は全て当社API上に構築されています。当社APIにおける翻訳過程は分かりやすくシンプルです―認証、翻訳内容を送信、発注、翻訳結果の受け取り（APIコールあるいはコールバックの受け取りによる）、これだけです。",
@@ -185,12 +193,12 @@ angular.module('transfluentAPI', [
         "authentication-curl-fail-example": "認証応答の失敗例（HTTP500, <code>Content-Type: application/json</code>）：",
         "api-Languages-desc": "各翻訳者ごとの言語名および対応できる言語組み合わせのリストを取得します。",
         "languages-curl-response-example": "応答例（ HTTP200, <code>Content-Type: application/json</code>）：",
-        "api-Text-desc": "Text: either source text to translate or previously made translation you want to save into our system. May contain HTML. Please use UTF-8.",
-        "curl-example-get-text-title": "cURL Example to retrieve a text",
-        "curl-successful-response": "Successful response (HTTP200, <code>Content-Type: application/json</code>):",
+        "api-Text-desc": "テキスト: 当システムに保存しようとしている、翻訳するソーステキストまたは以前に行った翻訳のいずれかには、HTMLが含まれている可能性があります。UTF-8をご使用ください。",
+        "curl-example-get-text-title": "テキストをリトリーブするためのcURL例",
+        "curl-successful-response": "応答がありました (HTTP200, <code>Content-Type: application/json</code>):",
         "curl-example-save-source-text": "ソーステキストを保存する際のcURL例",
-        "curl-successfully-saved-text": "Successfully saved (HTTP200, <code>Content-Type: application/json</code>):",
-        "curl-failed-to-save-text": "Failed to save (HTTP401, <code>Content-Type: application/json</code>):",
+        "curl-successfully-saved-text": "保存できました (HTTP200, <code>Content-Type: application/json</code>):",
+        "curl-failed-to-save-text": "保存できませんでした (HTTP401, <code>Content-Type: application/json</code>):",
         "api-TextStatus-desc": "テキストが指定した言語に翻訳されているか確認します。",
         "curl-example-check-text-status-title": "ステータスチェックの際のcURL例",
         "curl-example-retrieve-texts-title": "テキストを取得する際のcURL例",
@@ -225,7 +233,11 @@ angular.module('transfluentAPI', [
         "curl-example-callback-for-text-title": "テキスト発注の際のコールバック例：",
         "curl-example-callback-for-file-title": "ファイル発注の際のコールバック例：",
         "callback-security-title": "セキュリティ",
-        "callback-security-body": "アプリケーションがコールバックの処理を行う前に照合する機密が認証キーに含まれるコールバックURLには、秘密鍵を含むことを強く推奨します。（例：<code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> ）　これにより、未認証コンテンツをお客様のシステムに提供する第三者に対するセキュリティを実装します。"
+        "callback-security-body": "アプリケーションがコールバックの処理を行う前に照合する機密が認証キーに含まれるコールバックURLには、秘密鍵を含むことを強く推奨します。（例：<code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> ）　これにより、未認証コンテンツをお客様のシステムに提供する第三者に対するセキュリティを実装します。",
+        "support-title": "Need guidance? Got stuck? Have a question?",
+        "support-body": "Drop us a line to <code>coders</code> (the domain is <code>transfluent.com</code>) and we will get back to you.",
+        "back-link": "ウェブサイトへ戻る",
+        "made-with-love": "<a href=\"https://www.transfluent.com/about/our-company/\">チームTransfluent</a>が<i class=\"fa fa-heart\"></i>を込めて作成"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

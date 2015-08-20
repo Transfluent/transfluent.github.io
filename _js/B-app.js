@@ -111,7 +111,12 @@ angular.module('transfluentAPI', [
         "curl-example-file-translate-order-title": "cURL Example to order translations for a file",
         "curl-response-file-translate-order-title": "Successfully ordered translations for the file (HTTP200, <code>Content-Type: application/json</code>):",
         "testing-information": "For development and testing your integration, we provide a <strong>Pseudo language</strong> translation. The language code for Pseudo language is <strong>xx-xx</strong>. Use English (<code>en</code>) as source language and Pseudo language as target language and the order will be processed for free. Instead of actual translation, you will get your source text reversed (e.g. &quot;Hello&quot; -&gt; &quot;olleH&quot;). Placing Pseudo language orders is useful for testing the whole process from end to end and, depending on your use case, possibly also for pinpointing any non-translated parts on your end.",
-        "sdk-information": "Transfluent provides minimal SDKs for <a href=\"https://github.com/Transfluent/Transfluent-PHP-SDK\" target=\"_blank\">PHP</a> and <a href=\"https://github.com/Transfluent/Transfluent-Ruby\" target=\"_blank\">Ruby</a> which helps you to get started quickly. For Python, there is a third party <a href=\"https://github.com/jpvanhal/python-transfluent\" target=\"_blank\">client library</a> available - thanks to <a href=\"https://github.com/jpvanhal\">Janne Vanhala</a>."
+        "sdk-information": "Transfluent provides minimal SDKs for <a href=\"https://github.com/Transfluent/Transfluent-PHP-SDK\" target=\"_blank\">PHP</a> and <a href=\"https://github.com/Transfluent/Transfluent-Ruby\" target=\"_blank\">Ruby</a> which helps you to get started quickly. For Python, there is a third party <a href=\"https://github.com/jpvanhal/python-transfluent\" target=\"_blank\">client library</a> available - thanks to <a href=\"https://github.com/jpvanhal\">Janne Vanhala</a>.",
+        "callback-information": "When placing your order, you may provide <code>callback_url</code> parameter. A HTTP POST request with JSON payload will be made to the callback URL once translation is completed.",
+        "curl-example-callback-for-text-title": "Example callback for text orders:",
+        "curl-example-callback-for-file-title": "Example callback for file orders:",
+        "callback-security-title": "Security",
+        "callback-security-body": "It is highly recommended to include a secret key to the callback URL. E.g. <code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> where <code>auth-key</code> parameter contains your secret that must match before your application starts processing any callback. This provides security against third party providing unauthorized content to your system."
     });
     $translateProvider.translations('ja', {
         "Japanese": "Japanese",
@@ -215,7 +220,12 @@ angular.module('transfluentAPI', [
         "curl-example-file-translate-order-title": "ファイルの翻訳を発注する際のcURL例",
         "curl-response-file-translate-order-title": "Successfully ordered translations for the file (HTTP200, <code>Content-Type: application/json</code>):",
         "testing-information": "お客様側の統合を開発およびテストするために、当社では擬似言語翻訳を提供しております。擬似言語の言語コードは<strong>xx-xx</strong>です。ソース言語を英語（<code>en</code>）、ターゲット言語を擬似言語に設定すると、その注文は無料で処理されます。実際の翻訳の代わりに、元の文章は前後逆に変換されます。（例：&quot;Hello&quot; → &quot;olleH&quot;）擬似言語翻訳は、利用方法によっては過程の全体を初めから終わりまでテストしたり、また場合によりお客様側の非翻訳部分を特定したりするために役立てることができます。",
-        "sdk-information": "Transfluent provides minimal SDKs for <a href=\"https://github.com/Transfluent/Transfluent-PHP-SDK\" target=\"_blank\">PHP</a> and <a href=\"https://github.com/Transfluent/Transfluent-Ruby\" target=\"_blank\">Ruby</a> which helps you to get started quickly. For Python, there is a third party <a href=\"https://github.com/jpvanhal/python-transfluent\" target=\"_blank\">client library</a> available - thanks to <a href=\"https://github.com/jpvanhal\">Janne Vanhala</a>."
+        "sdk-information": "Transfluent provides minimal SDKs for <a href=\"https://github.com/Transfluent/Transfluent-PHP-SDK\" target=\"_blank\">PHP</a> and <a href=\"https://github.com/Transfluent/Transfluent-Ruby\" target=\"_blank\">Ruby</a> which helps you to get started quickly. For Python, there is a third party <a href=\"https://github.com/jpvanhal/python-transfluent\" target=\"_blank\">client library</a> available - thanks to <a href=\"https://github.com/jpvanhal\">Janne Vanhala</a>.",
+        "callback-information": "発注時に<code>callback_url</code>パラメータを提供することもできます。翻訳完了後に、コールバックURLに対しJSONペイロードへのHTTP POSTリクエストが実行されます。",
+        "curl-example-callback-for-text-title": "テキスト発注の際のコールバック例：",
+        "curl-example-callback-for-file-title": "ファイル発注の際のコールバック例：",
+        "callback-security-title": "セキュリティ",
+        "callback-security-body": "アプリケーションがコールバックの処理を行う前に照合する機密が認証キーに含まれるコールバックURLには、秘密鍵を含むことを強く推奨します。（例：<code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> ）　これにより、未認証コンテンツをお客様のシステムに提供する第三者に対するセキュリティを実装します。"
     });
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();

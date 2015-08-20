@@ -7,10 +7,9 @@ section: api/Callbacks
 <div ng-controller="servicesCtrl">
     <div ng-repeat="method in navs| filter: searchTerm">
         <div ng-if="method.Name =='{{ page.title}}'">
-            <p>When placing your order, you may provide <code>callback_url</code> parameter.
-            A HTTP POST request with JSON payload will be made to the callback URL once translation is completed.</p>
+            <p translate="callback-information"></p>
 
-            <h4>Example callback for text orders:</h4>
+            <h4 translate="curl-example-callback-for-text-title"></h4>
 {% highlight json %}
 {
     "text_id" : "example-translation-key",
@@ -33,7 +32,7 @@ section: api/Callbacks
 }
 {% endhighlight %}
 
-            <h4>Example callback for file orders:</h4>
+            <h4 translate="curl-example-callback-for-file-title"></h4>
 {% highlight json %}
 {
     "updated_files": {
@@ -45,8 +44,8 @@ section: api/Callbacks
 }
 {% endhighlight %}
 
-            <h4>Security</h4>
-            <p>It is highly recommended to include a secret key to the callback URL. E.g. <code>https://example.org/my-app/transfluent-callback?auth-key=ABC123</code> where <code>auth-key</code> parameter contains your secret that must match before your application starts processing any callback. This provides security against third party providing unauthorized content to your system.</p>
+            <h4 translate="callback-security-title"></h4>
+            <p translate="callback-security-body"></p>
         </div>
     </div>
 </div>

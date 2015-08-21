@@ -48,7 +48,7 @@
     - value: invalidate_translations [=on]
       desc: |
             <code>invalidate_translations</code> is a boolean value (<code>1/0</code> or <code>on/off</code>) which controls if translations are trashed or not. E.g. if you make a spelling error correction to the original text, you probably do not want to trash the translations and re-translate the text. Also if you save previously made translation to our system using this method, it is important to set <code>invalidate_translations</code> off! <span class="label label-warning">Warning! Affects ALL texts set on the same request. If you need to invalidate some and keep others, you have to perform two requests.</span>
-      translation_key: api-invalidate_translations-2-parameter
+      translation_key: invalidate_translations-2
     - value: limit [=10]
       desc: <span class="label label-warning">GET-only</span> Limit number of text items in the response payload. Maximum is 100.
       optional: yes
@@ -89,7 +89,7 @@
     - value: texts
       desc: |
           Text keys to translate. Provide an array of text keys (e.g. [{"id":"my_text_id"},{"id":"some_another_key"}]).
-      translation_key: api-texts-2-parameter
+      translation_key: texts-2
     - value: comment
       desc: Context information about your texts and other relevant information to the translator such as preferred tone (formal/informal).
       optional: yes

@@ -1,0 +1,14 @@
+---
+layout: ci
+title: Continuous Integration
+section: api/CI
+---
+
+<div ng-controller="servicesCtrl">
+    <div ng-repeat="method in navs| filter: searchTerm">
+        <div ng-if="method.Name =='{{ page.title}}'">
+            <h3 translate="continuous-integration-title"></h3>
+            <p translate="continuous-integration-body"></p>
+        </div>
+    </div>
+</div>

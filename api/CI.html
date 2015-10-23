@@ -8,7 +8,12 @@ section: api/CI
     <div ng-repeat="method in navs| filter: searchTerm">
         <div ng-if="method.Name =='{{ page.title}}'">
             <h3 translate="continuous-integration-title"></h3>
-            <p translate="continuous-integration-text"></p>
+            <p translate="continuous-integration-text" class="ci-body"></p>
+            <style type="text/css">
+                .ci-body li {
+                    list-style: square !important;
+                }
+            </style>
         </div>
     </div>
 </div>

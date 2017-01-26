@@ -30,7 +30,7 @@ gulp.task('scripts', function () {
     .pipe(sort())
     .pipe(concat("scripts.js"))
     .pipe(ngmin())
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('js'))
 });
 

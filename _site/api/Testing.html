@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Testing Transfluent API Documentation</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body ng-app="transfluentAPI">
+    <div class="container">
+
+      <header class="header">
+        <div class="header row">
+  <div class="header-logo col-sm-4">
+    <a href="/"><img src="/images/transfluent-logo.png" alt="Transfluent"></a>
+  </div>
+</div>
+      </header>
+
+      <div class="content-area row">
+
+        <nav class="navigation col-sm-3">
+          <div class='search-form'>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <input type="search" class="form-control" placeholder="Search the documentation" name="apisearch" ng-model='searchTerm'>
+    </div>
+</div>
+
+<div class='navigation-links'>
+    <ul>
+        <li><a href="/">Get started</a></li>
+    </ul>
+    <ul ng-controller="securityCtrl">
+        <li ng-hide="searchTerm">Authentication</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="languagesCtrl">
+        <li ng-hide="searchTerm">Languages</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Link ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="textCtrl">
+        <li ng-hide="searchTerm">Text&amp;HTML</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="fileCtrl">
+        <li ng-hide="searchTerm">Resource files</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul ng-controller="servicesCtrl">
+        <li ng-hide="searchTerm">Development</li>
+        <li>
+            <ul>
+                <li ng-repeat="nav in navs| filter: searchTerm"><a href="/api/{[ nav.Name ]}.html">{[ nav.Name ]}</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+        </nav>
+
+        <section class="main-content col-xs-12 col-sm-9">
+          <article class="panel panel-primary">
+  <header class='api-header panel-heading'>
+    <h3 class='api-title'>Testing</h3>
+  </header>
+  <div class='api-body panel-body'>
+    <div ng-controller="servicesCtrl">
+  <div ng-repeat="method in navs| filter: searchTerm">
+    <div ng-if="method.Name =='Testing'">
+      For development and testing your integration, we provide a <strong>Pseudo language</strong> translation. The language code for Pseudo language is <strong>xx-xx</strong>. Use English (<code>en</code>) as source language and Pseudo language as target language and the order will be processed for free. Instead of actual translation, you will get your source text reversed (e.g. &quot;Hello&quot; -&gt; &quot;olleH&quot;). Placing Pseudo language orders is useful for testing the whole process from end to end and, depending on your use case, possibly also for pinpointing any non-translated parts on your end.
+    </div>
+  </div>
+</div>
+  </div>
+</article>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+  <div class="lower-footer">
+  <div class="col-md-12 col-sm-12 text-left">
+    <div style="float: right;"><a href="https://www.transfluent.com" style="color: white !important;">Back to our website</a></div>
+    <p class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      Transfluent &copy; 2015. Made with <i class="fa fa-heart"></i> in Jyväskylä, Finland.
+    </p>
+  </div>
+</div>
+</div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

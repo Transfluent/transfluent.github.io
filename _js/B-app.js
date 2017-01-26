@@ -303,8 +303,9 @@ angular.module('transfluentAPI', [
     $translateProvider.preferredLanguage('en');
     $translateProvider.useCookieStorage();
 })
-.controller('LanguageSelector', function ($scope, $translate) {
+.controller('LanguageSelector', function ($scope, $translate, $rootScope) {
     $scope.ChangeLanguage = function (key) {
         $translate.use(key);
+        $rootScope.language_code = key;
     };
 });

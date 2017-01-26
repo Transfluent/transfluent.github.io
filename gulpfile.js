@@ -36,9 +36,11 @@ gulp.task('scripts', function () {
 
 gulp.task('minify', function () {
 	gulp.src('_css/*.css')
-	        .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
-		.pipe(minifycss())
-		.pipe(gulp.dest('css'))
+	.pipe(sort())
+	//.pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+	.pipe(concat("styles.css"))
+	.pipe(minifycss())
+	.pipe(gulp.dest('css'))
     //.pipe(livereload())
 });
 

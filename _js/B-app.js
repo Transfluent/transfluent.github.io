@@ -306,6 +306,14 @@ angular.module('transfluentAPI', [
 .controller('LanguageSelector', function ($scope, $translate, $rootScope) {
     $scope.ChangeLanguage = function (key) {
         $translate.use(key);
-        $rootScope.language_code = key;
+    };
+})
+.directive('watchLanguage', function ($rootScope) {
+    return {
+        link: function (scope, element) {
+            $rootScope.$on('$translateChangeSuccess', function (event, translationResp) {
+                element.attr("lang", translationResp.language || 'en');
+            });
+        }
     };
 });

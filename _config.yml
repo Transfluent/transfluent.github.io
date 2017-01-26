@@ -1,10 +1,10 @@
 name: transfluent.github.io
 description: Transfluent API Documentation
 author:
-  name: Transfluent.com
-  email: info@transfluent.com
-pygments: true
-exclude: ['node_modules', 'nbproject', 'bower_components', 'bower.json', 'gulpfile.js', 'README.md', 'config.rb', 'package.json', 'Gemfil*']
+  name: Transfluent Coders
+  email: coders@transfluent.com
+rouge: true
+exclude: ['node_modules', '.gitignore', 'bower_components', 'bower.json', 'gulpfile.js', 'README.md', 'config.rb', 'package.json', 'Gemfil*']
 timezone: Europe/Helsinki
 permalink: /:title
 markdown: kramdown

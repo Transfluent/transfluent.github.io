@@ -76,3 +76,4 @@ gulp.task('watch', function () {
 
 
 //gulp.task('default', ['watch', 'compass']); // , 'jekyll'
+gulp.task('default', ['scripts', 'minify', 'jsonify']);

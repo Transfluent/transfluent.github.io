@@ -75,6 +75,10 @@
     - value: comment
       desc: Comment to the translator. E.g. context information, requested text style (formal/informal) etc.
       optional: yes
+    - value: context
+      desc: |
+        Context file (URL) or files (array of URLs), will be shown to the translator(s)
+      optional: yes
     - value: quote
       desc: <code>quote</code> is a boolean which set <code>on</code> will return a quote instead of processing the payload and placing the order. Default is "off", i.e. order will be immediately processed.
       optional: yes

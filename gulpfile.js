@@ -11,12 +11,12 @@ var gulp        = require('gulp'),
     map         = require('map-stream'),
     yaml        = require('js-yaml');
   
-gulp.task('jekyll', function(){
+/*gulp.task('jekyll', function(){
 	gulp.src('')
 	.pipe(shell([
 		'jekyll serve -w'
 	]))
-});
+});*/
 
 gulp.task('compass', function(){
 	gulp.src('_sass/**/*.scss')
@@ -75,4 +75,4 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('default', ['watch', 'jekyll', 'compass']);
+//gulp.task('default', ['watch', 'compass']); // , 'jekyll'

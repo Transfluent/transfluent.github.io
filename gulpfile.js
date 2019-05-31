@@ -60,7 +60,7 @@ gulp.task('jsonify', function(){
       }
  
       file.path = gutil.replaceExtension(file.path, '.json');
-      file.contents = new Buffer(JSON.stringify(json));
+      file.contents = new Buffer.from(JSON.stringify(json));
  
       cb(null,file);
     }))

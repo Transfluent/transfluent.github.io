@@ -15,7 +15,7 @@
     "gulp-uglify": "~0.2.1",
     "gulp-uglifyjs": "^0.3.0",
     "gulp-util": "^2.2.20",
-    "js-yaml": "~3.0.2",
+    "js-yaml": ">=3.13.1",
     "map-stream": "~0.1.0"
   },
   "scripts": {

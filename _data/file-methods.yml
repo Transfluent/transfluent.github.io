@@ -23,7 +23,7 @@
       desc: File content <strong>must be</strong> base64 encoded.
     - value: type
       desc: |
-        Supported types are: <ul><li>json-file</li><li>Properties-file</li><li>YAML-file</li><li>XML-file</li><li>HTML-file</li><li>HAML-file</li><li>iOS-strings</li><li>Android-strings</li><li>MooTools-locale</li><li>WP-RESX</li><li>po-file</li><li>Excel-file</li></ul>
+        Supported types are: <ul><li>json-file</li><li>Properties-file</li><li>YAML-file</li><li>XML-file</li><li>HTML-file</li><li>HAML-file</li><li>iOS-strings</li><li>Android-strings</li><li>MooTools-locale</li><li>WP-RESX</li><li>po-file</li><li>Excel-file</li><li>ini-file</li></ul>
     - value: master [=true]
       desc: |
         <code>master</code> is a boolean. If you have previously translated content, you may save the translations by specifying this variable as false (<code>0</code> or <code>off</code>).
@@ -38,7 +38,7 @@
       desc: Authentication token. Please see <a href="/api/Authenticate.html">Authenticate</a> for more details.
 
 - Name: FileStatus
-  Description: You can easily check what is the translation progress of your submitted file.
+  Description: You can easily check what is the translation progress of your submitted file. Translation process has finished when "progress" property reaches 100%.
   Method: GET
   URL: https://transfluent.com/v2/file/status/
   Parameters: 

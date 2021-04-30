@@ -57,7 +57,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rexml (3.2.4)
+    rexml (3.2.5)
     sass (3.2.19)
     sass-globbing (1.1.5)
       sass (>= 3.1)
